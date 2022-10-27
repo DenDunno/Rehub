@@ -3038,9 +3038,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1054379557, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
+      propertyPath: _pencil
+      value: 
+      objectReference: {fileID: 234732837}
+    - target: {fileID: 1054379557, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _imageToDraw
       value: 
       objectReference: {fileID: 1279864672}
+    - target: {fileID: 1054379557, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
+      propertyPath: _pencilAttachment
+      value: 
+      objectReference: {fileID: 2106882624}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _vrRig
       value: 
@@ -12500,6 +12508,7 @@ GameObject:
   - component: {fileID: 2106882622}
   - component: {fileID: 2106882621}
   - component: {fileID: 2106882620}
+  - component: {fileID: 2106882624}
   m_Layer: 0
   m_Name: Marker
   m_TagString: Untagged
@@ -12688,6 +12697,18 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 1
+--- !u!114 &2106882624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106882617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f48c369e7336845ab6fd41a536d9f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2136234737
 PrefabInstance:
   m_ObjectHideFlags: 0
