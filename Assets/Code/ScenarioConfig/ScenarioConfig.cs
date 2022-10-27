@@ -3,6 +3,7 @@ public enum AmputatedBodyPart
 {
     LeftArm,
     RightArm,
+    LeftLeg
 }
 
 public class ScenarioConfig
