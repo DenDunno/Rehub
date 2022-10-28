@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [Serializable]
-public class GlyphExercise : MonoBehaviour, IScenarioComponent
+public class GlyphExercise : Exercise, IScenarioComponent
 {
     [AssetList]
     [SerializeField] private GlyphData[] _glyphGameRoundData;

@@ -15,7 +15,7 @@ public abstract class MonoBehaviourWrapper : MonoBehaviour
         {
             if (dependency == null)
             {
-                throw new ArgumentNullException("In " + gameObject.name);
+                throw new ArgumentNullException("Null dependency in " + gameObject.name);
             }
         }
         
@@ -23,6 +23,14 @@ public abstract class MonoBehaviourWrapper : MonoBehaviour
         _subscribers = dependencies.OfType<ISubscriber>();
         _fixedUpdates = dependencies.OfType<IFixedUpdate>();
         _updates = dependencies.OfType<IUpdate>();
+    }
+    
+    protected void SetDependencies(ScenarioConfig scenarioConfig, object[] dependencies)
+    { 
+        SetDependencies(dependencies);
+        
+        IEnumerable<IScenarioComponent> scenarioComponents = dependencies.OfType<IScenarioComponent>();
+        scenarioComponents.InitForEach(scenarioConfig);
     }
 
     private void OnEnable()

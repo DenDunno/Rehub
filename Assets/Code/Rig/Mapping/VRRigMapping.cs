@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class VRRigMapping : IUpdate
+public class VRRigMapping : IUpdate, IScenarioComponent
 {
     [SerializeField] private VRMap _headMapping;
     [SerializeField] private VRMap _leftArmMapping;
