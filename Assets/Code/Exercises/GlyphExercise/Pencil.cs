@@ -4,7 +4,7 @@ public class Pencil : MonoBehaviour
 {
     [SerializeField] private Rigidbody _rigidbody;
     private Whiteboard _whiteboard;
-    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out _whiteboard) == false)

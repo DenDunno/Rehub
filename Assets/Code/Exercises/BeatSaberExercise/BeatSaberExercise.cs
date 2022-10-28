@@ -2,7 +2,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class BeatSaberExercise : MonoBehaviourWrapper, IScenarioComponent 
+public class BeatSaberExercise : Exercise, IScenarioComponent 
 {
     [SerializeField] [AssetList] private List<Obstacle> _obstaclesPrefabs;
     [SerializeField] private float _coolDown = 2f;
