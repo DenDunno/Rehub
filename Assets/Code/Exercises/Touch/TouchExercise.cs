@@ -1,22 +1,19 @@
-﻿using System.Collections.Generic;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class TouchExercise : Exercise, IScenarioComponent
+public class TouchExercise : Exercise, IInitializable
 {
-    [SerializeField] [AssetsOnly] private LightBulb _lightBulb;
+    [SerializeField] [ChildGameObjectsOnly] private LightBulb _lightBulb;
+    [SerializeField] private BoxCollider _boxCollider;
     
-    public void Init(ScenarioConfig scenarioConfig)
+    void IInitializable.Init()
     {
-        var obstacles = new List<Obstacle>() { _lightBulb };
-        
-        // var obstacleTouchFeedback = new ObstacleTouchFeedback();
-        // var obstacleSpawnData = new ObstacleSpawnData(transform, scenarioConfig.VirtualHand, obstacleTouchFeedback.OnTouch, _spawnPositionOffset);
-        // var obstacleSpawner = new ObstacleSpawner(obstacles, obstacleSpawnData);
+        _lightBulb.Init(OnTouch);
+    }
 
-        SetDependencies(scenarioConfig, new object[]
-        {
-            
-        });
+    private void OnTouch()
+    {
+        Vector3 randomPosition = _boxCollider.bounds.GetRandomPositionInBox();
+        _lightBulb.transform.position = randomPosition;
     }
 }

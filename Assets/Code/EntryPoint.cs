@@ -13,6 +13,6 @@ public class EntryPoint : MonoBehaviour
         _vrRig.Init(scenarioConfig);
         _exerciseProxy.Init(scenarioConfig);
         
-        _exerciseProxy.Play<BeatSaberExercise>();
+        _exerciseProxy.Play<TouchExercise>();
     }
 }

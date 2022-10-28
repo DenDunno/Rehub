@@ -4,15 +4,11 @@ using Random = UnityEngine.Random;
 
 public class Obstacle : MonoBehaviour, IPoolableObject
 {
-    private ValveControllerInput _virtualHand;
     private Action _touchCallback;
-    
-    public bool IsActive { get; private set; }
 
     public void Init(ObstacleSpawnData obstacleSpawnData)
     {
         IsActive = true;
-        _virtualHand = obstacleSpawnData.VirtualHand;
         _touchCallback = obstacleSpawnData.TouchCallback;
         transform.parent = obstacleSpawnData.Parent;
         
@@ -20,9 +16,11 @@ public class Obstacle : MonoBehaviour, IPoolableObject
         transform.localPosition = obstacleSpawnData.Positions[randomPositionIndex];
     }
 
+    public bool IsActive { get; private set; }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out ValveControllerInput controller))
+        if (other.GetComponent<ValveControllerInput>() != null)
         {
             IsActive = false;
             _touchCallback?.Invoke();
