@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [Serializable]
-public class SymmetricMovement : IUpdate
+public class MirrorMovement : IUpdate
 {
     [SerializeField] private Vector3 _rotation;
     private HandsMovementData _data;
@@ -11,10 +11,13 @@ public class SymmetricMovement : IUpdate
     {
         _data = data;
     }
-
+    
     public void Update()
     {
+        Quaternion localRotation = _data.Target.transform.localRotation;
+        
         _data.Follower.transform.position = _data.Target.transform.position + _data.Target.transform.root.transform.right * _data.Offset;
-        _data.Follower.transform.rotation = _data.Target.transform.rotation * Quaternion.Euler(_rotation);
+        _data.Follower.transform.localRotation = new Quaternion(localRotation.x * -1.0f, localRotation.y, localRotation.z, localRotation.w * -1.0f);
+        _data.Follower.transform.localRotation *= Quaternion.Euler(_rotation);
     }
 }

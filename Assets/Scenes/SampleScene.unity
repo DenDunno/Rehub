@@ -3138,16 +3138,22 @@ MonoBehaviour:
       _trackingRotationOffset: {x: 90, y: -90, z: 0}
     _rightRigHand: {fileID: 267385666}
     _leftRigHand: {fileID: 96363880}
-  _symmetricMovement:
+  _playerHands:
+    _mirrorMovement:
+      _rotation: {x: 180, y: 0, z: 0}
+    _symmetricMovement:
+      _rotation: {x: 180, y: 0, z: 180}
+    _fixedMovement:
+      _rotation: {x: -90, y: 125, z: 0}
+      _offset: {x: -0.12, y: 1.59, z: 0.34}
+    _handsInitialization:
+      _leftVRHand: {fileID: 417624791}
+      _rightVRHand: {fileID: 417624787}
+      _leftRigHand: {fileID: 96363880}
+      _rightRigHand: {fileID: 267385666}
     _rightTarget: {fileID: 1302704622}
     _leftLeft: {fileID: 1064852241}
     _offset: -0.4
-    _rotation: {x: 0, y: 180, z: 0}
-  _handsInitialization:
-    _leftVRHand: {fileID: 417624791}
-    _rightVRHand: {fileID: 417624787}
-    _leftRigHand: {fileID: 96363880}
-    _rightRigHand: {fileID: 267385666}
 --- !u!114 &795362436
 MonoBehaviour:
   m_ObjectHideFlags: 0

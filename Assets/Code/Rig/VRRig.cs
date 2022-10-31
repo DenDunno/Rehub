@@ -4,15 +4,13 @@ public class  VRRig : MonoBehaviourWrapper, IScenarioComponent
 {
     [SerializeField] private HeadBodyOffset _headBodyOffset;
     [SerializeField] private VRRigMapping _vrRigMapping;
-    [SerializeField] private SymmetricMovement _symmetricMovement;
-    [SerializeField] private HandsInitialization _handsInitialization;
+    [SerializeField] private PlayerHands _playerHands;
     
     public void Init(ScenarioConfig scenarioConfig)
     {
         SetDependencies(scenarioConfig, new object[]
         {
-            _handsInitialization,
-            _symmetricMovement,
+            _playerHands,
             _headBodyOffset,
             _vrRigMapping
         });

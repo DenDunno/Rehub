@@ -9,8 +9,8 @@ public class HandsInitialization : IScenarioComponent
     [SerializeField] private Hand _rightVRHand;
     [SerializeField] private LeftRigHand _leftRigHand;
     [SerializeField] private RightRigHand _rightRigHand;
-     
-    void IScenarioComponent.Init(ScenarioConfig scenarioConfig)
+
+    public void Init(ScenarioConfig scenarioConfig)
     {
         InitVRHands();
         InitRigHands(scenarioConfig.AmputatedBodyPart);
