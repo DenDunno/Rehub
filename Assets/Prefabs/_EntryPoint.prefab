@@ -814,7 +814,7 @@ MonoBehaviour:
   _scenarioConfigFactory:
     _rightController: {fileID: 0}
     _leftController: {fileID: 0}
-    _amputatedBodyPart: 0
+    _amputatedBodyPart: 1
 --- !u!1 &7900163102764351092
 GameObject:
   m_ObjectHideFlags: 0

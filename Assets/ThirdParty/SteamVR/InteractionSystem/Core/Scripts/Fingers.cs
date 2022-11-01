@@ -7,6 +7,7 @@ public class Fingers
 {
     [SerializeField] private Transform _thumb0;
     [SerializeField] private Transform _thumb1;
+    [SerializeField] private Transform _thumb2;
     [SerializeField] private Transform _index0;
     [SerializeField] private Transform _index1;
     [SerializeField] private Transform _index2;
@@ -26,7 +27,7 @@ public class Fingers
     {
         Value = new List<Transform>()
         {
-            _thumb0, _thumb1,
+            _thumb0, _thumb1, _thumb2,
             _index0, _index1, _index2,
             _middle0, _middle1, _middle2, 
             _ring0, _ring1, _ring2,

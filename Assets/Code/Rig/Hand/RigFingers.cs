@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class RigHand : MonoBehaviour, IMap
+public abstract class RigFingers : MonoBehaviour, IMap
 {
     [SerializeField] private Fingers _fingers;
     private Fingers _vrFingers;
@@ -19,7 +19,7 @@ public abstract class RigHand : MonoBehaviour, IMap
 
         for (int i = 0; i < _vrFingers.Value.Count; ++i)
         {
-            _fingers.Value[i].localRotation = _vrFingers.Value[i].localRotation;
+            _fingers.Value[i].localRotation = Quaternion.Euler(-_vrFingers.Value[i].localRotation.eulerAngles);
         }
     }
 }

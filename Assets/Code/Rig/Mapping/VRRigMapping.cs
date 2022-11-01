@@ -8,13 +8,13 @@ public class VRRigMapping : IUpdate, IScenarioComponent
     [SerializeField] private VRMap _headMapping;
     [SerializeField] private VRMap _leftArmMapping;
     [SerializeField] private VRMap _rightArmMapping;
-    [SerializeField] private RightRigHand _rightRigHand;
-    [SerializeField] private LeftRigHand _leftRigHand;
+    [SerializeField] private RightRigFingers _rightRigFingers;
+    [SerializeField] private LeftRigFingers _leftRigFingers;
     private List<IMap> _vrMaps;
     
     public void Init(ScenarioConfig scenarioConfig)
     {
-        _vrMaps = new List<IMap>() { _headMapping, _rightRigHand, _leftRigHand };
+        _vrMaps = new List<IMap>() { _headMapping, _rightRigFingers, _leftRigFingers};
 
         TryAddBodyPartToMap(scenarioConfig, AmputatedBodyPart.LeftArm, _leftArmMapping);
         TryAddBodyPartToMap(scenarioConfig, AmputatedBodyPart.RightArm, _rightArmMapping);

@@ -7,8 +7,8 @@ public class HandsInitialization : IScenarioComponent
 {
     [SerializeField] private Hand _leftVRHand;
     [SerializeField] private Hand _rightVRHand;
-    [SerializeField] private LeftRigHand _leftRigHand;
-    [SerializeField] private RightRigHand _rightRigHand;
+    [SerializeField] private LeftRigFingers _leftRigFingers;
+    [SerializeField] private RightRigFingers _rightRigFingers;
 
     public void Init(ScenarioConfig scenarioConfig)
     {
@@ -27,7 +27,7 @@ public class HandsInitialization : IScenarioComponent
         Hand trackingVrHandForLeft = amputatedPart == AmputatedBodyPart.LeftArm ? _rightVRHand : _leftVRHand;
         Hand trackingVrHandForRight = amputatedPart == AmputatedBodyPart.RightArm ? _leftVRHand : _rightVRHand;
         
-        _leftRigHand.Init(trackingVrHandForLeft.VrHand.Fingers);
-        _rightRigHand.Init(trackingVrHandForRight.VrHand.Fingers);
+        _leftRigFingers.Init(trackingVrHandForLeft.VrHand.Fingers);
+        _rightRigFingers.Init(trackingVrHandForRight.VrHand.Fingers);
     }
 }
