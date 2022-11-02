@@ -1849,11 +1849,6 @@ Transform:
   m_Father: {fileID: 142999850}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1233809543 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1927110589883223507, guid: b778be43ca44a744d94eeea4bdae0731, type: 3}
-  m_PrefabInstance: {fileID: 2071251297}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1334039006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,10 +2131,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1125053256, guid: b778be43ca44a744d94eeea4bdae0731, type: 3}
-      propertyPath: _fingers._thumb2
-      value: 
-      objectReference: {fileID: 1233809543}
     - target: {fileID: 1673215530, guid: b778be43ca44a744d94eeea4bdae0731, type: 3}
       propertyPath: _vrRigMapping._headMapping._vrTarget
       value: 
