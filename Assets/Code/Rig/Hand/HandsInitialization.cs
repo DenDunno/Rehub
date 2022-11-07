@@ -5,8 +5,8 @@ using Valve.VR.InteractionSystem;
 [Serializable]
 public class HandsInitialization : IScenarioComponent
 {
-    [SerializeField] private Hand _leftVRHand;
-    [SerializeField] private Hand _rightVRHand;
+    [SerializeField] private VirtualHand _leftVRVirtualHand;
+    [SerializeField] private VirtualHand _rightVRVirtualHand;
     [SerializeField] private LeftRigHand _leftRigHand;
     [SerializeField] private RightRigHand _rightRigHand;
 
@@ -18,16 +18,16 @@ public class HandsInitialization : IScenarioComponent
 
     private void InitVRHands()
     {
-        _leftVRHand.Init();
-        _rightVRHand.Init();
+        // _leftVRHand.Init();
+        // _rightVRHand.Init();
     }
 
     private void InitRigHands(AmputatedBodyPart amputatedPart)
     {
-        Hand trackingVrHandForLeft = amputatedPart == AmputatedBodyPart.LeftArm ? _rightVRHand : _leftVRHand;
-        Hand trackingVrHandForRight = amputatedPart == AmputatedBodyPart.RightArm ? _leftVRHand : _rightVRHand;
+        VirtualHand trackingVrVirtualHandForLeft = amputatedPart == AmputatedBodyPart.LeftArm ? _rightVRVirtualHand : _leftVRVirtualHand;
+        VirtualHand trackingVrVirtualHandForRight = amputatedPart == AmputatedBodyPart.RightArm ? _leftVRVirtualHand : _rightVRVirtualHand;
         
-        _leftRigHand.Init(trackingVrHandForLeft.VrHand.Fingers);
-        _rightRigHand.Init(trackingVrHandForRight.VrHand.Fingers);
+        //_leftRigHand.Init(trackingVrHandForLeft.VrHand.Fingers);
+        //_rightRigHand.Init(trackingVrHandForRight.VrHand.Fingers);
     }
 }

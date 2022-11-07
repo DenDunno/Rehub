@@ -2,7 +2,6 @@
 
 public class EntryPoint : MonoBehaviour
 {
-    [SerializeField] private VRRig _vrRig;
     [SerializeField] private ExerciseProxy _exerciseProxy;
     [SerializeField] private ScenarioConfigFactory _scenarioConfigFactory;
 
@@ -10,9 +9,6 @@ public class EntryPoint : MonoBehaviour
     {
         ScenarioConfig scenarioConfig = _scenarioConfigFactory.Create();
         
-        _vrRig.Init(scenarioConfig);
         _exerciseProxy.Init(scenarioConfig);
-        
-        _exerciseProxy.Play<TouchExercise>();
     }
 }

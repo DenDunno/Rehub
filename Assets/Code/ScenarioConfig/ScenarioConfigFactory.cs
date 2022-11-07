@@ -1,11 +1,12 @@
 ﻿using System;
+using Passer.Humanoid;
 using UnityEngine;
 
 [Serializable]
 public class ScenarioConfigFactory
 {
-    [SerializeField] private ValveControllerInput _rightController;
-    [SerializeField] private ValveControllerInput _leftController;
+    [SerializeField] private HandTarget _leftHandTarget;
+    [SerializeField] private HandTarget _rightHandTarget;
     [SerializeField] private AmputatedBodyPart _amputatedBodyPart;
     
     public ScenarioConfig Create()
@@ -25,14 +26,25 @@ public class ScenarioConfigFactory
             return;
         }
 
-        (ValveControllerInput realHand, ValveControllerInput virtualHand) = (_rightController, _leftController);
-            
-        if (scenarioConfig.AmputatedBodyPart == AmputatedBodyPart.RightArm)
+        (HandTarget realHand, HandTarget virtualHand) = GetRealAndVirtualHand(scenarioConfig.AmputatedBodyPart);
+
+        scenarioConfig.SetRealAndVirtualHands(realHand, virtualHand);
+    }
+
+    private (HandTarget, HandTarget) GetRealAndVirtualHand(AmputatedBodyPart amputatedBodyPart)
+    {
+        HandTarget virtualHand = _leftHandTarget;
+        HandTarget realHand = _rightHandTarget;
+        bool isRightHandVirtual = amputatedBodyPart == AmputatedBodyPart.RightArm;
+
+        if (isRightHandVirtual)
         {
             Algorithms.Swap(ref virtualHand, ref realHand);
         }
-            
-        scenarioConfig.SetRealAndVirtualHands(realHand, virtualHand);
+
+        virtualHand.openVR = new VirtualHand();
+
+        return (realHand, virtualHand);
     }
 
     private AmputatedBodyPart GetAmputatedBodyPart()

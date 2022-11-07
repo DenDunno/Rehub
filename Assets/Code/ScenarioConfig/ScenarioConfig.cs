@@ -1,4 +1,6 @@
 ﻿
+using Passer.Humanoid;
+
 public enum AmputatedBodyPart
 {
     LeftArm,
@@ -9,8 +11,8 @@ public enum AmputatedBodyPart
 public class ScenarioConfig
 {
     public readonly AmputatedBodyPart AmputatedBodyPart;
-    public ValveControllerInput RealHand { get; private set; }
-    public ValveControllerInput VirtualHand { get; private set; }
+    public HandTarget RealHand { get; private set; }
+    public HandTarget VirtualHand { get; private set; }
 
     public ScenarioConfig(AmputatedBodyPart amputatedBodyPart)
     {
@@ -20,7 +22,7 @@ public class ScenarioConfig
     public bool IsHandAmputated => AmputatedBodyPart == AmputatedBodyPart.LeftArm ||
                                    AmputatedBodyPart == AmputatedBodyPart.RightArm;
 
-    public void SetRealAndVirtualHands(ValveControllerInput realHand, ValveControllerInput virtualHand)
+    public void SetRealAndVirtualHands(HandTarget realHand, HandTarget virtualHand)
     {
         RealHand = realHand;
         VirtualHand = virtualHand;
