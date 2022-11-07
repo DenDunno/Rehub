@@ -43,6 +43,7 @@ public class ScenarioConfigFactory
         }
 
         virtualHand.openVR = new VirtualHand();
+        virtualHand.viveTracker.enabled = true;
 
         return (realHand, virtualHand);
     }

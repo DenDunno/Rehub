@@ -16,7 +16,7 @@ public class GlyphExercise : Exercise, IScenarioComponent
     void IScenarioComponent.Init(ScenarioConfig scenarioConfig)
     {
         SetImageToDraw();
-        _pencilAttachment.Init(scenarioConfig.VirtualHand.transform);
+//        _pencilAttachment.Init(scenarioConfig.VirtualHand.transform);
     }
 
     public void TryAddPoint(Vector3 position)
