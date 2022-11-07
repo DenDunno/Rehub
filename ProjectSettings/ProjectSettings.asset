@@ -697,7 +697,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;pHUMANOID;pHUMANOID3;hOPENVR;hOCHAND;hOCULUS;pUNITYXR
+    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;pHUMANOID;pHUMANOID3;hOPENVR;hOCHAND;hOCULUS;pUNITYXR;hVIVETRACKER
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12,24 +13,24 @@ MonoBehaviour:
   m_Name: DefaultConfiguration
   m_EditorClassIdentifier: 
   openVRSupport: 1
-  viveTrackerSupport: 0
+  viveTrackerSupport: 1
   oculusSupport: 1
   windowsMRSupport: 0
   vrtkSupport: 0
   neuronSupport: 0
   hi5Support: 0
   realsenseSupport: 0
-  leapSupport: 1
+  leapSupport: 0
   kinect1Support: 0
   kinect2Support: 0
   kinect4Support: 0
-  astraSupport: 1
-  hydraSupport: 1
+  astraSupport: 0
+  hydraSupport: 0
   arkitSupport: 0
-  tobiiSupport: 1
-  optitrackSupport: 1
+  tobiiSupport: 0
+  optitrackSupport: 0
   pupilSupport: 0
-  antilatencySupport: 1
+  antilatencySupport: 0
   networkingSupport: 0
   networkingVoiceSupport: 0
   humanoidSceneName: 
