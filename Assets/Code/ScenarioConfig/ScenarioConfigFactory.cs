@@ -42,7 +42,7 @@ public class ScenarioConfigFactory
             Algorithms.Swap(ref virtualHand, ref realHand);
         }
 
-        virtualHand.openVR = new VirtualHand();
+        virtualHand.openVR = new VirtualHand(realHand);
         virtualHand.viveTracker.enabled = true;
 
         return (realHand, virtualHand);
