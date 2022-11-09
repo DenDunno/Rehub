@@ -19,50 +19,36 @@ public class VirtualHand : OpenVRHand
         if (tracker == null || !tracker.enabled || !enabled)
             return;
 
-        if (useSkeletalInput) {
+        if (useSkeletalInput) 
+        {
             if (handSkeleton == null)
-                handSkeleton = OpenVRHandSkeleton.Get(handTarget.humanoid.openVR.tracker.transform, handTarget.isLeft, handTarget.showRealObjects);
+            {
+                handSkeleton = OpenVRHandSkeleton.Get(handTarget.humanoid.openVR.tracker.transform, handTarget.isLeft, handTarget.showRealObjects);   
+            }
+            
+            SetPoseForVirtualHand();
 
-            if (handSkeleton != null) {
-                SetPoseForVirtualHand();
-                handTarget.hand.target.confidence.position = 0.9F;
-                handTarget.hand.target.confidence.rotation = 0.9F;
-                //openVRController.show = false;
-            }
-            else {
-                handTarget.hand.target.confidence.position = 0.0F;
-                handTarget.hand.target.confidence.rotation = 0.0F;
-            }
             if (openVRController != null)
+            {
                 UpdateInput();
-            return;
+                openVRController.UpdateComponent();
+            }
+                
         }
-
-        if (openVRController == null) {
-            UpdateTarget(handTarget.hand.target, sensorTransform);
-            return;
-        }
-
-        if (openVRController.isLeft != handTarget.isLeft) {
-            // Reassign controller when the left and right have swapped
-            openVRController.trackerId = -1;
-        }
-
-        openVRController.UpdateComponent();
-        if (openVRController.status != Tracker.Status.Tracking)
-            return;
-        //#endif
-        UpdateTarget(handTarget.hand.target, openVRController);
-        UpdateInput();
-        UpdateHand();
     }
 
     private void SetPoseForVirtualHand()
     {
-        Vector3 rotation = handTarget.isLeft ? new Vector3(-90, 0, 0) : new Vector3(90, 0, 0);
-        handTarget.hand.target.transform.localRotation = Quaternion.Euler(rotation);
-        
+        UpdateWrist();
         UpdateFingers();
+    }
+
+    private void UpdateWrist()
+    {
+        // Vector3 rotation = handTarget.isLeft ? new Vector3(-90, 0, 0) : new Vector3(90, 0, 0);
+        // handTarget.hand.target.transform.localRotation = Quaternion.Euler(EntryPoint.Rotation);
+        
+        handTarget.hand.target.transform.rotation = _realHand.hand.target.transform.rotation * Quaternion.Euler(0, 0, 180);
     }
 
     private void UpdateFingers()
@@ -89,6 +75,7 @@ public class VirtualHand : OpenVRHand
         {
             Transform thisBoneTransform = realHandSkeleton.GetBone(finger, fingerBone);
             targetTransform.localRotation = Quaternion.Inverse(thisBoneTransform.localRotation);
+
         }
         catch { }
     }
