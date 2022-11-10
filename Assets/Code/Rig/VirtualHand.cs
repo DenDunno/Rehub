@@ -64,7 +64,7 @@ public class VirtualHand : OpenVRHand
         else if (_wristMovementType == WristMovementType.Mirror)
         {
             Quaternion localRotation = _realHand.hand.target.transform.localRotation;
-            handTarget.hand.target.transform.localRotation = new Quaternion(-localRotation.x, localRotation.y, localRotation.z, -localRotation.w);
+            handTarget.hand.target.transform.localRotation = new Quaternion(localRotation.x, localRotation.y, -localRotation.z, localRotation.w * -1.0f);
             handTarget.hand.target.transform.localRotation *= Quaternion.Euler(EntryPoint.Rotation);
         }
     }
