@@ -1,4 +1,5 @@
 ﻿using System;
+using Passer.Humanoid;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,7 +21,7 @@ public class Obstacle : MonoBehaviour, IPoolableObject
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<ValveControllerInput>() != null)
+        if (other.GetComponent<HandTarget>() != null)
         {
             IsActive = false;
             _touchCallback?.Invoke();

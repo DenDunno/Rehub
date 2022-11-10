@@ -243,6 +243,7 @@ namespace Passer.Humanoid {
             handTarget.forearm.SetBoneRotation(handTarget.forearm.target.transform.rotation);
 
             CalculateStretchlessTarget(handTarget);
+
             if (!handTarget.humanoid.physics || handTarget.handRigidbody.isKinematic) {
                 //Quaternion handOrientation = NaturalHandOrientation(forearmRotation);
                 // Not working good enough yet

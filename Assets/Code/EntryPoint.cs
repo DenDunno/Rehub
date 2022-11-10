@@ -14,6 +14,7 @@ public class EntryPoint : MonoBehaviour
         ScenarioConfig scenarioConfig = _scenarioConfigFactory.Create();
         
         _exerciseProxy.Init(scenarioConfig);
+        _exerciseProxy.Play<BeatSaberExercise>();
     }
 
     private void Update()
