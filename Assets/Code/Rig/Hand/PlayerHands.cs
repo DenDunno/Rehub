@@ -19,7 +19,7 @@ public class PlayerHands : IScenarioComponent, IUpdate
     {
         HandsMovementData data = CreateHandsMovementData(scenarioConfig.AmputatedBodyPart);
 
-        _handsInitialization.Init(scenarioConfig);
+        //_handsInitialization.Init(scenarioConfig);
         _symmetricMovement.Init(data);
         _mirrorMovement.Init(data);
         _fixedMovement.Init(data);

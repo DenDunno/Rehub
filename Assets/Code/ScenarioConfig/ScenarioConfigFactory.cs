@@ -8,6 +8,7 @@ public class ScenarioConfigFactory
     [SerializeField] private HandTarget _leftHandTarget;
     [SerializeField] private HandTarget _rightHandTarget;
     [SerializeField] private AmputatedBodyPart _amputatedBodyPart;
+    [SerializeField] private VirtualHand _virtualHand;
     
     public ScenarioConfig Create()
     {
@@ -42,7 +43,8 @@ public class ScenarioConfigFactory
             Algorithms.Swap(ref virtualHand, ref realHand);
         }
 
-        virtualHand.openVR = new VirtualHand(realHand);
+        _virtualHand.SetRealHand(realHand);
+        virtualHand.openVR = _virtualHand;
         virtualHand.viveTracker.enabled = true;
 
         return (realHand, virtualHand);
