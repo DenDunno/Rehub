@@ -5,9 +5,11 @@ public class EntryPoint : MonoBehaviour
     [SerializeField] private ExerciseProxy _exerciseProxy;
     [SerializeField] private ScenarioConfigFactory _scenarioConfigFactory;
     [SerializeField] private Vector3 _rotation;
-    [SerializeField]private Vector3 _position;
+    [SerializeField] private Vector3 _position;
+    [SerializeField] private Vector4 _rot;
     public static Vector3 Rotation;
     public static Vector3 Position;
+    public static Vector4 Rot;
 
     private void Awake()
     {
@@ -21,5 +23,6 @@ public class EntryPoint : MonoBehaviour
     {
         Rotation = _rotation;
         Position = _position;
+        Rot = _rot;
     }
 }

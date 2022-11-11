@@ -21,7 +21,7 @@ public class Obstacle : MonoBehaviour, IPoolableObject
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<HandTarget>() != null)
+        if (other.GetComponent<HandTrigger>() != null)
         {
             IsActive = false;
             _touchCallback?.Invoke();
