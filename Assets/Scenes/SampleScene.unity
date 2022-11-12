@@ -219,21 +219,21 @@ MonoBehaviour:
     faceAnimation: 1
   unityXR:
     enabled: 1
-    target: {fileID: 0}
+    target: {fileID: 4202183}
     sensorTransform: {fileID: 0}
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     _unityXrHmd: {fileID: 0}
   openVR:
     enabled: 1
-    target: {fileID: 0}
+    target: {fileID: 4202183}
     sensorTransform: {fileID: 0}
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     hmd: {fileID: 0}
   viveTracker:
     enabled: 0
-    target: {fileID: 0}
+    target: {fileID: 4202183}
     sensorTransform: {fileID: 0}
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -2005,43 +2005,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1348634
+      value: 0.13486347
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.02454353
+      value: 0.024543526
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.013808174
+      value: -0.013808175
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000066822713
+      value: 0.00000066955135
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46968862
+      value: 0.46968853
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0025006956
+      value: -0.0025003494
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7820494
+      value: -0.78204733
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6206671
+      value: -0.6206697
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.038908124
+      value: 0.03890825
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.04070865
+      value: -0.040708523
       objectReference: {fileID: 0}
     - target: {fileID: -7128567795561383244, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2473,19 +2473,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999927
+      value: 0.99999267
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0037886826
+      value: -0.0038015211
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00048711564
+      value: 0.00048711448
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00004435162
+      value: -0.000044399727
       objectReference: {fileID: 0}
     - target: {fileID: 2936792236941852015, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2505,19 +2505,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.009832008
+      value: -0.009832
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.002490209
+      value: 0.0024901142
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.08845705
+      value: -0.08846645
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.99602836
+      value: -0.9960275
       objectReference: {fileID: 0}
     - target: {fileID: 3608902352428601334, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3258,7 +3258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 349505674}
   - component: {fileID: 349505675}
-  - component: {fileID: 349505676}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -3972,11 +3971,11 @@ MonoBehaviour:
     controllerType: 0
     useSkeletalInput: 1
   viveTracker:
-    enabled: 1
+    enabled: 0
     target: {fileID: 349505675}
     sensorTransform: {fileID: 1581363855}
-    sensor2TargetPosition: {x: 0.00000005264883, y: -0.049998924, z: -0.00000074040145}
-    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 1.0000001}
+    sensor2TargetPosition: {x: 0.000000052707037, y: -0.0499988, z: -0.00000073737465}
+    sensor2TargetRotation: {x: 5.1670827e-11, y: 0.000000004632653, z: -0.0000000010419741, w: 1.0000001}
     handSkeleton: {fileID: 0}
     attachedBone: 2
   oculus:
@@ -4145,19 +4144,6 @@ MonoBehaviour:
   handPhysics: {fileID: 0}
   grabbedChanged: 0
   directFingerMovements: 1
---- !u!135 &349505676
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349505673}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.08
-  m_Center: {x: -0.12, y: 0, z: 0}
 --- !u!4 &359958297 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5474398487305837081, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
@@ -4245,7 +4231,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408100322}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5050,7 +5036,6 @@ GameObject:
   m_Component:
   - component: {fileID: 613033806}
   - component: {fileID: 613033807}
-  - component: {fileID: 613033808}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -5766,11 +5751,11 @@ MonoBehaviour:
   viveTracker:
     enabled: 0
     target: {fileID: 613033807}
-    sensorTransform: {fileID: 0}
-    sensor2TargetPosition: {x: 0, y: 0, z: 0}
-    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    sensorTransform: {fileID: 1581363855}
+    sensor2TargetPosition: {x: 0.37284896, y: -0.04344976, z: -0.0077962745}
+    sensor2TargetRotation: {x: 0.000018022258, y: -0.020944325, z: -0.017570285, w: 0.9996264}
     handSkeleton: {fileID: 0}
-    attachedBone: 0
+    attachedBone: 2
   oculus:
     enabled: 1
     target: {fileID: 613033807}
@@ -5937,19 +5922,6 @@ MonoBehaviour:
   handPhysics: {fileID: 0}
   grabbedChanged: 0
   directFingerMovements: 1
---- !u!135 &613033808
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 613033805}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.08
-  m_Center: {x: 0.12, y: 0, z: 0}
 --- !u!1001 &614956214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6418,7 +6390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _rotation.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._leftController
@@ -6438,11 +6410,11 @@ PrefabInstance:
       objectReference: {fileID: 613033807}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._amputatedBodyPart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._virtualHand._wristMovementType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7900163102160034681, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: m_Name
@@ -6777,7 +6749,7 @@ MonoBehaviour:
       toBoneRotation: {x: -0.0016485443, y: -0.0028605636, z: 0.9999945, w: -0.000014645752}
     bone:
       transform: {fileID: 312422384}
-      length: 0.4540627
+      length: 0.4540628
       jointLimitations: 0
       maxAngle: 0
       minAngles: {x: -130, y: -40, z: -30}
@@ -6798,7 +6770,7 @@ MonoBehaviour:
       toBoneRotation: {x: -0.002135602, y: 0.0026617346, z: 0.99999416, w: 0.000004969469}
     bone:
       transform: {fileID: 312422383}
-      length: 0.46969542
+      length: 0.46969545
       jointLimitations: 0
       maxAngle: 0
       minAngles: {x: -15, y: NaN, z: NaN}
@@ -7572,7 +7544,7 @@ MonoBehaviour:
     bodyRotation: 0
   viveTracker:
     enabled: 0
-    target: {fileID: 0}
+    target: {fileID: 1176931461}
     sensorTransform: {fileID: 0}
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
@@ -8373,7 +8345,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581363854}
-  m_LocalRotation: {x: 0.023837797, y: 0.010280203, z: 0.009040185, w: 0.99962217}
+  m_LocalRotation: {x: 0.023837797, y: 0.010280198, z: 0.009040186, w: 0.99962217}
   m_LocalPosition: {x: -0.18649733, y: 1.5557729, z: -0.0928669}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8877,10 +8849,10 @@ MonoBehaviour:
     nextFrame: 0
   viveTracker:
     enabled: 0
-    target: {fileID: 0}
-    sensorTransform: {fileID: 0}
-    sensor2TargetPosition: {x: 0, y: 0, z: 0}
-    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    target: {fileID: 1818521607}
+    sensorTransform: {fileID: 1581363855}
+    sensor2TargetPosition: {x: 0.113916665, y: -1.4880875, z: 0.05822421}
+    sensor2TargetRotation: {x: -0.022475988, y: -0.010265536, z: -0.009026564, w: 0.99965405}
   upperLeg:
     name: 
     boneId: 32
@@ -8984,7 +8956,14 @@ MonoBehaviour:
     - When Ground Changes
     - Always
     fromEventLabel: ground.gameObject
-    events: []
+    events:
+    - eventType: 0
+      eventNetworking: 0
+      functionCall:
+        targetGameObject: {fileID: 0}
+        methodName: 
+        parameters: []
+      boolInverse: 0
   ground: {fileID: 0}
   groundNormal: {x: 0, y: 1, z: 0}
   groundTranslation: {x: 0, y: 0, z: 0}

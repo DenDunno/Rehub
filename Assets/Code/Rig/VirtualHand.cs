@@ -73,27 +73,28 @@ public class VirtualHand : OpenVRHand
     private void UpdateFingers()
     {
         UpdateThumb();
-        UpdateFinger(handTarget.fingers.thumb, Finger.Thumb);
         UpdateFinger(handTarget.fingers.index, Finger.Index);
         UpdateFinger(handTarget.fingers.middle, Finger.Middle);
         UpdateFinger(handTarget.fingers.ring, Finger.Ring);
         UpdateFinger(handTarget.fingers.little, Finger.Little);
     }
 
+    private void MapPhalange(FingersTarget.TargetedPhalanges realPhalange, FingersTarget.TargetedPhalanges virtualPhalange)
+    {
+        virtualPhalange.target.transform.localRotation = Quaternion.Inverse(realPhalange.target.transform.localRotation);
+    }
+
     private void UpdateThumb()
     {
         MapThumbFinger(_realHand.fingers.thumb.proximal, handTarget.fingers.thumb.proximal);
-        MapThumbFinger(_realHand.fingers.thumb.proximal, handTarget.fingers.thumb.proximal);
-        MapThumbFinger(_realHand.fingers.thumb.proximal, handTarget.fingers.thumb.proximal);
+        MapThumbFinger(_realHand.fingers.thumb.intermediate, handTarget.fingers.thumb.intermediate);
+        MapThumbFinger(_realHand.fingers.thumb.distal, handTarget.fingers.thumb.distal);
     }
 
     private void MapThumbFinger(FingersTarget.TargetedPhalanges realFinger, FingersTarget.TargetedPhalanges virtualFinger)
     {
-        Transform realTransform = realFinger.bone.transform;
-        Transform virtualTransform = virtualFinger.bone.transform;
-        
-        virtualTransform.localRotation = realTransform.localRotation;
-        virtualTransform.localPosition = realTransform.localPosition;
+        virtualFinger.target.transform.localRotation = Quaternion.Inverse(realFinger.target.transform.localRotation);
+        virtualFinger.target.transform.localPosition = realFinger.target.transform.localPosition;
     }
 
     private void UpdateFinger(FingersTarget.TargetedFinger finger, Finger index) 
@@ -109,8 +110,28 @@ public class VirtualHand : OpenVRHand
         {
             HandSkeleton realHandSkeleton = OpenVRHandSkeleton.Get(_realHand.humanoid.openVR.tracker.transform, _realHand.isLeft, _realHand.showRealObjects);
             Transform realBone = realHandSkeleton.GetBone(finger, fingerBone);
-            targetTransform.localRotation = Quaternion.Inverse(realBone.localRotation);
+            
+            if (handSkeleton.isLeft)
+            {
+                targetTransform.localRotation = Quaternion.Inverse(realBone.localRotation);
+                
+                if (finger == Finger.Middle)
+                {
+                    targetTransform.localRotation *= Quaternion.Euler(-10, 0, 0);
+                }
+            }
+            else
+            {
+                targetTransform.localRotation = realBone.localRotation;
+                
+                if (finger == Finger.Index)
+                {
+                    targetTransform.localRotation *= Quaternion.Euler(0, -5, 0);
+                }
+            }
         }
-        catch { }
+        catch
+        {
+        }
     }
 }
