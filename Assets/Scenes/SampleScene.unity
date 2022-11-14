@@ -1744,7 +1744,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243278365}
-  m_LocalRotation: {x: 0.024755066, y: -0.1182642, z: -0.0059870863, w: 0.9926555}
+  m_LocalRotation: {x: 0.024498532, y: -0.11888086, z: -0.006050489, w: 0.9925878}
   m_LocalPosition: {x: 0.1297741, y: -0.000000026077032, z: -0.0000000040163286}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1795,6 +1795,897 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1128676053858039139, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
   m_PrefabInstance: {fileID: 312422379}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &267310195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 267310196}
+  - component: {fileID: 267310197}
+  m_Layer: 0
+  m_Name: Right Hand Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &267310196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267310195}
+  m_LocalRotation: {x: -0.102684006, y: -0.0896362, z: 0.007705357, w: 0.9906371}
+  m_LocalPosition: {x: 0.71127105, y: 1.4960923, z: -0.08471966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 312422433}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &267310197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267310195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e499d70b79fff45a764b71bda439a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showRealObjects: 1
+  humanoid: {fileID: 312422434}
+  grabWithHandpose: 1
+  isLeft: 0
+  side: 2
+  outward: {x: 1, y: 0, z: 0}
+  up: {x: 0, y: 0, z: 0}
+  fingers:
+    handTarget: {fileID: 267310197}
+    thumb:
+      proximal:
+        name: 
+        boneId: 41
+        target:
+          length: 0.058860734
+          transform: {fileID: 1473481349}
+          baseRotation: {x: 0.02121629, y: -0.29991087, z: -0.067300685, w: 0.9513537}
+          basePosition: {x: 0.020828163, y: -0.009808791, z: 0.021831872}
+          toBoneRotation: {x: -0.035145182, y: -0.035151385, z: -0.70623386, w: 0.7062319}
+        bone:
+          transform: {fileID: 312422392}
+          length: 0.058860555
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.035145182, y: 0.035151385, z: 0.70623386, w: 0.7062319}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 42
+        target:
+          length: 0.030306416
+          transform: {fileID: 1901443644}
+          baseRotation: {x: 0.0033382743, y: 0.16158363, z: 0.020383796, w: 0.98664284}
+          basePosition: {x: 0.058860414, y: 0.000000019790605, z: -0.000000006519258}
+          toBoneRotation: {x: -0.046413388, y: -0.04641533, z: -0.70558494, w: 0.70557916}
+        bone:
+          transform: {fileID: 312422393}
+          length: 0.030306416
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.046413388, y: 0.04641533, z: 0.70558494, w: 0.70557916}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 43
+        target:
+          length: 0
+          transform: {fileID: 1637297982}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000005}
+          basePosition: {x: 0.030306369, y: -0.00000007645576, z: -0.00000018684659}
+          toBoneRotation: {x: -0.030739091, y: -0.06052018, z: -0.6860943, w: 0.72433966}
+        bone:
+          transform: {fileID: 312422394}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.030739091, y: 0.06052018, z: 0.6860943, w: 0.72433966}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    index:
+      proximal:
+        name: 
+        boneId: 45
+        target:
+          length: 0.042531323
+          transform: {fileID: 680275866}
+          baseRotation: {x: -0.002454406, y: 0.09478034, z: -0.02577044, w: 0.9951616}
+          basePosition: {x: 0.09360891, y: -0.004619788, z: 0.021801088}
+          toBoneRotation: {x: 0.06614802, y: 0.06614005, z: -0.7040055, w: 0.7040074}
+        bone:
+          transform: {fileID: 312422404}
+          length: 0.04253125
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06614802, y: -0.06614005, z: 0.7040055, w: 0.7040074}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 46
+        target:
+          length: 0.028680064
+          transform: {fileID: 1612738055}
+          baseRotation: {x: 0.0001626739, y: -0.0067364955, z: -0.024140904, w: 0.99968594}
+          basePosition: {x: 0.042531345, y: -0.00000003472087, z: -0.00000010152871}
+          toBoneRotation: {x: 0.070289895, y: 0.07029488, z: -0.70360315, w: 0.7036059}
+        bone:
+          transform: {fileID: 312422405}
+          length: 0.028680194
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.070289895, y: -0.07029488, z: 0.70360315, w: 0.7036059}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 47
+        target:
+          length: 0
+          transform: {fileID: 80946071}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000006}
+          basePosition: {x: 0.028680108, y: -0.0000000078670155, z: 0.000000070724326}
+          toBoneRotation: {x: 0.0809887, y: 0.061899643, z: -0.6803876, w: 0.725729}
+        bone:
+          transform: {fileID: 312422406}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.0809887, y: -0.061899643, z: 0.6803876, w: 0.725729}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    middle:
+      proximal:
+        name: 
+        boneId: 49
+        target:
+          length: 0.04863971
+          transform: {fileID: 1965365893}
+          baseRotation: {x: -0.0015714859, y: 0.0803619, z: -0.019488182, w: 0.996574}
+          basePosition: {x: 0.09193924, y: -0.000000026077032, z: 0.000000055937562}
+          toBoneRotation: {x: 0.066015124, y: 0.06598172, z: -0.7040315, w: 0.704009}
+        bone:
+          transform: {fileID: 312422401}
+          length: 0.04863953
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.066015124, y: -0.06598172, z: 0.7040315, w: 0.704009}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 50
+        target:
+          length: 0.030814927
+          transform: {fileID: 1028549647}
+          baseRotation: {x: 0.000028792863, y: -0.002661931, z: -0.010811341, w: 0.999938}
+          basePosition: {x: 0.048639864, y: -0.00000005478796, z: 0.00000011213706}
+          toBoneRotation: {x: 0.068485476, y: 0.06849138, z: -0.7037854, w: 0.7037793}
+        bone:
+          transform: {fileID: 312422402}
+          length: 0.030815052
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.068485476, y: -0.06849138, z: 0.7037854, w: 0.7037793}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 51
+        target:
+          length: 0
+          transform: {fileID: 2069889134}
+          baseRotation: {x: 0.00032146293, y: 0.0015927172, z: 0.0005711646, w: 0.9999986}
+          basePosition: {x: 0.03081482, y: -0.000000035502794, z: -0.000000041024038}
+          toBoneRotation: {x: 0.08020101, y: 0.058921903, z: -0.6858526, w: 0.72090423}
+        bone:
+          transform: {fileID: 312422403}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.08020101, y: -0.058921903, z: 0.6858526, w: 0.72090423}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    ring:
+      proximal:
+        name: 
+        boneId: 53
+        target:
+          length: 0.04648476
+          transform: {fileID: 1369208479}
+          baseRotation: {x: -0.00082956185, y: 0.08926987, z: -0.009255159, w: 0.9959641}
+          basePosition: {x: 0.08724535, y: -0.0021798718, z: -0.018599015}
+          toBoneRotation: {x: 0.06877955, y: 0.06877561, z: -0.7037559, w: 0.7037523}
+        bone:
+          transform: {fileID: 312422395}
+          length: 0.046484638
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06877955, y: -0.06877561, z: 0.7037559, w: 0.7037523}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 54
+        target:
+          length: 0.027029967
+          transform: {fileID: 182529289}
+          baseRotation: {x: -0.00007197104, y: 0.0044119945, z: -0.016312689, w: 0.99985725}
+          basePosition: {x: 0.046484757, y: 0.000000033847755, z: 0.00000003898458}
+          toBoneRotation: {x: 0.068736225, y: 0.0687405, z: -0.7037603, w: 0.7037554}
+        bone:
+          transform: {fileID: 312422396}
+          length: 0.027030015
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.068736225, y: -0.0687405, z: 0.7037603, w: 0.7037554}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 55
+        target:
+          length: 0
+          transform: {fileID: 1101862932}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000008}
+          basePosition: {x: 0.027029943, y: -0.00000010870866, z: 0.00000008633644}
+          toBoneRotation: {x: 0.07392, y: 0.06605253, z: -0.67320484, w: 0.7327814}
+        bone:
+          transform: {fileID: 312422397}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07392, y: -0.06605253, z: 0.67320484, w: 0.7327814}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    little:
+      proximal:
+        name: 
+        boneId: 57
+        target:
+          length: 0.0334534
+          transform: {fileID: 985644596}
+          baseRotation: {x: -0.00011338458, y: 0.08051146, z: -0.0014037348, w: 0.9967527}
+          basePosition: {x: 0.08545687, y: -0.004619783, z: -0.037151616}
+          toBoneRotation: {x: 0.06802302, y: 0.0680184, z: -0.7038269, w: 0.7038284}
+        bone:
+          transform: {fileID: 312422398}
+          length: 0.03345339
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06802302, y: -0.0680184, z: 0.7038269, w: 0.7038284}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 58
+        target:
+          length: 0.017647073
+          transform: {fileID: 636283813}
+          baseRotation: {x: 0.000008688646, y: -0.0065337797, z: -0.0013292377, w: 0.99997777}
+          basePosition: {x: 0.03345341, y: -0.000000019143272, z: -0.00000012719829}
+          toBoneRotation: {x: 0.06620374, y: 0.06620357, z: -0.70400566, w: 0.70399636}
+        bone:
+          transform: {fileID: 312422399}
+          length: 0.017647073
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06620374, y: -0.06620357, z: 0.70400566, w: 0.70399636}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 59
+        target:
+          length: 0
+          transform: {fileID: 28136920}
+          baseRotation: {x: 0.00041310902, y: 0.0015726144, z: 0.00056760083, w: 0.9999986}
+          basePosition: {x: 0.017647045, y: -0.000000018321737, z: -0.00000017322384}
+          toBoneRotation: {x: 0.07871492, y: 0.061640594, z: -0.653242, w: 0.7505199}
+        bone:
+          transform: {fileID: 312422400}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07871492, y: -0.061640594, z: 0.653242, w: 0.7505199}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    allFingers:
+    - proximal:
+        name: 
+        boneId: 41
+        target:
+          length: 0.058860734
+          transform: {fileID: 1473481349}
+          baseRotation: {x: 0.02121629, y: -0.29991087, z: -0.067300685, w: 0.9513537}
+          basePosition: {x: 0.020828163, y: -0.009808791, z: 0.021831872}
+          toBoneRotation: {x: -0.035145182, y: -0.035151385, z: -0.70623386, w: 0.7062319}
+        bone:
+          transform: {fileID: 312422392}
+          length: 0.058860555
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.035145182, y: 0.035151385, z: 0.70623386, w: 0.7062319}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 42
+        target:
+          length: 0.030306416
+          transform: {fileID: 1901443644}
+          baseRotation: {x: 0.0033382743, y: 0.16158363, z: 0.020383796, w: 0.98664284}
+          basePosition: {x: 0.058860414, y: 0.000000019790605, z: -0.000000006519258}
+          toBoneRotation: {x: -0.046413388, y: -0.04641533, z: -0.70558494, w: 0.70557916}
+        bone:
+          transform: {fileID: 312422393}
+          length: 0.030306416
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.046413388, y: 0.04641533, z: 0.70558494, w: 0.70557916}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 43
+        target:
+          length: 0
+          transform: {fileID: 1637297982}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000005}
+          basePosition: {x: 0.030306369, y: -0.00000007645576, z: -0.00000018684659}
+          toBoneRotation: {x: -0.030739091, y: -0.06052018, z: -0.6860943, w: 0.72433966}
+        bone:
+          transform: {fileID: 312422394}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.030739091, y: 0.06052018, z: 0.6860943, w: 0.72433966}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 45
+        target:
+          length: 0.042531323
+          transform: {fileID: 680275866}
+          baseRotation: {x: -0.002454406, y: 0.09478034, z: -0.02577044, w: 0.9951616}
+          basePosition: {x: 0.09360891, y: -0.004619788, z: 0.021801088}
+          toBoneRotation: {x: 0.06614802, y: 0.06614005, z: -0.7040055, w: 0.7040074}
+        bone:
+          transform: {fileID: 312422404}
+          length: 0.04253125
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06614802, y: -0.06614005, z: 0.7040055, w: 0.7040074}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 46
+        target:
+          length: 0.028680064
+          transform: {fileID: 1612738055}
+          baseRotation: {x: 0.0001626739, y: -0.0067364955, z: -0.024140904, w: 0.99968594}
+          basePosition: {x: 0.042531345, y: -0.00000003472087, z: -0.00000010152871}
+          toBoneRotation: {x: 0.070289895, y: 0.07029488, z: -0.70360315, w: 0.7036059}
+        bone:
+          transform: {fileID: 312422405}
+          length: 0.028680194
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.070289895, y: -0.07029488, z: 0.70360315, w: 0.7036059}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 47
+        target:
+          length: 0
+          transform: {fileID: 80946071}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000006}
+          basePosition: {x: 0.028680108, y: -0.0000000078670155, z: 0.000000070724326}
+          toBoneRotation: {x: 0.0809887, y: 0.061899643, z: -0.6803876, w: 0.725729}
+        bone:
+          transform: {fileID: 312422406}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.0809887, y: -0.061899643, z: 0.6803876, w: 0.725729}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 49
+        target:
+          length: 0.04863971
+          transform: {fileID: 1965365893}
+          baseRotation: {x: -0.0015714859, y: 0.0803619, z: -0.019488182, w: 0.996574}
+          basePosition: {x: 0.09193924, y: -0.000000026077032, z: 0.000000055937562}
+          toBoneRotation: {x: 0.066015124, y: 0.06598172, z: -0.7040315, w: 0.704009}
+        bone:
+          transform: {fileID: 312422401}
+          length: 0.04863953
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.066015124, y: -0.06598172, z: 0.7040315, w: 0.704009}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 50
+        target:
+          length: 0.030814927
+          transform: {fileID: 1028549647}
+          baseRotation: {x: 0.000028792863, y: -0.002661931, z: -0.010811341, w: 0.999938}
+          basePosition: {x: 0.048639864, y: -0.00000005478796, z: 0.00000011213706}
+          toBoneRotation: {x: 0.068485476, y: 0.06849138, z: -0.7037854, w: 0.7037793}
+        bone:
+          transform: {fileID: 312422402}
+          length: 0.030815052
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.068485476, y: -0.06849138, z: 0.7037854, w: 0.7037793}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 51
+        target:
+          length: 0
+          transform: {fileID: 2069889134}
+          baseRotation: {x: 0.00032146293, y: 0.0015927172, z: 0.0005711646, w: 0.9999986}
+          basePosition: {x: 0.03081482, y: -0.000000035502794, z: -0.000000041024038}
+          toBoneRotation: {x: 0.08020101, y: 0.058921903, z: -0.6858526, w: 0.72090423}
+        bone:
+          transform: {fileID: 312422403}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.08020101, y: -0.058921903, z: 0.6858526, w: 0.72090423}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 53
+        target:
+          length: 0.04648476
+          transform: {fileID: 1369208479}
+          baseRotation: {x: -0.00082956185, y: 0.08926987, z: -0.009255159, w: 0.9959641}
+          basePosition: {x: 0.08724535, y: -0.0021798718, z: -0.018599015}
+          toBoneRotation: {x: 0.06877955, y: 0.06877561, z: -0.7037559, w: 0.7037523}
+        bone:
+          transform: {fileID: 312422395}
+          length: 0.046484638
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06877955, y: -0.06877561, z: 0.7037559, w: 0.7037523}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 54
+        target:
+          length: 0.027029967
+          transform: {fileID: 182529289}
+          baseRotation: {x: -0.00007197104, y: 0.0044119945, z: -0.016312689, w: 0.99985725}
+          basePosition: {x: 0.046484757, y: 0.000000033847755, z: 0.00000003898458}
+          toBoneRotation: {x: 0.068736225, y: 0.0687405, z: -0.7037603, w: 0.7037554}
+        bone:
+          transform: {fileID: 312422396}
+          length: 0.027030015
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.068736225, y: -0.0687405, z: 0.7037603, w: 0.7037554}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 55
+        target:
+          length: 0
+          transform: {fileID: 1101862932}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000008}
+          basePosition: {x: 0.027029943, y: -0.00000010870866, z: 0.00000008633644}
+          toBoneRotation: {x: 0.07392, y: 0.06605253, z: -0.67320484, w: 0.7327814}
+        bone:
+          transform: {fileID: 312422397}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07392, y: -0.06605253, z: 0.67320484, w: 0.7327814}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 57
+        target:
+          length: 0.0334534
+          transform: {fileID: 985644596}
+          baseRotation: {x: -0.00011338458, y: 0.08051146, z: -0.0014037348, w: 0.9967527}
+          basePosition: {x: 0.08545687, y: -0.004619783, z: -0.037151616}
+          toBoneRotation: {x: 0.06802302, y: 0.0680184, z: -0.7038269, w: 0.7038284}
+        bone:
+          transform: {fileID: 312422398}
+          length: 0.03345339
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06802302, y: -0.0680184, z: 0.7038269, w: 0.7038284}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 58
+        target:
+          length: 0.017647073
+          transform: {fileID: 636283813}
+          baseRotation: {x: 0.000008688646, y: -0.0065337797, z: -0.0013292377, w: 0.99997777}
+          basePosition: {x: 0.03345341, y: -0.000000019143272, z: -0.00000012719829}
+          toBoneRotation: {x: 0.06620374, y: 0.06620357, z: -0.70400566, w: 0.70399636}
+        bone:
+          transform: {fileID: 312422399}
+          length: 0.017647073
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06620374, y: -0.06620357, z: 0.70400566, w: 0.70399636}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 59
+        target:
+          length: 0
+          transform: {fileID: 28136920}
+          baseRotation: {x: 0.00041310902, y: 0.0015726144, z: 0.00056760083, w: 0.9999986}
+          basePosition: {x: 0.017647045, y: -0.000000018321737, z: -0.00000017322384}
+          toBoneRotation: {x: 0.07871492, y: 0.061640594, z: -0.653242, w: 0.7505199}
+        bone:
+          transform: {fileID: 312422400}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07871492, y: -0.061640594, z: 0.653242, w: 0.7505199}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+  rotationSpeedLimitation: 0
+  unity: {fileID: 0}
+  armAnimator:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    armSwing: 0
+  unityXR:
+    enabled: 1
+    target: {fileID: 267310197}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    _unityXrController: {fileID: 0}
+  openVR:
+    enabled: 1
+    target: {fileID: 267310197}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
+  viveTracker:
+    enabled: 0
+    target: {fileID: 267310197}
+    sensorTransform: {fileID: 1581363855}
+    sensor2TargetPosition: {x: 0.00000005689799, y: -0.050000217, z: 0.00000020675361}
+    sensor2TargetRotation: {x: -0.0000000018855606, y: 0.0000000037289696, z: 8.633755e-10, w: 1}
+    handSkeleton: {fileID: 0}
+    attachedBone: 2
+  oculus:
+    enabled: 1
+    target: {fileID: 267310197}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    unityXRController: {fileID: 0}
+  stretchlessTarget: {fileID: 0}
+  shoulder:
+    name: 
+    boneId: 36
+    target:
+      length: 0.12977412
+      transform: {fileID: 1958833371}
+      baseRotation: {x: 0.08450463, y: 0.10777739, z: 0.008792184, w: 0.9905382}
+      basePosition: {x: 0.05887628, y: 0.37628475, z: 0.0018517375}
+      toBoneRotation: {x: 0.0011113355, y: 0.0011125896, z: -0.70710605, w: 0.707106}
+    bone:
+      transform: {fileID: 312422388}
+      length: 0.12977414
+      jointLimitations: 1
+      maxAngle: 30
+      minAngles: {x: 0, y: -45, z: 0}
+      maxAngles: {x: 0, y: 0, z: 45}
+      baseRotation: {x: 0.08451909, y: 0.107794896, z: 0.008793853, w: 0.99053496}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: -0.0011113355, y: -0.0011125896, z: 0.70710605, w: 0.707106}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  upperArm:
+    name: 
+    boneId: 37
+    target:
+      length: 0.26898432
+      transform: {fileID: 243278366}
+      baseRotation: {x: 0.0011576869, y: -0.1180924, z: -0.008795933, w: 0.99296314}
+      basePosition: {x: 0.12977408, y: 0.000000056810677, z: 0.000000029162038}
+      toBoneRotation: {x: 0.015540299, y: 0.015424159, z: -0.7069638, w: 0.706911}
+    bone:
+      transform: {fileID: 312422389}
+      length: 0.26898435
+      jointLimitations: 0
+      maxAngle: 120
+      minAngles: {x: -180, y: -130, z: -45}
+      maxAngles: {x: 60, y: 45, z: 180}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: -0.015540299, y: -0.015424159, z: 0.7069638, w: 0.706911}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  forearm:
+    name: 
+    boneId: 38
+    target:
+      length: 0.25686994
+      transform: {fileID: 1194933637}
+      baseRotation: {x: -0.050080035, y: -0.07655249, z: -0.0038499557, w: 0.99580014}
+      basePosition: {x: 0.2689843, y: -0.000000008411008, z: -0.000000020489097}
+      toBoneRotation: {x: -0.0293941, y: -0.029388864, z: -0.70649534, w: 0.7064963}
+    bone:
+      transform: {fileID: 312422390}
+      length: 0.25687027
+      jointLimitations: 0
+      maxAngle: 130
+      minAngles: {x: 0, y: -150, z: 0}
+      maxAngles: {x: 0, y: 0, z: 0}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: 0.0293941, y: 0.029388864, z: 0.70649534, w: 0.7064963}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  hand:
+    name: 
+    boneId: 40
+    target:
+      length: 0
+      transform: {fileID: 613033806}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toBoneRotation: {x: -0.006664064, y: 0.13925645, z: -0.71565866, w: 0.6843947}
+    bone:
+      transform: {fileID: 312422391}
+      length: 0.02
+      jointLimitations: 0
+      maxAngle: 100
+      minAngles: {x: -90, y: -20, z: -70}
+      maxAngles: {x: 45, y: 50, z: 70}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: 0.006664064, y: -0.13925645, z: 0.71565866, w: 0.6843947}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  poseMethod: 0
+  physics: 1
+  physicsMode: 2
+  strength: 100
+  grabbingTechnique: 1
+  nearDistance: 0.1
+  touchInteraction: 1
+  grabPose: {fileID: 0}
+  closedPose: {fileID: 0}
+  poseMixer:
+    mixedPoses: []
+    currentPoseIx: 0
+    detectedPoseIx: -1
+    poseMode: 0
+    detectedPose: {fileID: 0}
+  grabSocket: {fileID: 2126462925}
+  pinchSocket: {fileID: 503588313}
+  grabbedPrefab: {fileID: 0}
+  grabbedObject: {fileID: 0}
+  grabbedHandle: {fileID: 0}
+  targetToHandle: {x: 0, y: 0, z: 0}
+  grabbedRigidbody: 0
+  grabbedKinematicRigidbody: 0
+  colliders: []
+  twoHandedGrab: 0
+  targetToSecondaryHandle: {x: 0, y: 0, z: 0}
+  poseEvent:
+    id: 1
+    label: Pose Event
+    tooltip: 'Call functions based on recognized posesParameter: the recognized pose'
+    eventTypeLabels:
+    - Never
+    - On Pose Recognized
+    - On No Pose Recongnized
+    - While Pose Recognized
+    - While No Pose Recognized
+    - While Pose Changes
+    - Always
+    fromEventLabel: poseMixer.detectedPose
+    events: []
+  touchEvent:
+    id: 2
+    label: Touch Event
+    tooltip: 'Call funtions based on touched objectsParameter: the touched object'
+    eventTypeLabels:
+    - Never
+    - On Touch Start
+    - On Touch End
+    - While Touching
+    - While not Touching
+    - On Touched Object Changes
+    - Always
+    fromEventLabel: touchedObject
+    events: []
+  grabEvent:
+    id: 3
+    label: Grab Event
+    tooltip: 'Call functions based on grabbed objectsParameter: the grabbed object'
+    eventTypeLabels:
+    - Never
+    - On Grab Start
+    - On Grab End
+    - While Holding Object
+    - While not Holding Object
+    - On Grabbed Object Changes
+    - Always
+    fromEventLabel: grabbedObject
+    events: []
+  handPalm: {fileID: 463975109}
+  handRigidbody: {fileID: 0}
+  handPhysics: {fileID: 0}
+  grabbedChanged: 0
+  directFingerMovements: 1
 --- !u!1 &283801400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,19 +2768,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -9063934903362011785, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9979904
+      value: 0.9919713
       objectReference: {fileID: 0}
     - target: {fileID: -9063934903362011785, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00008411703
+      value: -0.000080905855
       objectReference: {fileID: 0}
     - target: {fileID: -9063934903362011785, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.063365385
+      value: 0.12646337
       objectReference: {fileID: 0}
     - target: {fileID: -9063934903362011785, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000042981457
+      value: -0.000047852285
+      objectReference: {fileID: 0}
+    - target: {fileID: -8712608076141188490, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8680729261100901431, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_RootOrder
@@ -1935,69 +2834,89 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8613773302792933248, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8607203352313505001, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8217417402019571285, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99964297
+      value: 0.9996429
       objectReference: {fileID: 0}
     - target: {fileID: -8217417402019571285, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.021911616
+      value: 0.02191467
       objectReference: {fileID: 0}
     - target: {fileID: -8217417402019571285, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00096618664
+      value: 0.0009662056
       objectReference: {fileID: 0}
     - target: {fileID: -8217417402019571285, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.015264996
+      value: 0.01526463
+      objectReference: {fileID: 0}
+    - target: {fileID: -8114228376269143413, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8015387511879216049, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7601228174633053548, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9998545
+      value: 0.9998549
       objectReference: {fileID: 0}
     - target: {fileID: -7601228174633053548, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.012460602
+      value: 0.012470425
       objectReference: {fileID: 0}
     - target: {fileID: -7601228174633053548, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0016485555
+      value: -0.0012492905
       objectReference: {fileID: 0}
     - target: {fileID: -7601228174633053548, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.011535548
+      value: -0.011533944
+      objectReference: {fileID: 0}
+    - target: {fileID: -7578257321885197491, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7564430873255186004, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9865701
+      value: 0.98657
       objectReference: {fileID: 0}
     - target: {fileID: -7564430873255186004, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.15816443
+      value: -0.15816464
       objectReference: {fileID: 0}
     - target: {fileID: -7564430873255186004, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.012408478
+      value: -0.012408349
       objectReference: {fileID: 0}
     - target: {fileID: -7564430873255186004, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.03885333
+      value: 0.03885307
       objectReference: {fileID: 0}
     - target: {fileID: -7542273642453916017, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99967015
+      value: 0.9996701
       objectReference: {fileID: 0}
     - target: {fileID: -7542273642453916017, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.025510706
+      value: 0.025510134
       objectReference: {fileID: 0}
     - target: {fileID: -7542273642453916017, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0014582229
+      value: -0.0014582343
       objectReference: {fileID: 0}
     - target: {fileID: -7542273642453916017, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0026046215
+      value: -0.0026075814
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2005,43 +2924,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.13486347
+      value: 0.1348634
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.024543526
+      value: 0.02454353
       objectReference: {fileID: 0}
     - target: {fileID: -7510068853178305942, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.013808175
+      value: -0.013808174
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000066955135
+      value: 0.00000066822713
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.46968853
+      value: 0.46968862
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0025003494
+      value: -0.0025006956
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.78204733
+      value: -0.7820494
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6206697
+      value: -0.6206671
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.03890825
+      value: 0.038908124
       objectReference: {fileID: 0}
     - target: {fileID: -7192905832188571825, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.040708523
+      value: -0.04070865
       objectReference: {fileID: 0}
     - target: {fileID: -7128567795561383244, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2049,47 +2968,83 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7128567795561383244, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0011768519
+      value: -0.0011809417
       objectReference: {fileID: 0}
     - target: {fileID: -7128567795561383244, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00012771334
+      value: -0.0001277156
       objectReference: {fileID: 0}
     - target: {fileID: -7128567795561383244, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.016859699
+      value: -0.016863262
+      objectReference: {fileID: 0}
+    - target: {fileID: -7079739761872325353, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6939139668292049779, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6923939213984607522, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6650361638478644873, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99957824
+      value: 0.99959064
       objectReference: {fileID: 0}
     - target: {fileID: -6650361638478644873, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.012579002
+      value: 0.010914665
       objectReference: {fileID: 0}
     - target: {fileID: -6650361638478644873, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0015656574
+      value: 0.0019337966
       objectReference: {fileID: 0}
     - target: {fileID: -6650361638478644873, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.026130749
+      value: 0.026377406
+      objectReference: {fileID: 0}
+    - target: {fileID: -6596416878752676983, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6592877221868327530, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6527723036144478885, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6499547173876975027, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6479912987762421573, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91051257
+      value: 0.91051304
       objectReference: {fileID: 0}
     - target: {fileID: -6479912987762421573, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.39965975
+      value: 0.39965853
       objectReference: {fileID: 0}
     - target: {fileID: -6479912987762421573, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.10000082
+      value: 0.10000048
       objectReference: {fileID: 0}
     - target: {fileID: -6479912987762421573, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.035196964
+      value: 0.035197765
+      objectReference: {fileID: 0}
+    - target: {fileID: -6208284818209695794, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6206718787589652962, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6126682267335366445, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2097,99 +3052,195 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6126682267335366445, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010247924
+      value: 0.0102479765
       objectReference: {fileID: 0}
     - target: {fileID: -6126682267335366445, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.001702707
+      value: -0.0017027839
       objectReference: {fileID: 0}
     - target: {fileID: -6126682267335366445, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.033247635
+      value: -0.03324765
       objectReference: {fileID: 0}
     - target: {fileID: -6118407527680671124, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9996677
+      value: 0.99966776
       objectReference: {fileID: 0}
     - target: {fileID: -6118407527680671124, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.011238142
+      value: 0.011253799
       objectReference: {fileID: 0}
     - target: {fileID: -6118407527680671124, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0060548494
+      value: -0.006055206
       objectReference: {fileID: 0}
     - target: {fileID: -6118407527680671124, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.022398265
+      value: 0.022387132
+      objectReference: {fileID: 0}
+    - target: {fileID: -6018380944837356074, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6011713804848960890, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5887037670231967524, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5840750359673601231, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5739039469422984170, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5492216845645977183, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5135019745354523074, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5109906711545895641, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999396
+      value: 0.9999382
       objectReference: {fileID: 0}
     - target: {fileID: -5109906711545895641, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.002950187
+      value: 0.0029520832
       objectReference: {fileID: 0}
     - target: {fileID: -5109906711545895641, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0039021275
+      value: -0.004256224
       objectReference: {fileID: 0}
     - target: {fileID: -5109906711545895641, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0098402575
+      value: 0.009838227
+      objectReference: {fileID: 0}
+    - target: {fileID: -4403895219066734694, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4360166336806234295, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4335015426039117693, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4143710855118023520, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3957722696452199523, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3901758867315301356, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3895224547801875012, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3841127019787874667, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3436981736663657504, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3383765313903907917, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3383765313903907917, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3372643722824285858, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3260906246563904939, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99941194
+      value: 0.999412
       objectReference: {fileID: 0}
     - target: {fileID: -3260906246563904939, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.022786057
+      value: 0.022786034
       objectReference: {fileID: 0}
     - target: {fileID: -3260906246563904939, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0010624813
+      value: -0.0010624678
       objectReference: {fileID: 0}
     - target: {fileID: -3260906246563904939, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.025600163
+      value: -0.025600044
+      objectReference: {fileID: 0}
+    - target: {fileID: -3220365837076574397, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3112537914233249302, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99798614
+      value: 0.9919421
       objectReference: {fileID: 0}
     - target: {fileID: -3112537914233249302, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00008407233
+      value: 0.0008287724
       objectReference: {fileID: 0}
     - target: {fileID: -3112537914233249302, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.06343201
+      value: -0.12668909
       objectReference: {fileID: 0}
     - target: {fileID: -3112537914233249302, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000405074
+      value: -0.00002985353
       objectReference: {fileID: 0}
     - target: {fileID: -3006772033495122993, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99987155
+      value: 0.9998716
       objectReference: {fileID: 0}
     - target: {fileID: -3006772033495122993, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.014777455
+      value: 0.014775476
       objectReference: {fileID: 0}
     - target: {fileID: -3006772033495122993, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0020449178
+      value: -0.002044721
       objectReference: {fileID: 0}
     - target: {fileID: -3006772033495122993, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0058625233
+      value: -0.0058630216
+      objectReference: {fileID: 0}
+    - target: {fileID: -2772400472138414656, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2601969827326112936, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2549078560930322912, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2503874237855416536, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2483429761692392863, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2327251958725981970, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2207,6 +3258,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0000000011690808
       objectReference: {fileID: 0}
+    - target: {fileID: -2107208441318730731, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1975247833437634863, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9999765
@@ -2223,21 +3278,29 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.000058372476
       objectReference: {fileID: 0}
+    - target: {fileID: -1887352272902988405, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1815146286518403126, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1729295793012034039, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9927181
+      value: 0.99193263
       objectReference: {fileID: 0}
     - target: {fileID: -1729295793012034039, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.118405886
+      value: 0.11851478
       objectReference: {fileID: 0}
     - target: {fileID: -1729295793012034039, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.021307943
+      value: -0.04486945
       objectReference: {fileID: 0}
     - target: {fileID: -1729295793012034039, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0060767303
+      value: 0.0032678503
       objectReference: {fileID: 0}
     - target: {fileID: -1700544684200432963, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2267,53 +3330,61 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.00000002061539
       objectReference: {fileID: 0}
+    - target: {fileID: -1592100605374333841, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1557721704481497718, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1372956684692220268, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9996701
+      value: 0.99967015
       objectReference: {fileID: 0}
     - target: {fileID: -1372956684692220268, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.025510622
+      value: 0.025511093
       objectReference: {fileID: 0}
     - target: {fileID: -1372956684692220268, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0014588411
+      value: 0.0014589273
       objectReference: {fileID: 0}
     - target: {fileID: -1372956684692220268, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0026050734
+      value: 0.0026052988
       objectReference: {fileID: 0}
     - target: {fileID: -1192127454424002365, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999745
+      value: 0.9999744
       objectReference: {fileID: 0}
     - target: {fileID: -1192127454424002365, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.006664903
+      value: 0.006668172
       objectReference: {fileID: 0}
     - target: {fileID: -1192127454424002365, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0025767123
+      value: 0.0025766771
       objectReference: {fileID: 0}
     - target: {fileID: -1192127454424002365, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000082314065
+      value: 0.000079766556
       objectReference: {fileID: 0}
     - target: {fileID: -1116551521090907254, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9996429
+      value: 0.99964297
       objectReference: {fileID: 0}
     - target: {fileID: -1116551521090907254, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.021911493
+      value: 0.021911064
       objectReference: {fileID: 0}
     - target: {fileID: -1116551521090907254, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00096598896
+      value: -0.0009659595
       objectReference: {fileID: 0}
     - target: {fileID: -1116551521090907254, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.015264763
+      value: -0.0152641935
       objectReference: {fileID: 0}
     - target: {fileID: -968854542467661828, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2321,15 +3392,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -968854542467661828, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.014243314
+      value: 0.014243367
       objectReference: {fileID: 0}
     - target: {fileID: -968854542467661828, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0011967105
+      value: -0.0011967395
       objectReference: {fileID: 0}
     - target: {fileID: -968854542467661828, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.025883611
+      value: -0.025883436
       objectReference: {fileID: 0}
     - target: {fileID: -925500418468163455, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2337,15 +3408,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -925500418468163455, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.014777656
+      value: 0.014779378
       objectReference: {fileID: 0}
     - target: {fileID: -925500418468163455, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0020450898
+      value: 0.0020451015
       objectReference: {fileID: 0}
     - target: {fileID: -925500418468163455, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.005862674
+      value: 0.005862004
+      objectReference: {fileID: 0}
+    - target: {fileID: -807006819798673388, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -667818693221067503, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -651492962353453222, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -516775627453787792, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -383895749176718589, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2363,6 +3450,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.9958935
       objectReference: {fileID: 0}
+    - target: {fileID: 6723458012527362, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 140937275956955998, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9904067
@@ -2379,41 +3470,89 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.013803469
       objectReference: {fileID: 0}
+    - target: {fileID: 180102272511665586, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 294930638542699242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99985725
+      value: 0.9998573
       objectReference: {fileID: 0}
     - target: {fileID: 294930638542699242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.001177511
+      value: -0.0011706381
       objectReference: {fileID: 0}
     - target: {fileID: 294930638542699242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00012500968
+      value: 0.00012482973
       objectReference: {fileID: 0}
     - target: {fileID: 294930638542699242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.016857235
+      value: 0.016854959
+      objectReference: {fileID: 0}
+    - target: {fileID: 661905664675523231, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 819278646419938857, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_Name
       value: male_Thin_1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 925397956330762037, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056695664121213787, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1407616645643183796, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9994118
+      value: 0.99941176
       objectReference: {fileID: 0}
     - target: {fileID: 1407616645643183796, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.022786967
+      value: 0.02278706
       objectReference: {fileID: 0}
     - target: {fileID: 1407616645643183796, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0010736714
+      value: 0.0010736734
       objectReference: {fileID: 0}
     - target: {fileID: 1407616645643183796, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.025607115
+      value: 0.025607249
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419916910092246721, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482564305681159382, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783293079877131076, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941293281860906488, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958580806032994409, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048471006983846629, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2436602780775836954, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2443,6 +3582,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.0000011514892
       objectReference: {fileID: 0}
+    - target: {fileID: 2601124371560717486, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2664926551721883317, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00000076692555
@@ -2471,21 +3614,25 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.040709283
       objectReference: {fileID: 0}
+    - target: {fileID: 2773982092775061752, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99999267
+      value: 0.9999927
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0038015211
+      value: -0.0037886826
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00048711448
+      value: 0.00048711564
       objectReference: {fileID: 0}
     - target: {fileID: 2873351865157507531, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000044399727
+      value: -0.00004435162
       objectReference: {fileID: 0}
     - target: {fileID: 2936792236941852015, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2493,75 +3640,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2936792236941852015, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0071986998
+      value: 0.0071987147
       objectReference: {fileID: 0}
     - target: {fileID: 2936792236941852015, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.005354402
+      value: -0.005354285
       objectReference: {fileID: 0}
     - target: {fileID: 2936792236941852015, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06937487
+      value: -0.0693749
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954241625325942413, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241518307271471485, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.009832
+      value: -0.009832008
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0024901142
+      value: 0.002490209
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.08846645
+      value: -0.08845705
       objectReference: {fileID: 0}
     - target: {fileID: 3261469352476761151, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9960275
+      value: -0.99602836
       objectReference: {fileID: 0}
     - target: {fileID: 3608902352428601334, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91051275
+      value: 0.9105121
       objectReference: {fileID: 0}
     - target: {fileID: 3608902352428601334, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.39965948
+      value: 0.39966118
       objectReference: {fileID: 0}
     - target: {fileID: 3608902352428601334, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.10000009
+      value: -0.09999886
       objectReference: {fileID: 0}
     - target: {fileID: 3608902352428601334, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.035197556
+      value: -0.035200115
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721656726795648037, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036950252047398180, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4287408333398144738, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328284726718729694, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000008105323
+      value: -0.0000010647924
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2568703
+      value: 0.25687036
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.000001647633
+      value: 0.0000015716283
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.999195
+      value: 0.99707323
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.020809228
+      value: -0.021044642
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.033710763
+      value: -0.07329298
       objectReference: {fileID: 0}
     - target: {fileID: 4463382142986792340, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0063284473
+      value: 0.0054985294
+      objectReference: {fileID: 0}
+    - target: {fileID: 4655872356275022481, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691854514888324354, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4836608483948968533, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2579,21 +3758,29 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0000016320217
       objectReference: {fileID: 0}
+    - target: {fileID: 4944645402038743409, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4949417779550672537, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9927225
+      value: 0.99203545
       objectReference: {fileID: 0}
     - target: {fileID: 4949417779550672537, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.11836637
+      value: 0.11756476
       objectReference: {fileID: 0}
     - target: {fileID: 4949417779550672537, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.021326348
+      value: 0.0450995
       objectReference: {fileID: 0}
     - target: {fileID: 4949417779550672537, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.006058583
+      value: -0.0032065068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018535173608937605, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5286744488484192981, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2601,155 +3788,215 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286744488484192981, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0014457052
+      value: 0.0014456635
       objectReference: {fileID: 0}
     - target: {fileID: 5286744488484192981, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0018533967
+      value: -0.0018534533
       objectReference: {fileID: 0}
     - target: {fileID: 5286744488484192981, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.04246444
+      value: -0.042464364
       objectReference: {fileID: 0}
     - target: {fileID: 5337117215536541608, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9998547
+      value: 0.99985516
       objectReference: {fileID: 0}
     - target: {fileID: 5337117215536541608, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.012447522
+      value: 0.012456308
       objectReference: {fileID: 0}
     - target: {fileID: 5337117215536541608, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0016502319
+      value: 0.0012516968
       objectReference: {fileID: 0}
     - target: {fileID: 5337117215536541608, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.01153409
+      value: 0.011531373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390736960341708541, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000033213294
+      value: 0.000000629334
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25687033
+      value: 0.2568704
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0000020581213
+      value: 0.0000016410197
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99917036
+      value: 0.99705625
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.022154892
+      value: -0.022381673
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.033603884
+      value: 0.07313924
       objectReference: {fileID: 0}
     - target: {fileID: 5425705057290989030, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00620715
+      value: -0.005343002
       objectReference: {fileID: 0}
     - target: {fileID: 5486838133707298220, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99939334
+      value: 0.9993934
       objectReference: {fileID: 0}
     - target: {fileID: 5486838133707298220, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.010247621
+      value: 0.010247702
       objectReference: {fileID: 0}
     - target: {fileID: 5486838133707298220, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0016974031
+      value: 0.0016974359
       objectReference: {fileID: 0}
     - target: {fileID: 5486838133707298220, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.033242617
+      value: 0.033242777
       objectReference: {fileID: 0}
     - target: {fileID: 5810923416060958090, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7065488
+      value: 0.70654887
       objectReference: {fileID: 0}
     - target: {fileID: 5810923416060958090, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.007115706
+      value: -0.007115729
       objectReference: {fileID: 0}
     - target: {fileID: 5810923416060958090, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.1451964
+      value: -0.14519638
       objectReference: {fileID: 0}
     - target: {fileID: 5810923416060958090, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6925722
+      value: 0.69257206
       objectReference: {fileID: 0}
     - target: {fileID: 5839510010507201617, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98656994
+      value: 0.98657095
       objectReference: {fileID: 0}
     - target: {fileID: 5839510010507201617, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.1581651
+      value: -0.15815927
       objectReference: {fileID: 0}
     - target: {fileID: 5839510010507201617, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.01240809
+      value: 0.012408229
       objectReference: {fileID: 0}
     - target: {fileID: 5839510010507201617, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.038852744
+      value: -0.038853254
       objectReference: {fileID: 0}
     - target: {fileID: 5884070034386385307, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70654875
+      value: 0.706549
       objectReference: {fileID: 0}
     - target: {fileID: 5884070034386385307, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0071157096
+      value: -0.007115636
       objectReference: {fileID: 0}
     - target: {fileID: 5884070034386385307, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.14519663
+      value: 0.14519662
       objectReference: {fileID: 0}
     - target: {fileID: 5884070034386385307, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.6925723
+      value: -0.69257194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6133423733873458599, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6154484864668440433, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199192012644603378, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6271976247251651349, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9975407
+      value: 0.9975276
       objectReference: {fileID: 0}
     - target: {fileID: 6271976247251651349, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.005579413
+      value: 0.0039598276
       objectReference: {fileID: 0}
     - target: {fileID: 6271976247251651349, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0058762706
+      value: 0.006404889
       objectReference: {fileID: 0}
     - target: {fileID: 6271976247251651349, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.06962053
+      value: 0.06987213
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314752401652805594, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333495473706439044, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6411388359868785171, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446166843884870528, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595400751286067220, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755895025571388623, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881376149413677449, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6969474127178794604, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99909484
+      value: 0.9990949
       objectReference: {fileID: 0}
     - target: {fileID: 6969474127178794604, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0014442272
+      value: 0.0014442935
       objectReference: {fileID: 0}
     - target: {fileID: 6969474127178794604, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0018614456
+      value: 0.0018614659
       objectReference: {fileID: 0}
     - target: {fileID: 6969474127178794604, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.042472057
+      value: 0.042472135
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103640243792834533, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104311154572629256, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122344350811747252, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7294390042540146916, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2779,37 +4026,101 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.000000002419789
       objectReference: {fileID: 0}
+    - target: {fileID: 7303391058007302287, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7406555062019610378, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7505739299982969526, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99966764
+      value: 0.9996677
       objectReference: {fileID: 0}
     - target: {fileID: 7505739299982969526, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.011238238
+      value: 0.011248255
       objectReference: {fileID: 0}
     - target: {fileID: 7505739299982969526, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0060548107
+      value: 0.006055086
       objectReference: {fileID: 0}
     - target: {fileID: 7505739299982969526, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.022398004
+      value: -0.022387883
       objectReference: {fileID: 0}
     - target: {fileID: 7557876669416501242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99993193
+      value: 0.999932
       objectReference: {fileID: 0}
     - target: {fileID: 7557876669416501242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.004631853
+      value: 0.004635058
       objectReference: {fileID: 0}
     - target: {fileID: 7557876669416501242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0035658423
+      value: 0.0035658681
       objectReference: {fileID: 0}
     - target: {fileID: 7557876669416501242, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010102894
+      value: -0.010099799
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558194718207895815, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666215788402631102, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763027238727644047, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7781793610721705001, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797104415677652783, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7905116135096078956, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7911981368196235282, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964288732455565031, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107367109164960522, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304175215116285622, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340167086832972872, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8380973694583538557, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603960705552321987, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686918652142966079, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8688627261733828367, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2817,15 +4128,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8688627261733828367, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0066648405
+      value: 0.0066630943
       objectReference: {fileID: 0}
     - target: {fileID: 8688627261733828367, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0025726163
+      value: -0.0025726215
       objectReference: {fileID: 0}
     - target: {fileID: 8688627261733828367, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00007849924
+      value: -0.00007902169
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794944980326481951, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827084527582276505, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901111552321213403, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
@@ -3142,8 +4465,8 @@ MonoBehaviour:
   id: -1
   path: /Humanoid/Scripts/
   headTarget: {fileID: 4202183}
-  leftHandTarget: {fileID: 349505675}
-  rightHandTarget: {fileID: 613033807}
+  leftHandTarget: {fileID: 358458284}
+  rightHandTarget: {fileID: 267310197}
   hipsTarget: {fileID: 1176931461}
   leftFootTarget: {fileID: 1818521607}
   rightFootTarget: {fileID: 921356252}
@@ -3239,7 +4562,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318391643}
-  m_LocalRotation: {x: -0.06346978, y: -0.00000009685749, z: -0.00000013830132, w: 0.99798375}
+  m_LocalRotation: {x: -0.06363903, y: 0.0013831846, z: 0.00012187839, w: 0.997972}
   m_LocalPosition: {x: -0.26898423, y: 0.0000000016443664, z: 0.000000016298145}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3272,8 +4595,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349505673}
-  m_LocalRotation: {x: -0.062262647, y: 0.08262507, z: -0.014444422, w: 0.99452895}
-  m_LocalPosition: {x: -0.2568703, y: -0.0000011355152, z: 0.000000011277734}
+  m_LocalRotation: {x: -0.062372543, y: 0.08261911, z: -0.0144549, w: 0.9945224}
+  m_LocalPosition: {x: -0.25687242, y: -0.000113748705, z: 0.00073846936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3971,11 +5294,11 @@ MonoBehaviour:
     controllerType: 0
     useSkeletalInput: 1
   viveTracker:
-    enabled: 0
+    enabled: 1
     target: {fileID: 349505675}
     sensorTransform: {fileID: 1581363855}
-    sensor2TargetPosition: {x: 0.000000052707037, y: -0.0499988, z: -0.00000073737465}
-    sensor2TargetRotation: {x: 5.1670827e-11, y: 0.000000004632653, z: -0.0000000010419741, w: 1.0000001}
+    sensor2TargetPosition: {x: -0.3728676, y: -0.043471135, z: -0.0067539215}
+    sensor2TargetRotation: {x: 0.00056365546, y: 0.020199494, z: 0.01755115, w: 0.9996419}
     handSkeleton: {fileID: 0}
     attachedBone: 2
   oculus:
@@ -4140,7 +5463,898 @@ MonoBehaviour:
     fromEventLabel: grabbedObject
     events: []
   handPalm: {fileID: 1879411751}
-  handRigidbody: {fileID: 1440495842}
+  handRigidbody: {fileID: 0}
+  handPhysics: {fileID: 0}
+  grabbedChanged: 0
+  directFingerMovements: 1
+--- !u!1 &358458282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358458283}
+  - component: {fileID: 358458284}
+  m_Layer: 0
+  m_Name: Left Hand Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358458283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358458282}
+  m_LocalRotation: {x: -0.102586195, y: 0.09100978, z: -0.007483868, w: 0.9905238}
+  m_LocalPosition: {x: -0.71127546, y: 1.4960762, z: -0.08467865}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 312422433}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &358458284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358458282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e499d70b79fff45a764b71bda439a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showRealObjects: 1
+  humanoid: {fileID: 312422434}
+  grabWithHandpose: 1
+  isLeft: 1
+  side: 1
+  outward: {x: -1, y: 0, z: 0}
+  up: {x: 0, y: 0, z: 0}
+  fingers:
+    handTarget: {fileID: 358458284}
+    thumb:
+      proximal:
+        name: 
+        boneId: 13
+        target:
+          length: 0.058860607
+          transform: {fileID: 1429220210}
+          baseRotation: {x: 0.021218, y: 0.29991382, z: 0.0673053, w: 0.95135236}
+          basePosition: {x: -0.020827822, y: -0.0098085, z: 0.021831904}
+          toBoneRotation: {x: -0.03514841, y: 0.035149403, z: 0.7062305, w: 0.7062353}
+        bone:
+          transform: {fileID: 312422413}
+          length: 0.05886069
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.03514841, y: -0.035149403, z: -0.7062305, w: 0.7062353}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 14
+        target:
+          length: 0.030306369
+          transform: {fileID: 283801401}
+          baseRotation: {x: 0.0033380527, y: -0.16158958, z: -0.020381695, w: 0.98664194}
+          basePosition: {x: -0.05886043, y: 0.00000004377216, z: -0.00000019045547}
+          toBoneRotation: {x: -0.04641356, y: 0.04641804, z: 0.70558107, w: 0.7055827}
+        bone:
+          transform: {fileID: 312422414}
+          length: 0.030306157
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.04641356, y: -0.04641804, z: -0.70558107, w: 0.7055827}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 15
+        target:
+          length: 0
+          transform: {fileID: 803248691}
+          baseRotation: {x: -0.0000000059282885, y: -0.000000011655477, z: -0.00000004063178, w: 1.0000005}
+          basePosition: {x: -0.030306358, y: 0.000000055428245, z: -0.000000009138603}
+          toBoneRotation: {x: -0.030747438, y: 0.06053031, z: 0.6860948, w: 0.7243376}
+        bone:
+          transform: {fileID: 312422415}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.030747438, y: -0.06053031, z: -0.6860948, w: 0.7243376}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    index:
+      proximal:
+        name: 
+        boneId: 17
+        target:
+          length: 0.042531334
+          transform: {fileID: 1125376186}
+          baseRotation: {x: -0.0024542988, y: -0.09479133, z: 0.025766293, w: 0.9951606}
+          basePosition: {x: -0.093609035, y: -0.0046194214, z: 0.021801062}
+          toBoneRotation: {x: 0.06614604, y: -0.066141665, z: 0.7040067, w: 0.70400655}
+        bone:
+          transform: {fileID: 312422425}
+          length: 0.042531326
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06614604, y: 0.066141665, z: -0.7040067, w: 0.70400655}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 18
+        target:
+          length: 0.028679939
+          transform: {fileID: 1184372271}
+          baseRotation: {x: 0.00016251211, y: 0.006727545, z: 0.024146222, w: 0.99968576}
+          basePosition: {x: -0.042531367, y: 0.000000053922122, z: 0.00000006258779}
+          toBoneRotation: {x: 0.07029397, y: -0.0702908, z: 0.7036, w: 0.70360935}
+        bone:
+          transform: {fileID: 312422426}
+          length: 0.028679928
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07029397, y: 0.0702908, z: -0.7036, w: 0.70360935}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 19
+        target:
+          length: 0
+          transform: {fileID: 74550416}
+          baseRotation: {x: 1.5945058e-12, y: 0.0000000063430075, z: 0.00000010163441, w: 1.0000005}
+          basePosition: {x: -0.028679773, y: -0.00000009517339, z: -0.00000003818056}
+          toBoneRotation: {x: 0.080996946, y: -0.061898597, z: 0.68038017, w: 0.72573525}
+        bone:
+          transform: {fileID: 312422427}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.080996946, y: 0.061898597, z: -0.68038017, w: 0.72573525}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    middle:
+      proximal:
+        name: 
+        boneId: 21
+        target:
+          length: 0.04863935
+          transform: {fileID: 1361534612}
+          baseRotation: {x: -0.0015719273, y: -0.08036343, z: 0.019493273, w: 0.9965737}
+          basePosition: {x: -0.09193919, y: -0.000000026309863, z: 0.0000002530869}
+          toBoneRotation: {x: 0.066015385, y: -0.06598193, z: 0.7040287, w: 0.7040115}
+        bone:
+          transform: {fileID: 312422422}
+          length: 0.048639588
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.066015385, y: 0.06598193, z: -0.7040287, w: 0.7040115}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 22
+        target:
+          length: 0.030815376
+          transform: {fileID: 90525396}
+          baseRotation: {x: 0.000010862785, y: 0.0010600473, z: 0.010230627, w: 0.99994713}
+          basePosition: {x: -0.048639566, y: 0.00000003596506, z: -0.00000020691368}
+          toBoneRotation: {x: 0.06873303, y: -0.06874289, z: 0.7037618, w: 0.70375407}
+        bone:
+          transform: {fileID: 312422423}
+          length: 0.030815162
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06873303, y: 0.06874289, z: -0.7037618, w: 0.70375407}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 23
+        target:
+          length: 0
+          transform: {fileID: 1022750119}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000006}
+          basePosition: {x: -0.030815423, y: 0.000000051562026, z: -0.00000011293636}
+          toBoneRotation: {x: 0.08134827, y: -0.057752114, z: 0.68613553, w: 0.720601}
+        bone:
+          transform: {fileID: 312422424}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.08134827, y: 0.057752114, z: -0.68613553, w: 0.720601}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    ring:
+      proximal:
+        name: 
+        boneId: 25
+        target:
+          length: 0.046484876
+          transform: {fileID: 976489857}
+          baseRotation: {x: -0.00083013024, y: -0.08926693, z: 0.009262018, w: 0.9959642}
+          basePosition: {x: -0.08724544, y: -0.0021794364, z: -0.018599069}
+          toBoneRotation: {x: 0.06877669, y: -0.06877951, z: 0.7037521, w: 0.70375615}
+        bone:
+          transform: {fileID: 312422416}
+          length: 0.046484884
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06877669, y: 0.06877951, z: -0.7037521, w: 0.70375615}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 26
+        target:
+          length: 0.02703002
+          transform: {fileID: 1991630829}
+          baseRotation: {x: -0.00007217371, y: -0.0044247652, z: 0.016308496, w: 0.9998572}
+          basePosition: {x: -0.046484996, y: 0.000000014786565, z: -0.0000002226152}
+          toBoneRotation: {x: 0.06874435, y: -0.068737485, z: 0.70375663, w: 0.7037588}
+        bone:
+          transform: {fileID: 312422417}
+          length: 0.02703026
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06874435, y: 0.068737485, z: -0.70375663, w: 0.7037588}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 27
+        target:
+          length: 0
+          transform: {fileID: 579470192}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000005}
+          basePosition: {x: -0.027030155, y: 0.00000001499518, z: 0.00000008655142}
+          toBoneRotation: {x: 0.073922835, y: -0.06604309, z: 0.6732073, w: 0.73278004}
+        bone:
+          transform: {fileID: 312422418}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.073922835, y: 0.06604309, z: -0.6732073, w: 0.73278004}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    little:
+      proximal:
+        name: 
+        boneId: 29
+        target:
+          length: 0.033453472
+          transform: {fileID: 1421924942}
+          baseRotation: {x: -0.00011370005, y: -0.080508366, z: 0.0014076853, w: 0.99675286}
+          basePosition: {x: -0.085456766, y: -0.004619406, z: -0.03715177}
+          toBoneRotation: {x: 0.06802033, y: -0.06802222, z: 0.7038252, w: 0.7038302}
+        bone:
+          transform: {fileID: 312422419}
+          length: 0.033453353
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06802033, y: 0.06802222, z: -0.7038252, w: 0.7038302}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 30
+        target:
+          length: 0.017647104
+          transform: {fileID: 832767646}
+          baseRotation: {x: 0.0000086963855, y: 0.006527629, z: 0.0013345603, w: 0.9999778}
+          basePosition: {x: -0.033453494, y: 0.00000007337985, z: -0.0000000030486262}
+          toBoneRotation: {x: 0.06620196, y: -0.0662007, z: 0.7040026, w: 0.70399976}
+        bone:
+          transform: {fileID: 312422420}
+          length: 0.017647224
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06620196, y: 0.0662007, z: -0.7040026, w: 0.70399976}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 31
+        target:
+          length: 0
+          transform: {fileID: 493046160}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000001}
+          basePosition: {x: -0.017647268, y: 0.00000009568308, z: -0.000000107869894}
+          toBoneRotation: {x: 0.07946984, y: -0.06014735, z: 0.65356016, w: 0.7502842}
+        bone:
+          transform: {fileID: 312422421}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07946984, y: 0.06014735, z: -0.65356016, w: 0.7502842}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    allFingers:
+    - proximal:
+        name: 
+        boneId: 13
+        target:
+          length: 0.058860607
+          transform: {fileID: 1429220210}
+          baseRotation: {x: 0.021218, y: 0.29991382, z: 0.0673053, w: 0.95135236}
+          basePosition: {x: -0.020827822, y: -0.0098085, z: 0.021831904}
+          toBoneRotation: {x: -0.03514841, y: 0.035149403, z: 0.7062305, w: 0.7062353}
+        bone:
+          transform: {fileID: 312422413}
+          length: 0.05886069
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.03514841, y: -0.035149403, z: -0.7062305, w: 0.7062353}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 14
+        target:
+          length: 0.030306369
+          transform: {fileID: 283801401}
+          baseRotation: {x: 0.0033380527, y: -0.16158958, z: -0.020381695, w: 0.98664194}
+          basePosition: {x: -0.05886043, y: 0.00000004377216, z: -0.00000019045547}
+          toBoneRotation: {x: -0.04641356, y: 0.04641804, z: 0.70558107, w: 0.7055827}
+        bone:
+          transform: {fileID: 312422414}
+          length: 0.030306157
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.04641356, y: -0.04641804, z: -0.70558107, w: 0.7055827}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 15
+        target:
+          length: 0
+          transform: {fileID: 803248691}
+          baseRotation: {x: -0.0000000059282885, y: -0.000000011655477, z: -0.00000004063178, w: 1.0000005}
+          basePosition: {x: -0.030306358, y: 0.000000055428245, z: -0.000000009138603}
+          toBoneRotation: {x: -0.030747438, y: 0.06053031, z: 0.6860948, w: 0.7243376}
+        bone:
+          transform: {fileID: 312422415}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0.030747438, y: -0.06053031, z: -0.6860948, w: 0.7243376}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 17
+        target:
+          length: 0.042531334
+          transform: {fileID: 1125376186}
+          baseRotation: {x: -0.0024542988, y: -0.09479133, z: 0.025766293, w: 0.9951606}
+          basePosition: {x: -0.093609035, y: -0.0046194214, z: 0.021801062}
+          toBoneRotation: {x: 0.06614604, y: -0.066141665, z: 0.7040067, w: 0.70400655}
+        bone:
+          transform: {fileID: 312422425}
+          length: 0.042531326
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06614604, y: 0.066141665, z: -0.7040067, w: 0.70400655}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 18
+        target:
+          length: 0.028679939
+          transform: {fileID: 1184372271}
+          baseRotation: {x: 0.00016251211, y: 0.006727545, z: 0.024146222, w: 0.99968576}
+          basePosition: {x: -0.042531367, y: 0.000000053922122, z: 0.00000006258779}
+          toBoneRotation: {x: 0.07029397, y: -0.0702908, z: 0.7036, w: 0.70360935}
+        bone:
+          transform: {fileID: 312422426}
+          length: 0.028679928
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07029397, y: 0.0702908, z: -0.7036, w: 0.70360935}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 19
+        target:
+          length: 0
+          transform: {fileID: 74550416}
+          baseRotation: {x: 1.5945058e-12, y: 0.0000000063430075, z: 0.00000010163441, w: 1.0000005}
+          basePosition: {x: -0.028679773, y: -0.00000009517339, z: -0.00000003818056}
+          toBoneRotation: {x: 0.080996946, y: -0.061898597, z: 0.68038017, w: 0.72573525}
+        bone:
+          transform: {fileID: 312422427}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.080996946, y: 0.061898597, z: -0.68038017, w: 0.72573525}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 21
+        target:
+          length: 0.04863935
+          transform: {fileID: 1361534612}
+          baseRotation: {x: -0.0015719273, y: -0.08036343, z: 0.019493273, w: 0.9965737}
+          basePosition: {x: -0.09193919, y: -0.000000026309863, z: 0.0000002530869}
+          toBoneRotation: {x: 0.066015385, y: -0.06598193, z: 0.7040287, w: 0.7040115}
+        bone:
+          transform: {fileID: 312422422}
+          length: 0.048639588
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.066015385, y: 0.06598193, z: -0.7040287, w: 0.7040115}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 22
+        target:
+          length: 0.030815376
+          transform: {fileID: 90525396}
+          baseRotation: {x: 0.000010862785, y: 0.0010600473, z: 0.010230627, w: 0.99994713}
+          basePosition: {x: -0.048639566, y: 0.00000003596506, z: -0.00000020691368}
+          toBoneRotation: {x: 0.06873303, y: -0.06874289, z: 0.7037618, w: 0.70375407}
+        bone:
+          transform: {fileID: 312422423}
+          length: 0.030815162
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06873303, y: 0.06874289, z: -0.7037618, w: 0.70375407}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 23
+        target:
+          length: 0
+          transform: {fileID: 1022750119}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000006}
+          basePosition: {x: -0.030815423, y: 0.000000051562026, z: -0.00000011293636}
+          toBoneRotation: {x: 0.08134827, y: -0.057752114, z: 0.68613553, w: 0.720601}
+        bone:
+          transform: {fileID: 312422424}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.08134827, y: 0.057752114, z: -0.68613553, w: 0.720601}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 25
+        target:
+          length: 0.046484876
+          transform: {fileID: 976489857}
+          baseRotation: {x: -0.00083013024, y: -0.08926693, z: 0.009262018, w: 0.9959642}
+          basePosition: {x: -0.08724544, y: -0.0021794364, z: -0.018599069}
+          toBoneRotation: {x: 0.06877669, y: -0.06877951, z: 0.7037521, w: 0.70375615}
+        bone:
+          transform: {fileID: 312422416}
+          length: 0.046484884
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06877669, y: 0.06877951, z: -0.7037521, w: 0.70375615}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 26
+        target:
+          length: 0.02703002
+          transform: {fileID: 1991630829}
+          baseRotation: {x: -0.00007217371, y: -0.0044247652, z: 0.016308496, w: 0.9998572}
+          basePosition: {x: -0.046484996, y: 0.000000014786565, z: -0.0000002226152}
+          toBoneRotation: {x: 0.06874435, y: -0.068737485, z: 0.70375663, w: 0.7037588}
+        bone:
+          transform: {fileID: 312422417}
+          length: 0.02703026
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06874435, y: 0.068737485, z: -0.70375663, w: 0.7037588}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 27
+        target:
+          length: 0
+          transform: {fileID: 579470192}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000005}
+          basePosition: {x: -0.027030155, y: 0.00000001499518, z: 0.00000008655142}
+          toBoneRotation: {x: 0.073922835, y: -0.06604309, z: 0.6732073, w: 0.73278004}
+        bone:
+          transform: {fileID: 312422418}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.073922835, y: 0.06604309, z: -0.6732073, w: 0.73278004}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+    - proximal:
+        name: 
+        boneId: 29
+        target:
+          length: 0.033453472
+          transform: {fileID: 1421924942}
+          baseRotation: {x: -0.00011370005, y: -0.080508366, z: 0.0014076853, w: 0.99675286}
+          basePosition: {x: -0.085456766, y: -0.004619406, z: -0.03715177}
+          toBoneRotation: {x: 0.06802033, y: -0.06802222, z: 0.7038252, w: 0.7038302}
+        bone:
+          transform: {fileID: 312422419}
+          length: 0.033453353
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06802033, y: 0.06802222, z: -0.7038252, w: 0.7038302}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      intermediate:
+        name: 
+        boneId: 30
+        target:
+          length: 0.017647104
+          transform: {fileID: 832767646}
+          baseRotation: {x: 0.0000086963855, y: 0.006527629, z: 0.0013345603, w: 0.9999778}
+          basePosition: {x: -0.033453494, y: 0.00000007337985, z: -0.0000000030486262}
+          toBoneRotation: {x: 0.06620196, y: -0.0662007, z: 0.7040026, w: 0.70399976}
+        bone:
+          transform: {fileID: 312422420}
+          length: 0.017647224
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.06620196, y: 0.0662007, z: -0.7040026, w: 0.70399976}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      distal:
+        name: 
+        boneId: 31
+        target:
+          length: 0
+          transform: {fileID: 493046160}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1.0000001}
+          basePosition: {x: -0.017647268, y: 0.00000009568308, z: -0.000000107869894}
+          toBoneRotation: {x: 0.07946984, y: -0.06014735, z: 0.65356016, w: 0.7502842}
+        bone:
+          transform: {fileID: 312422421}
+          length: 0.02
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: -0.07946984, y: 0.06014735, z: -0.65356016, w: 0.7502842}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+  rotationSpeedLimitation: 0
+  unity: {fileID: 0}
+  armAnimator:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    armSwing: 0
+  unityXR:
+    enabled: 1
+    target: {fileID: 358458284}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    _unityXrController: {fileID: 0}
+  openVR:
+    enabled: 1
+    target: {fileID: 358458284}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
+  viveTracker:
+    enabled: 0
+    target: {fileID: 358458284}
+    sensorTransform: {fileID: 1581363855}
+    sensor2TargetPosition: {x: -0.3728676, y: -0.043471135, z: -0.0067539215}
+    sensor2TargetRotation: {x: 0.00056365546, y: 0.020199494, z: 0.01755115, w: 0.9996419}
+    handSkeleton: {fileID: 0}
+    attachedBone: 2
+  oculus:
+    enabled: 1
+    target: {fileID: 358458284}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    handSkeleton: {fileID: 0}
+    unityXRController: {fileID: 0}
+  stretchlessTarget: {fileID: 0}
+  shoulder:
+    name: 
+    boneId: 8
+    target:
+      length: 0.12977436
+      transform: {fileID: 368101659}
+      baseRotation: {x: 0.08450443, y: -0.10777742, z: -0.008791145, w: 0.99053836}
+      basePosition: {x: -0.058876153, y: 0.37628463, z: 0.0018517971}
+      toBoneRotation: {x: 0.0011123406, y: -0.0011112774, z: 0.70710534, w: 0.70710665}
+    bone:
+      transform: {fileID: 312422409}
+      length: 0.12977423
+      jointLimitations: 1
+      maxAngle: 30
+      minAngles: {x: 0, y: 0, z: -45}
+      maxAngles: {x: 0, y: 45, z: 0}
+      baseRotation: {x: 0.084518984, y: -0.107795805, z: -0.008793015, w: 0.9905349}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: -0.0011123406, y: 0.0011112774, z: -0.70710534, w: 0.70710665}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  upperArm:
+    name: 
+    boneId: 9
+    target:
+      length: 0.26898417
+      transform: {fileID: 1320188310}
+      baseRotation: {x: 0.0011601081, y: 0.11813249, z: 0.008810146, w: 0.99295837}
+      basePosition: {x: -0.12977435, y: -0.00000005401671, z: 0.0000001231092}
+      toBoneRotation: {x: 0.015525206, y: -0.01540947, z: 0.7069648, w: 0.7069106}
+    bone:
+      transform: {fileID: 312422410}
+      length: 0.2689843
+      jointLimitations: 0
+      maxAngle: 120
+      minAngles: {x: -180, y: -45, z: -180}
+      maxAngles: {x: 60, y: 130, z: 45}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: -0.015525206, y: 0.01540947, z: -0.7069648, w: 0.7069106}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  forearm:
+    name: 
+    boneId: 10
+    target:
+      length: 0.25687024
+      transform: {fileID: 318391644}
+      baseRotation: {x: -0.050048675, y: 0.0765611, z: 0.0038479778, w: 0.99580085}
+      basePosition: {x: -0.2689843, y: 0.000000011990778, z: 0.000000089989044}
+      toBoneRotation: {x: -0.029361477, y: 0.029356657, z: 0.70649606, w: 0.70649815}
+    bone:
+      transform: {fileID: 312422411}
+      length: 0.2568704
+      jointLimitations: 0
+      maxAngle: 130
+      minAngles: {x: 0, y: 0, z: 0}
+      maxAngles: {x: 0, y: 150, z: 0}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: 0.029361477, y: -0.029356657, z: -0.70649606, w: 0.70649815}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  hand:
+    name: 
+    boneId: 12
+    target:
+      length: 0
+      transform: {fileID: 349505674}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toBoneRotation: {x: -0.006664119, y: -0.1392578, z: 0.71565956, w: 0.6843938}
+    bone:
+      transform: {fileID: 312422412}
+      length: 0.02
+      jointLimitations: 0
+      maxAngle: 100
+      minAngles: {x: -180, y: -50, z: -70}
+      maxAngles: {x: 90, y: 20, z: 90}
+      baseRotation: {x: 0, y: 0, z: 0, w: 1}
+      basePosition: {x: 0, y: 0, z: 0}
+      toTargetRotation: {x: 0.006664119, y: 0.1392578, z: -0.71565956, w: 0.6843938}
+      rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+      velocity: {x: 0, y: 0, z: 0}
+  poseMethod: 0
+  physics: 1
+  physicsMode: 2
+  strength: 100
+  grabbingTechnique: 1
+  nearDistance: 0.1
+  touchInteraction: 1
+  grabPose: {fileID: 0}
+  closedPose: {fileID: 0}
+  poseMixer:
+    mixedPoses: []
+    currentPoseIx: 0
+    detectedPoseIx: -1
+    poseMode: 0
+    detectedPose: {fileID: 0}
+  grabSocket: {fileID: 15789209}
+  pinchSocket: {fileID: 187883867}
+  grabbedPrefab: {fileID: 0}
+  grabbedObject: {fileID: 0}
+  grabbedHandle: {fileID: 0}
+  targetToHandle: {x: 0, y: 0, z: 0}
+  grabbedRigidbody: 0
+  grabbedKinematicRigidbody: 0
+  colliders: []
+  twoHandedGrab: 0
+  targetToSecondaryHandle: {x: 0, y: 0, z: 0}
+  poseEvent:
+    id: 1
+    label: Pose Event
+    tooltip: 'Call functions based on recognized posesParameter: the recognized pose'
+    eventTypeLabels:
+    - Never
+    - On Pose Recognized
+    - On No Pose Recongnized
+    - While Pose Recognized
+    - While No Pose Recognized
+    - While Pose Changes
+    - Always
+    fromEventLabel: poseMixer.detectedPose
+    events: []
+  touchEvent:
+    id: 2
+    label: Touch Event
+    tooltip: 'Call funtions based on touched objectsParameter: the touched object'
+    eventTypeLabels:
+    - Never
+    - On Touch Start
+    - On Touch End
+    - While Touching
+    - While not Touching
+    - On Touched Object Changes
+    - Always
+    fromEventLabel: touchedObject
+    events: []
+  grabEvent:
+    id: 3
+    label: Grab Event
+    tooltip: 'Call functions based on grabbed objectsParameter: the grabbed object'
+    eventTypeLabels:
+    - Never
+    - On Grab Start
+    - On Grab End
+    - While Holding Object
+    - While not Holding Object
+    - On Grabbed Object Changes
+    - Always
+    fromEventLabel: grabbedObject
+    events: []
+  handPalm: {fileID: 1879411751}
+  handRigidbody: {fileID: 0}
   handPhysics: {fileID: 0}
   grabbedChanged: 0
   directFingerMovements: 1
@@ -4172,7 +6386,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368101658}
-  m_LocalRotation: {x: 0.08450441, y: -0.107777394, z: -0.008791146, w: 0.9905381}
+  m_LocalRotation: {x: 0.0845191, y: -0.10779586, z: -0.008793178, w: 0.9905349}
   m_LocalPosition: {x: -0.058876153, y: 0.13872325, z: -0.010633414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4679,8 +6893,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463975108}
-  m_LocalRotation: {x: -0.04131983, y: 0.81494516, z: 0.5731318, w: 0.0753467}
-  m_LocalPosition: {x: 0.017989468, y: 0.07121069, z: 0.02135658}
+  m_LocalRotation: {x: -0.04131794, y: 0.81494087, z: 0.5731381, w: 0.07534565}
+  m_LocalPosition: {x: 0.01798961, y: 0.07121157, z: 0.021356847}
   m_LocalScale: {x: 0.99999964, y: 1, z: 1.0000007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5050,8 +7264,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 613033805}
-  m_LocalRotation: {x: -0.06231168, y: -0.08129828, z: 0.014697767, w: 0.9946316}
-  m_LocalPosition: {x: 0.25686994, y: -0.0000007641502, z: -0.000000037951395}
+  m_LocalRotation: {x: -0.06256687, y: -0.08158942, z: 0.014638005, w: 0.99459255}
+  m_LocalPosition: {x: 0.2568685, y: 0.00010080115, z: -0.0006677335}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5752,8 +7966,8 @@ MonoBehaviour:
     enabled: 0
     target: {fileID: 613033807}
     sensorTransform: {fileID: 1581363855}
-    sensor2TargetPosition: {x: 0.37284896, y: -0.04344976, z: -0.0077962745}
-    sensor2TargetRotation: {x: 0.000018022258, y: -0.020944325, z: -0.017570285, w: 0.9996264}
+    sensor2TargetPosition: {x: 0.000000031490345, y: -0.050000366, z: 0.00000022468157}
+    sensor2TargetRotation: {x: -0.0000000018855606, y: 0.0000000037289696, z: 8.633755e-10, w: 1}
     handSkeleton: {fileID: 0}
     attachedBone: 2
   oculus:
@@ -5918,7 +8132,7 @@ MonoBehaviour:
     fromEventLabel: grabbedObject
     events: []
   handPalm: {fileID: 463975109}
-  handRigidbody: {fileID: 1940141303}
+  handRigidbody: {fileID: 0}
   handPhysics: {fileID: 0}
   grabbedChanged: 0
   directFingerMovements: 1
@@ -6399,7 +8613,7 @@ PrefabInstance:
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._leftHandTarget
       value: 
-      objectReference: {fileID: 349505675}
+      objectReference: {fileID: 358458284}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._rightController
       value: 
@@ -6407,9 +8621,13 @@ PrefabInstance:
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._rightHandTarget
       value: 
-      objectReference: {fileID: 613033807}
+      objectReference: {fileID: 267310197}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
       propertyPath: _scenarioConfigFactory._amputatedBodyPart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
+      propertyPath: _scenarioConfigFactory._wristMovementType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7900163102160034680, guid: d6123ccef0aadd742b1d1fef63ea4368, type: 3}
@@ -6749,7 +8967,7 @@ MonoBehaviour:
       toBoneRotation: {x: -0.0016485443, y: -0.0028605636, z: 0.9999945, w: -0.000014645752}
     bone:
       transform: {fileID: 312422384}
-      length: 0.4540628
+      length: 0.4540627
       jointLimitations: 0
       maxAngle: 0
       minAngles: {x: -130, y: -40, z: -30}
@@ -6770,7 +8988,7 @@ MonoBehaviour:
       toBoneRotation: {x: -0.002135602, y: 0.0026617346, z: 0.99999416, w: 0.000004969469}
     bone:
       transform: {fileID: 312422383}
-      length: 0.46969545
+      length: 0.46969542
       jointLimitations: 0
       maxAngle: 0
       minAngles: {x: -15, y: NaN, z: NaN}
@@ -7670,7 +9888,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194933636}
-  m_LocalRotation: {x: -0.063544884, y: -0.00000021606678, z: 0.000000004889442, w: 0.99797904}
+  m_LocalRotation: {x: -0.06303164, y: 0.00093938387, z: 0.00009804729, w: 0.9980111}
   m_LocalPosition: {x: 0.2689843, y: -0.0000000118889165, z: 0.000000039115548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7838,7 +10056,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320188309}
-  m_LocalRotation: {x: 0.024739074, y: 0.11830366, z: 0.0060016783, w: 0.9926511}
+  m_LocalRotation: {x: 0.02500682, y: 0.11695122, z: 0.00590075, w: 0.99280524}
   m_LocalPosition: {x: -0.12977433, y: 0.000000049825758, z: 0.000000011641532}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8120,22 +10338,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8827084527582276505, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
   m_PrefabInstance: {fileID: 312422379}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1440495842
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1440495841}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 10
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
 --- !u!114 &1440495843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8345,8 +10547,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581363854}
-  m_LocalRotation: {x: 0.023837797, y: 0.010280198, z: 0.009040186, w: 0.99962217}
-  m_LocalPosition: {x: -0.18649733, y: 1.5557729, z: -0.0928669}
+  m_LocalRotation: {x: 0.023583012, y: -0.0108763585, z: -0.009059559, w: 0.9996217}
+  m_LocalPosition: {x: 0.18649355, y: 1.5557758, z: -0.09288883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8851,8 +11053,8 @@ MonoBehaviour:
     enabled: 0
     target: {fileID: 1818521607}
     sensorTransform: {fileID: 1581363855}
-    sensor2TargetPosition: {x: 0.113916665, y: -1.4880875, z: 0.05822421}
-    sensor2TargetRotation: {x: -0.022475988, y: -0.010265536, z: -0.009026564, w: 0.99965405}
+    sensor2TargetPosition: {x: 0.113916665, y: -1.4880874, z: 0.05822421}
+    sensor2TargetRotation: {x: -0.022475986, y: -0.010265535, z: -0.009026563, w: 0.999654}
   upperLeg:
     name: 
     boneId: 32
@@ -9003,8 +11205,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879411750}
-  m_LocalRotation: {x: -0.041318998, y: -0.8149463, z: -0.5731299, w: 0.075348556}
-  m_LocalPosition: {x: -0.017988762, y: 0.07121046, z: 0.021356555}
+  m_LocalRotation: {x: -0.04131548, y: -0.81493807, z: -0.5731422, w: 0.07534635}
+  m_LocalPosition: {x: -0.017988876, y: 0.071211, z: 0.021356264}
   m_LocalScale: {x: 0.99999946, y: 0.99999976, z: 1.0000005}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9053,22 +11255,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -651492962353453222, guid: 7fdc05d039801f1438d28954c68cf1bd, type: 3}
   m_PrefabInstance: {fileID: 312422379}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1940141303
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940141302}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 10
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 3
 --- !u!114 &1940141304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9109,7 +11295,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958833370}
-  m_LocalRotation: {x: 0.08450462, y: 0.10777736, z: 0.008792182, w: 0.9905381}
+  m_LocalRotation: {x: 0.08449406, y: 0.10776248, z: 0.008791243, w: 0.9905406}
   m_LocalPosition: {x: 0.05887628, y: 0.13872346, z: -0.010633563}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

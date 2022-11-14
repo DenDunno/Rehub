@@ -1,25 +1,21 @@
-﻿using System;
-using Passer.Humanoid;
+﻿using Passer.Humanoid;
 using Passer.Humanoid.Tracking;
 using Passer.Tracking;
 using UnityEngine;
 
-[Serializable]
 public class VirtualHand : OpenVRHand
 {
-    [SerializeField] private WristMovementType _wristMovementType;
-    private HandTarget _realHand;
-    private GameObject _gam;
+    private readonly HandTarget _realHand;
+    private WristMovement _wristMovement;
 
-    public void SetRealHand(HandTarget realHand)
+    public VirtualHand(HandTarget realHand)
     {
         _realHand = realHand;
-        _gam = new GameObject();
     }
-    
+
     public void SetMovementType(WristMovementType wristMovementType)
     {
-        _wristMovementType = wristMovementType;
+        _wristMovement = new WristMovement(wristMovementType, handTarget, _realHand);
     }
 
     public override void Update()
@@ -47,29 +43,10 @@ public class VirtualHand : OpenVRHand
 
     private void SetPoseForVirtualHand()
     {
-        UpdateWrist();
+        _wristMovement.Update();
         UpdateFingers();
     }
-
-    private void UpdateWrist()
-    {
-        if (_wristMovementType == WristMovementType.Fixed)
-        {
-            Vector3 rotation = handTarget.isLeft ? new Vector3(-90, 0, 0) : new Vector3(90, 0, 0);
-            handTarget.hand.target.transform.localRotation = Quaternion.Euler(rotation);
-        }
-        else if (_wristMovementType == WristMovementType.Symmetric)
-        {
-            handTarget.hand.target.transform.rotation = _realHand.hand.target.transform.rotation * Quaternion.Euler(0, 0, 180);
-        }
-        else if (_wristMovementType == WristMovementType.Mirror)
-        {
-            Quaternion localRotation = _realHand.hand.target.transform.localRotation;
-            handTarget.hand.target.transform.localRotation = new Quaternion(localRotation.x, localRotation.y, -localRotation.z, localRotation.w * -1.0f);
-            handTarget.hand.target.transform.localRotation *= Quaternion.Euler(EntryPoint.Rotation);
-        }
-    }
-
+    
     private void UpdateFingers()
     {
         UpdateThumb();
