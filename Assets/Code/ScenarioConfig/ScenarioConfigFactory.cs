@@ -43,10 +43,7 @@ public class ScenarioConfigFactory
             Algorithms.Swap(ref virtualHand, ref realHand);
         }
 
-        VirtualHand virtualHandLogic = new(realHand);
-        virtualHandLogic.SetMovementType(_wristMovementType);
-        
-        virtualHand.openVR = virtualHandLogic;
+        virtualHand.openVR = new VirtualHand(virtualHand, realHand, _wristMovementType);
         virtualHand.viveTracker.enabled = true;
 
         return (realHand, virtualHand);

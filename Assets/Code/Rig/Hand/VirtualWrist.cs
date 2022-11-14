@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using Passer.Humanoid;
 using UnityEngine;
 
-public class WristMovement
+public class VirtualWrist
 {
     private readonly WristMovementType _wristMovementType;
     private readonly HandTarget _virtualHand;
     private readonly HandTarget _realHand;
     private readonly Dictionary<WristMovementType, Action> _wristMovementStrategy;
     
-    public WristMovement(WristMovementType wristMovementType, HandTarget virtualHand, HandTarget realHand)
+    public VirtualWrist(WristMovementType wristMovementType, HandTarget virtualHand, HandTarget realHand)
     {
         _wristMovementType = wristMovementType;
         _virtualHand = virtualHand;
