@@ -8,28 +8,25 @@ public class ScenarioConfigFactory
     [SerializeField] private HandTarget _leftHandTarget;
     [SerializeField] private HandTarget _rightHandTarget;
     [SerializeField] private AmputatedBodyPart _amputatedBodyPart;
-    [SerializeField] private WristMovementType _wristMovementType;
-    
+
     public ScenarioConfig Create()
     {
         AmputatedBodyPart amputatedBodyPart = GetAmputatedBodyPart();
         var scenarioConfig = new ScenarioConfig(amputatedBodyPart);
         
-        TrySetUpRealAndVirtualHands(scenarioConfig);
+        SetUpVirtualBodyParts(scenarioConfig);
 
         return scenarioConfig; 
     }
 
-    private void TrySetUpRealAndVirtualHands(ScenarioConfig scenarioConfig)
+    private void SetUpVirtualBodyParts(ScenarioConfig scenarioConfig)
     {
-        if (scenarioConfig.IsHandAmputated == false)
+        if (scenarioConfig.IsHandAmputated)
         {
-            return;
+            (HandTarget realHand, HandTarget virtualHand) = GetRealAndVirtualHand(scenarioConfig.AmputatedBodyPart);
+            
+            scenarioConfig.SetRealAndVirtualHands(realHand, virtualHand);
         }
-
-        (HandTarget realHand, HandTarget virtualHand) = GetRealAndVirtualHand(scenarioConfig.AmputatedBodyPart);
-
-        scenarioConfig.SetRealAndVirtualHands(realHand, virtualHand);
     }
 
     private (HandTarget, HandTarget) GetRealAndVirtualHand(AmputatedBodyPart amputatedBodyPart)
@@ -42,9 +39,6 @@ public class ScenarioConfigFactory
         {
             Algorithms.Swap(ref virtualHand, ref realHand);
         }
-
-        virtualHand.openVR = new VirtualHand(virtualHand, realHand, _wristMovementType);
-        virtualHand.viveTracker.enabled = true;
 
         return (realHand, virtualHand);
     }

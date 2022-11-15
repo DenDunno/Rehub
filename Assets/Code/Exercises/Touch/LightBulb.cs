@@ -12,7 +12,7 @@ public class LightBulb : MonoBehaviour
     
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<ValveControllerInput>() != null)
+        if (other.GetComponent<HandTrigger>() != null)
         {
             _onTouch?.Invoke();
         }
