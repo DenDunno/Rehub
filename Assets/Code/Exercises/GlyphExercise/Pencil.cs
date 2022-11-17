@@ -13,7 +13,7 @@ public class Pencil : MonoBehaviour
         }
         else
         {
-            _rigidbody.freezeRotation = true;
+  //          _rigidbody.freezeRotation = true;
         }
     }
 
@@ -25,6 +25,6 @@ public class Pencil : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         _whiteboard.Clear();
-        _rigidbody.freezeRotation = false;
+//        _rigidbody.freezeRotation = false;
     }
 }
