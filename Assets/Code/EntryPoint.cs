@@ -15,7 +15,7 @@ public class EntryPoint : MonoBehaviour
         
         _handsInitialization.Init(scenarioConfig);
         _exerciseProxy.Init(scenarioConfig);
-        _exerciseProxy.Play<TouchExercise>();
+        _exerciseProxy.Play<GlyphExercise>();
     }
 
     private void Update()
