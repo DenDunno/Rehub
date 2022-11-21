@@ -8,6 +8,7 @@ public class ExerciseProxy : MonoBehaviourWrapper, IScenarioComponent
         _exercises = GetComponentsInChildren<Exercise>(true);
         
         SetDependencies(scenarioConfig, _exercises);
+        Play<TouchExercise>();
     }
 
     public void Play<T>() where T : Exercise

@@ -20,7 +20,7 @@ namespace Passer.Humanoid {
             get { return "Vive Tracker"; }
         }
 
-        private ViveTrackerComponent viveTracker;
+        protected ViveTrackerComponent viveTracker;
 
         public override Tracker.Status status {
             get {

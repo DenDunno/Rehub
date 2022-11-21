@@ -2043,10 +2043,10 @@ MonoBehaviour:
     nextFrame: 0
   viveTracker:
     enabled: 0
-    target: {fileID: 0}
-    sensorTransform: {fileID: 0}
-    sensor2TargetPosition: {x: 0, y: 0, z: 0}
-    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    target: {fileID: 1519724139680703983}
+    sensorTransform: {fileID: 1519724141168185532}
+    sensor2TargetPosition: {x: -0.63131666, y: -1.5049139, z: -0.06154964}
+    sensor2TargetRotation: {x: -0.15127967, y: 0.07032132, z: -0.0027360779, w: 0.98598284}
   upperLeg:
     name: 
     boneId: 60
@@ -6098,8 +6098,8 @@ MonoBehaviour:
     enabled: 0
     target: {fileID: 1519724140212666783}
     sensorTransform: {fileID: 1519724141168185532}
-    sensor2TargetPosition: {x: -0.37286794, y: -0.043473598, z: -0.006753346}
-    sensor2TargetRotation: {x: 0.00056365546, y: 0.020199494, z: 0.01755115, w: 0.9996419}
+    sensor2TargetPosition: {x: -0.8883929, y: -0.056665827, z: -0.13103163}
+    sensor2TargetRotation: {x: -0.12677664, y: 0.08036202, z: 0.0030655276, w: 0.988666}
     handSkeleton: {fileID: 0}
     attachedBone: 2
   oculus:
@@ -6463,8 +6463,8 @@ MonoBehaviour:
     enabled: 0
     target: {fileID: 1519724140327572020}
     sensorTransform: {fileID: 1519724141168185532}
-    sensor2TargetPosition: {x: 0.113916665, y: -1.4880874, z: 0.05822421}
-    sensor2TargetRotation: {x: -0.022475986, y: -0.010265535, z: -0.009026563, w: 0.999654}
+    sensor2TargetPosition: {x: -0.77646285, y: -1.5050743, z: -0.057557862}
+    sensor2TargetRotation: {x: -0.14993663, y: 0.07034431, z: -0.0028367327, w: 0.98618597}
   upperLeg:
     name: 
     boneId: 32
@@ -7842,8 +7842,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519724141168185533}
-  m_LocalRotation: {x: 0.023583012, y: -0.0108763585, z: -0.009059559, w: 0.9996217}
-  m_LocalPosition: {x: 0.18649386, y: 1.5557785, z: -0.09288931}
+  m_LocalRotation: {x: 0.15127982, y: -0.070321456, z: 0.0027371226, w: 0.98598266}
+  m_LocalPosition: {x: 0.7038884, y: 1.5724447, z: 0.02291298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8140,6 +8140,7 @@ GameObject:
   - component: {fileID: 1341400272173902387}
   - component: {fileID: 4935294986195595337}
   - component: {fileID: 1519724140149658129}
+  - component: {fileID: 253728712}
   m_Layer: 0
   m_Name: MaleThin
   m_TagString: Untagged
@@ -8232,7 +8233,7 @@ MonoBehaviour:
   isRemote: 0
   nwId: 0
   id: -1
-  path: /Humanoid/Scripts/
+  path: /ThirdParty/HumanoidControl/Humanoid/Scripts/
   headTarget: {fileID: 1519724139859672308}
   leftHandTarget: {fileID: 1519724140212666783}
   rightHandTarget: {fileID: 1519724139831965254}
@@ -8308,6 +8309,21 @@ MonoBehaviour:
   animatorParameterSidewardIndex: 0
   animatorParameterRotationIndex: 0
   animatorParameterHeightIndex: 0
+--- !u!114 &253728712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861760005321650313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9b87031f90422c840e549f2100b1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wristMovementType: 0
+  <HumanoidBodyParts>k__BackingField:
+    _humanoidControl: {fileID: 1519724140149658129}
 --- !u!1 &1905969621935165267
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,30 +1,19 @@
-﻿
-using Passer.Humanoid;
-
-public enum AmputatedBodyPart
-{
-    LeftArm,
-    RightArm,
-    LeftLeg
-}
+﻿using Passer.Humanoid;
 
 public class ScenarioConfig
 {
     public readonly AmputatedBodyPart AmputatedBodyPart;
-    public HandTarget RealHand { get; private set; }
-    public HandTarget VirtualHand { get; private set; }
+    public readonly HandTarget RealHand;
+    public readonly HandTarget VirtualHand;
+    public readonly FootTarget VirtualFoot;
+    public readonly FootTarget RealFoot;
 
-    public ScenarioConfig(AmputatedBodyPart amputatedBodyPart)
+    public ScenarioConfig(AmputatedBodyPart amputatedBodyPart, HandTarget virtualHand, HandTarget realHand, FootTarget virtualFoot, FootTarget realFoot)
     {
         AmputatedBodyPart = amputatedBodyPart;
-    }
-
-    public bool IsHandAmputated => AmputatedBodyPart == AmputatedBodyPart.LeftArm ||
-                                   AmputatedBodyPart == AmputatedBodyPart.RightArm;
-
-    public void SetRealAndVirtualHands(HandTarget realHand, HandTarget virtualHand)
-    {
         RealHand = realHand;
         VirtualHand = virtualHand;
+        RealFoot = realFoot;
+        VirtualFoot = virtualFoot;
     }
 }

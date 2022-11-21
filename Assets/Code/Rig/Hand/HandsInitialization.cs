@@ -1,24 +1,19 @@
-﻿using System;
-using Passer.Humanoid;
-using Sirenix.OdinInspector;
-using UnityEngine;
-
-[Serializable]
-public class HandsInitialization
+﻿
+public class HandsInitialization : IScenarioComponent
 {
-    [SerializeField] private WristMovementType _wristMovementType;
-    private ScenarioConfig _scenarioConfig;
+    private readonly WristMovementType _wristMovementType;
 
-    public void Init(ScenarioConfig scenarioConfig)
+    public HandsInitialization(WristMovementType wristMovementType)
     {
-        _scenarioConfig = scenarioConfig;
-        SetWristMovementType();
-        scenarioConfig.VirtualHand.viveTracker.enabled = true;
+        _wristMovementType = wristMovementType;
     }
 
-    [Button]
-    private void SetWristMovementType()
+    void IScenarioComponent.Init(ScenarioConfig scenarioConfig)
     {
-        _scenarioConfig.VirtualHand.openVR = new VirtualHand(_scenarioConfig.VirtualHand, _scenarioConfig.RealHand, _wristMovementType);
+        if (scenarioConfig.AmputatedBodyPart.IsHandAmputated)
+        {
+            scenarioConfig.VirtualHand.openVR = new VirtualHand(scenarioConfig.VirtualHand, scenarioConfig.RealHand, _wristMovementType);
+            scenarioConfig.VirtualHand.viveTracker.enabled = true;
+        }
     }
 }

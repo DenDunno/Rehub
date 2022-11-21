@@ -67,7 +67,7 @@ namespace Passer.Humanoid {
         public override Passer.Sensor animator { get { return legAnimator; } }
 
 #if hOPENVR && hVIVETRACKER && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
-        public ViveTrackerLeg viveTracker = new ViveTrackerLeg();
+        public ViveTrackerLeg viveTracker = new VirtualTrackerLeg();
 #endif
 #if hNEURON
         public PerceptionNeuronLeg neuron = new PerceptionNeuronLeg();

@@ -1,41 +1,23 @@
-﻿using System;
-using Passer.Humanoid;
-using UnityEngine;
+﻿using Passer.Humanoid;
 
-[Serializable]
-public class ScenarioConfigFactory
+public static class ScenarioConfigFactory
 {
-    [SerializeField] private HandTarget _leftHandTarget;
-    [SerializeField] private HandTarget _rightHandTarget;
-    [SerializeField] private AmputatedBodyPart _amputatedBodyPart;
-
-    public ScenarioConfig Create()
+    public static ScenarioConfig Create(HumanoidBodyParts humanoidBodyParts, BodyPart bodyPart)
     {
-        AmputatedBodyPart amputatedBodyPart = GetAmputatedBodyPart();
-        var scenarioConfig = new ScenarioConfig(amputatedBodyPart);
+        AmputatedBodyPart amputatedBodyPart = new(bodyPart);
         
-        SetUpVirtualBodyParts(scenarioConfig);
+        (HandTarget realHand, HandTarget virtualHand) = GetRealAndVirtualHand(amputatedBodyPart, humanoidBodyParts);
+        (FootTarget realFoot, FootTarget virtualFoot) = GetRealAndVirtualFoot(amputatedBodyPart, humanoidBodyParts);
 
-        return scenarioConfig; 
+        return new ScenarioConfig(amputatedBodyPart, virtualHand, realHand, virtualFoot, realFoot);
     }
 
-    private void SetUpVirtualBodyParts(ScenarioConfig scenarioConfig)
+    private static (HandTarget, HandTarget) GetRealAndVirtualHand(AmputatedBodyPart amputatedBodyPart, HumanoidBodyParts humanoidBodyParts)
     {
-        if (scenarioConfig.IsHandAmputated)
-        {
-            (HandTarget realHand, HandTarget virtualHand) = GetRealAndVirtualHand(scenarioConfig.AmputatedBodyPart);
-            
-            scenarioConfig.SetRealAndVirtualHands(realHand, virtualHand);
-        }
-    }
+        HandTarget virtualHand = humanoidBodyParts.LeftHand;
+        HandTarget realHand = humanoidBodyParts.RightHand;
 
-    private (HandTarget, HandTarget) GetRealAndVirtualHand(AmputatedBodyPart amputatedBodyPart)
-    {
-        HandTarget virtualHand = _leftHandTarget;
-        HandTarget realHand = _rightHandTarget;
-        bool isRightHandVirtual = amputatedBodyPart == AmputatedBodyPart.RightArm;
-
-        if (isRightHandVirtual)
+        if (amputatedBodyPart.Value == BodyPart.RightArm)
         {
             Algorithms.Swap(ref virtualHand, ref realHand);
         }
@@ -43,8 +25,16 @@ public class ScenarioConfigFactory
         return (realHand, virtualHand);
     }
 
-    private AmputatedBodyPart GetAmputatedBodyPart()
+    private static (FootTarget realFoot, FootTarget virtualFoot) GetRealAndVirtualFoot(AmputatedBodyPart amputatedBodyPart, HumanoidBodyParts humanoidBodyParts)
     {
-        return _amputatedBodyPart;
+        FootTarget virtualFoot = humanoidBodyParts.LeftFoot;
+        FootTarget realFoot = humanoidBodyParts.RightFoot;
+
+        if (amputatedBodyPart.Value == BodyPart.RightLeg)
+        {
+            Algorithms.Swap(ref virtualFoot, ref realFoot);
+        }
+
+        return (realFoot, virtualFoot);
     }
 }
