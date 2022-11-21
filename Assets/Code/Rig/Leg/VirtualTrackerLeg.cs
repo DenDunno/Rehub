@@ -14,7 +14,6 @@ public class VirtualTrackerLeg : ViveTrackerLeg
     {
         if (_isVirtual)
         {
-            Debug.Log(target.transform.gameObject);
             UpdateTrackedLeg();
         }
         else
