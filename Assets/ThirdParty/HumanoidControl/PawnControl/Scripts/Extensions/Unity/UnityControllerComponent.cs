@@ -94,7 +94,7 @@ namespace Passer.Tracking {
 
             Transform controllerTransform = tracker.transform.Find(name);
             if (controllerTransform == null) {
-                GameObject trackerObject = new GameObject(name);
+                GameObject trackerObject = new(name);
                 controllerTransform = trackerObject.transform;
 
                 controllerTransform.parent = tracker.transform;

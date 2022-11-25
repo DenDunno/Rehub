@@ -158,21 +158,21 @@ namespace Passer.Humanoid.Tracking {
             forward = Vector.Normalize(forward);
             Vector right = Vector.Normalize(Vector.Cross(up, forward));
             up = Vector.Cross(forward, right);
-            var m00 = right.x;
-            var m01 = right.y;
-            var m02 = right.z;
-            var m10 = up.x;
-            var m11 = up.y;
-            var m12 = up.z;
-            var m20 = forward.x;
-            var m21 = forward.y;
-            var m22 = forward.z;
+            float m00 = right.x;
+            float m01 = right.y;
+            float m02 = right.z;
+            float m10 = up.x;
+            float m11 = up.y;
+            float m12 = up.z;
+            float m20 = forward.x;
+            float m21 = forward.y;
+            float m22 = forward.z;
 
 
             float num8 = (m00 + m11) + m22;
-            var quaternion = identity;
+            Rotation quaternion = identity;
             if (num8 > 0f) {
-                var num = Mathf.Sqrt(num8 + 1f);
+                float num = Mathf.Sqrt(num8 + 1f);
                 quaternion.w = num * 0.5f;
                 num = 0.5f / num;
                 quaternion.x = (m12 - m21) * num;
@@ -181,8 +181,8 @@ namespace Passer.Humanoid.Tracking {
                 return quaternion;
             }
             if ((m00 >= m11) && (m00 >= m22)) {
-                var num7 = Mathf.Sqrt(((1f + m00) - m11) - m22);
-                var num4 = 0.5f / num7;
+                float num7 = Mathf.Sqrt(((1f + m00) - m11) - m22);
+                float num4 = 0.5f / num7;
                 quaternion.x = 0.5f * num7;
                 quaternion.y = (m01 + m10) * num4;
                 quaternion.z = (m02 + m20) * num4;
@@ -190,16 +190,16 @@ namespace Passer.Humanoid.Tracking {
                 return quaternion;
             }
             if (m11 > m22) {
-                var num6 = Mathf.Sqrt(((1f + m11) - m00) - m22);
-                var num3 = 0.5f / num6;
+                float num6 = Mathf.Sqrt(((1f + m11) - m00) - m22);
+                float num3 = 0.5f / num6;
                 quaternion.x = (m10 + m01) * num3;
                 quaternion.y = 0.5f * num6;
                 quaternion.z = (m21 + m12) * num3;
                 quaternion.w = (m20 - m02) * num3;
                 return quaternion;
             }
-            var num5 = (float)System.Math.Sqrt(((1f + m22) - m00) - m11);
-            var num2 = 0.5f / num5;
+            float num5 = (float)System.Math.Sqrt(((1f + m22) - m00) - m11);
+            float num2 = 0.5f / num5;
             quaternion.x = (m20 + m02) * num2;
             quaternion.y = (m21 + m12) * num2;
             quaternion.z = 0.5f * num5;
@@ -230,7 +230,7 @@ namespace Passer.Humanoid.Tracking {
                 return identity;
 
             Rotation result = identity;
-            var radians = degress * Mathf.Deg2Rad;
+            float radians = degress * Mathf.Deg2Rad;
             radians *= 0.5f;
             Vector.Normalize(axis);
             axis = axis * (float)System.Math.Sin(radians);
@@ -300,7 +300,7 @@ namespace Passer.Humanoid.Tracking {
                 blendB = t;
             }
 
-            Rotation result = new Rotation(blendA * a.xyz + blendB * b.xyz, blendA * a.w + blendB * b.w);
+            Rotation result = new(blendA * a.xyz + blendB * b.xyz, blendA * a.w + blendB * b.w);
             if (result.LengthSquared > 0.0f)
                 return Normalize(result);
             else

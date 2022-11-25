@@ -132,8 +132,8 @@ namespace Passer.Humanoid {
             public InstantiateHumanoid(byte[] data) : base(data) { }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -150,8 +150,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -181,7 +181,7 @@ namespace Passer.Humanoid {
         }
 
         public static void ReceiveInstantiate(this IHumanoidNetworking networking, byte[] serializedData) {
-            InstantiateHumanoid data = new InstantiateHumanoid(serializedData);
+            InstantiateHumanoid data = new(serializedData);
 
             Receive(networking, data);
         }
@@ -287,8 +287,8 @@ namespace Passer.Humanoid {
             public DestroyHumanoid(byte[] data) : base(data) { }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -298,8 +298,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -322,7 +322,7 @@ namespace Passer.Humanoid {
         }
 
         public static void ReceiveDestroy(this IHumanoidNetworking networking, byte[] serializedData) {
-            DestroyHumanoid data = new DestroyHumanoid(serializedData);
+            DestroyHumanoid data = new(serializedData);
             Receive(networking, data);
         }
 
@@ -379,7 +379,7 @@ namespace Passer.Humanoid {
                 float x = br.ReadSingle();
                 float y = br.ReadSingle();
                 float z = br.ReadSingle();
-                Vector3S v = new Vector3S() { x = x, y = y, z = z };
+                Vector3S v = new() { x = x, y = y, z = z };
                 return v;
             }
         }
@@ -452,7 +452,7 @@ namespace Passer.Humanoid {
             }
             public static HumanoidAnimatorParameters Read(BinaryReader br) {
                 int parameterCount = br.ReadInt32();
-                HumanoidAnimatorParameters animatorParameters = new HumanoidAnimatorParameters() {
+                HumanoidAnimatorParameters animatorParameters = new() {
                     parameters = new AnimatorParameter[parameterCount]
                 };
 
@@ -717,8 +717,8 @@ namespace Passer.Humanoid {
             }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -746,8 +746,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -885,7 +885,7 @@ namespace Passer.Humanoid {
                 return;
 
 
-            HumanoidPose humanoidPose = new HumanoidPose(data);
+            HumanoidPose humanoidPose = new(data);
             Receive(networking, humanoidPose);
         }
 
@@ -1240,8 +1240,8 @@ namespace Passer.Humanoid {
             public Grab(byte[] data) : base(data) { }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -1255,8 +1255,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -1283,7 +1283,7 @@ namespace Passer.Humanoid {
         }
 
         public static void ReceiveGrab(this IHumanoidNetworking networking, byte[] serializedData) {
-            Grab data = new Grab(serializedData);
+            Grab data = new(serializedData);
             Receive(networking, data);
         }
 
@@ -1325,8 +1325,8 @@ namespace Passer.Humanoid {
             public LetGo(byte[] data) : base(data) { }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -1337,8 +1337,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -1362,7 +1362,7 @@ namespace Passer.Humanoid {
         }
 
         public static void ReceiveLetGo(this IHumanoidNetworking networking, byte[] serializedData) {
-            LetGo data = new LetGo(serializedData);
+            LetGo data = new(serializedData);
 
             Receive(networking, data);
         }
@@ -1400,8 +1400,8 @@ namespace Passer.Humanoid {
             public ChangeAvatar(byte[] data) : base(data) { }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -1412,8 +1412,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -1437,7 +1437,7 @@ namespace Passer.Humanoid {
         }
 
         public static void ReceiveChangeAvatar(this IHumanoidNetworking networking, byte[] serializedData) {
-            ChangeAvatar data = new ChangeAvatar(serializedData);
+            ChangeAvatar data = new(serializedData);
 
             Receive(networking, data);
         }
@@ -1496,8 +1496,8 @@ namespace Passer.Humanoid {
             public SyncTrackingSpace(byte[] data) : base(data) { }
 
             public override byte[] Serialize() {
-                MemoryStream ms = new MemoryStream();
-                BinaryWriter bw = new BinaryWriter(ms);
+                MemoryStream ms = new();
+                BinaryWriter bw = new(ms);
 
                 bw.Write(nwId);
                 bw.Write(humanoidId);
@@ -1510,8 +1510,8 @@ namespace Passer.Humanoid {
             }
 
             public override void Deserialize(byte[] data) {
-                MemoryStream ms = new MemoryStream(data);
-                BinaryReader br = new BinaryReader(ms);
+                MemoryStream ms = new(data);
+                BinaryReader br = new(ms);
 
                 nwId = br.ReadUInt64();
                 humanoidId = br.ReadByte();
@@ -1549,7 +1549,7 @@ namespace Passer.Humanoid {
         }
 
         public static void ReceiveSyncTrackingSpace(this IHumanoidNetworking networking, byte[] serializedData) {
-            SyncTrackingSpace data = new SyncTrackingSpace(serializedData);
+            SyncTrackingSpace data = new(serializedData);
 
             Receive(networking, data);
         }
@@ -1597,7 +1597,7 @@ namespace Passer.Humanoid {
         }
 
         public static List<HumanoidControl> FindLocalHumanoids() {
-            List<HumanoidControl> humanoidList = new List<HumanoidControl>();
+            List<HumanoidControl> humanoidList = new();
             HumanoidControl[] foundHumanoids = UnityEngine.Object.FindObjectsOfType<HumanoidControl>();
             for (int i = 0; i < foundHumanoids.Length; i++) {
                 if (!foundHumanoids[i].isRemote) {

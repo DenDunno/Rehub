@@ -93,7 +93,7 @@ namespace Passer.Tracking {
         }
 
         public virtual GameObject CreateHandSkeleton(Transform trackerTransform, bool isLeft, bool showRealObjects) {
-            GameObject skeletonObj = new GameObject(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
+            GameObject skeletonObj = new(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
             skeletonObj.transform.parent = trackerTransform;
             skeletonObj.transform.localPosition = Vector3.zero;
             skeletonObj.transform.localRotation = Quaternion.identity;

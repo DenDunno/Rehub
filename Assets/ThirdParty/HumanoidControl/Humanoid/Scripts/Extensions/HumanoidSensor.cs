@@ -83,7 +83,7 @@ namespace Passer.Humanoid {
         }
 
         public static Vector3 InverseTransformPointUnscaled(Transform transform, Vector3 position) {
-            var worldToLocalMatrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one).inverse;
+            Matrix4x4 worldToLocalMatrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one).inverse;
             return worldToLocalMatrix.MultiplyPoint3x4(position);
         }
         #endregion
@@ -124,7 +124,7 @@ namespace Passer.Humanoid {
         }
 
         protected static Vector3 TransformPointUnscaled(Transform transform, Vector3 position) {
-            var localToWorldMatrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+            Matrix4x4 localToWorldMatrix = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
             return localToWorldMatrix.MultiplyPoint3x4(position);
         }
 

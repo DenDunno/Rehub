@@ -15,9 +15,9 @@ namespace Passer.Humanoid {
             if (handTarget == null || handTarget.hand.bone.transform == null)
                 return;
 
-            var handTargetBone = handTarget.hand.target;
-            var forearmTargetBone = handTarget.forearm.target;
-            var upperArmTargetBone = handTarget.upperArm.target;
+            HumanoidTarget.TargetTransform handTargetBone = handTarget.hand.target;
+            HumanoidTarget.TargetTransform forearmTargetBone = handTarget.forearm.target;
+            HumanoidTarget.TargetTransform upperArmTargetBone = handTarget.upperArm.target;
 
             if (handTargetBone.confidence.position <= 0.21F) {
                 if (forearmTargetBone.confidence.position > 0.9F && forearmTargetBone.confidence.rotation >= 0.9F) {

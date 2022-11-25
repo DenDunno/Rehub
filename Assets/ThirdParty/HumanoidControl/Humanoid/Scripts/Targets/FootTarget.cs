@@ -29,7 +29,7 @@ namespace Passer.Humanoid {
 
         public FootTarget otherFoot;
 
-        public LegMovements legMovements = new LegMovements();
+        public LegMovements legMovements = new();
 
         #region Limitations
         public bool rotationSpeedLimitation = false;
@@ -40,30 +40,30 @@ namespace Passer.Humanoid {
         public const float maxToesAngle = 30;
 
         // for future use
-        public static readonly Vector3 minLeftUpperLegAngles = new Vector3(-130, -45, -50);
-        public static readonly Vector3 maxLeftUpperLegAngles = new Vector3(30, 40, 30);
-        public static readonly Vector3 minRightUpperLegAngles = new Vector3(-130, -40, -30);
-        public static readonly Vector3 maxRightUpperLegAngles = new Vector3(30, 45, 50);
+        public static readonly Vector3 minLeftUpperLegAngles = new(-130, -45, -50);
+        public static readonly Vector3 maxLeftUpperLegAngles = new(30, 40, 30);
+        public static readonly Vector3 minRightUpperLegAngles = new(-130, -40, -30);
+        public static readonly Vector3 maxRightUpperLegAngles = new(30, 45, 50);
 
-        public static readonly Vector3 minLeftLowerLegAngles = new Vector3(-15, float.NaN, float.NaN);
-        public static readonly Vector3 maxLeftLowerLegAngles = new Vector3(130, float.NaN, float.NaN);
-        public static readonly Vector3 minRightLowerLegAngles = new Vector3(-15, float.NaN, float.NaN);
-        public static readonly Vector3 maxRightLowerLegAngles = new Vector3(130, float.NaN, float.NaN);
+        public static readonly Vector3 minLeftLowerLegAngles = new(-15, float.NaN, float.NaN);
+        public static readonly Vector3 maxLeftLowerLegAngles = new(130, float.NaN, float.NaN);
+        public static readonly Vector3 minRightLowerLegAngles = new(-15, float.NaN, float.NaN);
+        public static readonly Vector3 maxRightLowerLegAngles = new(130, float.NaN, float.NaN);
 
-        public static readonly Vector3 minLeftFootAngles = new Vector3(-45, 0, -30);
-        public static readonly Vector3 maxLeftFootAngles = new Vector3(70, 0, 20);
-        public static readonly Vector3 minRightFootAngles = new Vector3(-45, 0, -20);
-        public static readonly Vector3 maxRightFootAngles = new Vector3(50, 0, 30);
+        public static readonly Vector3 minLeftFootAngles = new(-45, 0, -30);
+        public static readonly Vector3 maxLeftFootAngles = new(70, 0, 20);
+        public static readonly Vector3 minRightFootAngles = new(-45, 0, -20);
+        public static readonly Vector3 maxRightFootAngles = new(50, 0, 30);
 
-        public static readonly Vector3 minLeftToesAngles = new Vector3(-70, float.NaN, float.NaN);
-        public static readonly Vector3 maxLeftToesAngles = new Vector3(45, float.NaN, float.NaN);
-        public static readonly Vector3 minRightToesAngles = new Vector3(-70, float.NaN, float.NaN);
-        public static readonly Vector3 maxRightToesAngles = new Vector3(45, float.NaN, float.NaN);
+        public static readonly Vector3 minLeftToesAngles = new(-70, float.NaN, float.NaN);
+        public static readonly Vector3 maxLeftToesAngles = new(45, float.NaN, float.NaN);
+        public static readonly Vector3 minRightToesAngles = new(-70, float.NaN, float.NaN);
+        public static readonly Vector3 maxRightToesAngles = new(45, float.NaN, float.NaN);
         #endregion
 
         #region Sensors
 
-        public LegAnimator legAnimator = new LegAnimator();
+        public LegAnimator legAnimator = new();
         public override Passer.Sensor animator { get { return legAnimator; } }
 
 #if hOPENVR && hVIVETRACKER && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
@@ -455,7 +455,7 @@ namespace Passer.Humanoid {
         public static FootTarget CreateTarget(FootTarget oldTarget) {
             HumanoidControl humanoid = oldTarget.humanoid;
 
-            GameObject targetObject = new GameObject();
+            GameObject targetObject = new();
             if (oldTarget.isLeft)
                 targetObject.name = "Left Foot Target";
             else
@@ -532,7 +532,7 @@ namespace Passer.Humanoid {
 
         #region Events
 
-        public GameObjectEventHandlers groundEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers groundEvent = new() {
             id = 1,
             label = "Ground Event",
             tooltip =
@@ -698,7 +698,7 @@ namespace Passer.Humanoid {
         public bool IsInTPose() {
             if (foot.bone.transform != null) {
                 float d;
-                Ray upper2foot = new Ray(upperLeg.bone.transform.position, foot.bone.transform.position - upperLeg.bone.transform.position);
+                Ray upper2foot = new(upperLeg.bone.transform.position, foot.bone.transform.position - upperLeg.bone.transform.position);
 
                 // Vertical? (needs adjustments for mini avatars)
                 if (Mathf.Abs(upper2foot.direction.x) > 0.1F ||
@@ -861,7 +861,7 @@ namespace Passer.Humanoid {
                 // Other foot is also on the ground, but it is lower, so that foot should not slide
                 isStandingLeg = false;
 
-            Vector3 delta = new Vector3(localPosition.x - lastPosition.x, 0, localPosition.z - lastPosition.z);
+            Vector3 delta = new(localPosition.x - lastPosition.x, 0, localPosition.z - lastPosition.z);
             float slideDistance = delta.magnitude;
             if (slideDistance > 0.001F && slideDistance < 0.15F) {
                 if (foot.target.confidence.position > 0 &&

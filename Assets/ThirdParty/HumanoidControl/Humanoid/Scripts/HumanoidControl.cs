@@ -881,17 +881,17 @@ namespace Passer.Humanoid {
 
         /// <summary>The Unity XR tracker</summary>\
 #if pUNITYXR
-        public UnityXRTracker unityXR = new UnityXRTracker();
+        public UnityXRTracker unityXR = new();
 #endif
 #if hLEGACYXR
         public UnityVRTracker unity = new UnityVRTracker();
 #endif
 #if hOPENVR && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
-        public OpenVRHumanoidTracker openVR = new OpenVRHumanoidTracker();
+        public OpenVRHumanoidTracker openVR = new();
 #endif
 #if hOCULUS && (UNITY_STANDALONE_WIN || UNITY_ANDROID)
         /// <summary>The Oculus tracker</summary>
-        public OculusHumanoidTracker oculus = new OculusHumanoidTracker();
+        public OculusHumanoidTracker oculus = new();
 #endif
         /// <summary>The Windows Mixed Reality tracker</summary>
 #if hWINDOWSMR && UNITY_2017_2_OR_NEWER && !UNITY_2020_1_OR_NEWER && UNITY_WSA_10_0
@@ -1393,7 +1393,7 @@ namespace Passer.Humanoid {
             }
 
             public static HumanoidPose Retrieve(HumanoidControl humanoid, float poseTime) {
-                HumanoidPose pose = new HumanoidPose() {
+                HumanoidPose pose = new() {
                     nwId = humanoid.nwId,
                     humanoidId = humanoid.humanoidId,
                     time = poseTime,
@@ -1410,7 +1410,7 @@ namespace Passer.Humanoid {
             }
 
             protected static Bone GetBonePose(HumanoidTarget target, Tracking.Bone boneId) {
-                Bone poseBone = new Bone() {
+                Bone poseBone = new() {
                     id = boneId,
                     position = target.main.target.transform.position,
                     positionConfidence = (byte)(target.main.target.confidence.position * 255),
@@ -1783,7 +1783,7 @@ namespace Passer.Humanoid {
 
 
             // Add gameobject with target rotation to ensure the direction of the capsule
-            GameObject spineColliderObject = new GameObject("Spine Collider") {
+            GameObject spineColliderObject = new("Spine Collider") {
                 tag = this.gameObject.tag,
                 layer = this.gameObject.layer
             };
@@ -1800,7 +1800,7 @@ namespace Passer.Humanoid {
 
             HumanoidTarget.BoneTransform leftUpperLeg = leftFootTarget.upperLeg.bone;
             // Add gameobject with target rotation to ensure the direction of the capsule
-            GameObject leftColliderObject = new GameObject("Left Leg Collider") {
+            GameObject leftColliderObject = new("Left Leg Collider") {
                 tag = this.gameObject.tag,
                 layer = this.gameObject.layer
             };
@@ -1816,7 +1816,7 @@ namespace Passer.Humanoid {
 
             HumanoidTarget.BoneTransform rightUpperLeg = rightFootTarget.upperLeg.bone;
             // Add gameobject with target rotation to ensure the direction of the capsule
-            GameObject rightColliderObject = new GameObject("Right Leg Collider") {
+            GameObject rightColliderObject = new("Right Leg Collider") {
                 tag = this.gameObject.tag,
                 layer = this.gameObject.layer
             };
@@ -2015,7 +2015,7 @@ namespace Passer.Humanoid {
         }
 
         private void TranslateBody(Transform transform, Vector3 translation) {
-            var collisionAngle = Vector3.Angle(translation, hitNormal);
+            float collisionAngle = Vector3.Angle(translation, hitNormal);
             if (!collided || (collided && collisionAngle <= 90f))
                 transform.Translate(translation, Space.World);
         }
@@ -2178,7 +2178,7 @@ namespace Passer.Humanoid {
             if (realWorldTransform != null)
                 return realWorldTransform.gameObject;
 
-            GameObject realWorld = new GameObject("Real World");
+            GameObject realWorld = new("Real World");
             realWorld.transform.parent = transform;
             realWorld.transform.localPosition = Vector3.zero;
             realWorld.transform.localRotation = Quaternion.identity;
@@ -2211,7 +2211,7 @@ namespace Passer.Humanoid {
         /// <returns>The position of the humanoid</returns>
         public Vector3 GetHumanoidPosition() {
             Vector3 footPosition = (leftFootTarget.foot.target.transform.position + rightFootTarget.foot.target.transform.position) / 2;
-            Vector3 footBase = new Vector3(footPosition.x, transform.position.y, footPosition.z);
+            Vector3 footBase = new(footPosition.x, transform.position.y, footPosition.z);
             return footBase;
         }
         //public Vector3 GetHumanoidPosition2() {

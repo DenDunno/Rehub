@@ -30,20 +30,20 @@
     }
 
     public class FaceSensor : Sensor {
-        public TrackedBrow leftBrow = new TrackedBrow();
-        public TrackedBrow rightBrow = new TrackedBrow();
+        public TrackedBrow leftBrow = new();
+        public TrackedBrow rightBrow = new();
 
-        public TrackedEye leftEye = new TrackedEye();
-        public TrackedEye rightEye = new TrackedEye();
+        public TrackedEye leftEye = new();
+        public TrackedEye rightEye = new();
 
-        public TargetData leftCheek = new TargetData();
-        public TargetData rightCheek = new TargetData();
+        public TargetData leftCheek = new();
+        public TargetData rightCheek = new();
 
-        public TrackedNose nose = new TrackedNose();
+        public TrackedNose nose = new();
 
-        public TrackedMouth mouth = new TrackedMouth();
+        public TrackedMouth mouth = new();
 
-        public TargetData jaw = new TargetData();
+        public TargetData jaw = new();
 
         public float smile;
         public float pucker;

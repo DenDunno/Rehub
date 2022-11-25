@@ -134,7 +134,7 @@ namespace Passer.Humanoid {
             sensor2TargetRotation = Quaternion.Inverse(sensorTransform.rotation) * targetRotation;
             //sensor2TargetPosition = -targetTransform.InverseTransformPoint(sensorTransform.position);
 
-            var worldToLocalMatrix = Matrix4x4.TRS(targetPosition, targetRotation, Vector3.one).inverse;
+            Matrix4x4 worldToLocalMatrix = Matrix4x4.TRS(targetPosition, targetRotation, Vector3.one).inverse;
             sensor2TargetPosition = -worldToLocalMatrix.MultiplyPoint3x4(sensorTransform.position);
         }
 

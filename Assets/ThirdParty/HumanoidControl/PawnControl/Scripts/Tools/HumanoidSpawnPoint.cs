@@ -5,7 +5,7 @@ namespace Passer {
 
     public class HumanoidSpawnPoint : SpawnPoint {
 
-        public Vector3 center = new Vector3(0, 0.9F, 0);
+        public Vector3 center = new(0, 0.9F, 0);
         public float radius = 0.3F;
         public float height = 1.8F;
 

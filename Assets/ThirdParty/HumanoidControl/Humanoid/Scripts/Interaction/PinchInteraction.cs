@@ -36,7 +36,7 @@ namespace Passer.Humanoid {
                 // Pinch Socket is already present
                 return;
 
-            GameObject socketObj = new GameObject(handTarget.isLeft ? "Left Pinch Socket" : "Right Pinch Socket");
+            GameObject socketObj = new(handTarget.isLeft ? "Left Pinch Socket" : "Right Pinch Socket");
             Transform socketTransform = socketObj.transform;
             socketTransform.parent = handTarget.hand.bone.transform;
             socketTransform.position = handTarget.hand.target.transform.TransformPoint(0.1F, -0.035F, 0.03F);

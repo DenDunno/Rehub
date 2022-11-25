@@ -15,12 +15,12 @@ namespace Passer {
         }
 
 		public ControllerEventHandlers[] mouseInputEvents = new ControllerEventHandlers[] {
-			new ControllerEventHandlers() { label = "Mouse Vertical", id = 0 },
-			new ControllerEventHandlers() { label = "Mouse Horizontal", id = 1 },
-			new ControllerEventHandlers() { label = "Mouse Scroll", id = 2 },
-			new ControllerEventHandlers() { label = "Left Button", id = 3 },
-			new ControllerEventHandlers() { label = "Middle button", id = 4 },
-			new ControllerEventHandlers() { label = "Right Button", id = 5 },
+			new() { label = "Mouse Vertical", id = 0 },
+			new() { label = "Mouse Horizontal", id = 1 },
+			new() { label = "Mouse Scroll", id = 2 },
+			new() { label = "Left Button", id = 3 },
+			new() { label = "Middle button", id = 4 },
+			new() { label = "Right Button", id = 5 },
 		};
 
 		protected virtual void Update() {

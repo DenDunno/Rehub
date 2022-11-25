@@ -113,7 +113,7 @@ namespace Passer.Pawn {
         /// <param name="side">The controller Side which should be created</param>
         /// <returns></returns>
         public static PawnHand Create(PawnControl pawn, Side side) {
-            GameObject targetObject = new GameObject();
+            GameObject targetObject = new();
             if (side == Side.Left)
                 targetObject.name = "Left Hand";
             else
@@ -350,7 +350,7 @@ namespace Passer.Pawn {
         //public RigidbodyData grabbedRigidbodyData;
 
         public static Socket CreateGrabSocket(PawnHand controllerTarget) {
-            GameObject socketObj = new GameObject(controllerTarget.isLeft ? "Left Grab Socket" : "Right Grab Socket");
+            GameObject socketObj = new(controllerTarget.isLeft ? "Left Grab Socket" : "Right Grab Socket");
             Transform socketTransform = socketObj.transform;
             socketTransform.parent = controllerTarget.transform;
             socketTransform.localPosition = Vector3.zero;

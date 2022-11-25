@@ -112,7 +112,7 @@ namespace Passer.Tracking {
             //Transform controllerTransform = tracker.transform.Find(name);
             UnityXRController unityController = FindController(unityXR, isLeft);
             if (unityController == null) {
-                GameObject trackerObject = new GameObject(name);
+                GameObject trackerObject = new(name);
                 Transform controllerTransform = trackerObject.transform;
 
                 controllerTransform.parent = unityXR.transform;
@@ -127,7 +127,7 @@ namespace Passer.Tracking {
             return unityController;
         }
 
-        protected Dictionary<string, string> modelNames = new Dictionary<string, string>() {
+        protected Dictionary<string, string> modelNames = new() {
             { "Oculus Touch Controller - Left", "Left Touch Controller" },
             { "Oculus Touch Controller - Right", "Right Touch Controller" },
             { "Spatial Controller - Left", "Windows MR Controller Left" },

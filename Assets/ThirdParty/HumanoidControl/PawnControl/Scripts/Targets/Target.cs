@@ -49,7 +49,7 @@ namespace Passer {
             if (rb != null)
                 return SetColliderToTrigger(rb);
             else {
-                List<Collider> changedColliders = new List<Collider>();
+                List<Collider> changedColliders = new();
 
                 Collider[] colliders = obj.GetComponentsInChildren<Collider>();
                 for (int j = 0; j < colliders.Length; j++) {
@@ -64,7 +64,7 @@ namespace Passer {
         }
 
         public static List<Collider> SetColliderToTrigger(Rigidbody rb) {
-            List<Collider> changedColliders = new List<Collider>();
+            List<Collider> changedColliders = new();
 
             Collider[] colliders = rb.GetComponentsInChildren<Collider>();
             for (int j = 0; j < colliders.Length; j++) {

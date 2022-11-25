@@ -17,7 +17,7 @@ namespace Passer.Humanoid {
         [System.NonSerialized]
         ulong actionHandle;
         [System.NonSerialized]
-        InputSkeletalActionData_t tempSkeletonActionData = new InputSkeletalActionData_t();
+        InputSkeletalActionData_t tempSkeletonActionData = new();
         [System.NonSerialized]
         uint skeletonActionData_size;
 
@@ -37,7 +37,7 @@ namespace Passer.Humanoid {
         public static OpenVRHandSkeleton Get(Transform openVRTransform, bool isLeft, bool showRealObjects) {
             OpenVRHandSkeleton skeleton = Find(openVRTransform, isLeft);
             if (skeleton == null) {
-                GameObject skeletonObj = new GameObject(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
+                GameObject skeletonObj = new(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
                 skeletonObj.transform.parent = openVRTransform;
                 skeletonObj.transform.localPosition = Vector3.zero;
                 skeletonObj.transform.localRotation = Quaternion.identity;
@@ -143,7 +143,7 @@ namespace Passer.Humanoid {
 
         protected void UpdateTransform(InputPoseActionData_t poseActionData) {
             HmdMatrix34_t pose = poseActionData.pose.mDeviceToAbsoluteTracking;
-            Matrix4x4 m = new Matrix4x4();
+            Matrix4x4 m = new();
 
             m.m00 = pose.m0;
             m.m01 = pose.m1;
@@ -189,9 +189,9 @@ namespace Passer.Humanoid {
         }
 
         private static Vector3 GetPosition(Matrix4x4 matrix) {
-            var x = matrix.m03;
-            var y = matrix.m13;
-            var z = matrix.m23;
+            float x = matrix.m03;
+            float y = matrix.m13;
+            float z = matrix.m23;
 
             return new Vector3(x, y, z);
         }
@@ -210,7 +210,7 @@ namespace Passer.Humanoid {
         protected void UpdateBoneTransform0(int boneIx, int boneIx2) {
             VRBoneTransform_t boneTransform = tempBoneTransforms[boneIx];
 
-            Vector3 p = new Vector3(
+            Vector3 p = new(
                 boneTransform.position.v0,
                 boneTransform.position.v1,
                 -boneTransform.position.v2
@@ -221,7 +221,7 @@ namespace Passer.Humanoid {
             //    -boneTransform.orientation.z,
             //    boneTransform.orientation.w
             //    );
-            Quaternion q2 = new Quaternion(
+            Quaternion q2 = new(
                 boneTransform.orientation.z,
                 boneTransform.orientation.w,
                 -boneTransform.orientation.x,
@@ -237,12 +237,12 @@ namespace Passer.Humanoid {
         protected void UpdateBoneTransform(int boneIx, int boneIx2) {
             VRBoneTransform_t boneTransform = tempBoneTransforms[boneIx];
 
-            Vector3 p = new Vector3(
+            Vector3 p = new(
                 -boneTransform.position.v0,
                 boneTransform.position.v1,
                 boneTransform.position.v2
                 );
-            Quaternion q = new Quaternion(
+            Quaternion q = new(
                 boneTransform.orientation.x,
                 -boneTransform.orientation.y,
                 -boneTransform.orientation.z,

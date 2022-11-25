@@ -36,7 +36,7 @@ namespace Passer.Tracking {
 
             OculusHmd hmd = FindHmd(oculusTransform);
             if (hmd == null) {
-                GameObject sensorObject = new GameObject("Oculus HMD");
+                GameObject sensorObject = new("Oculus HMD");
                 Transform sensorTransform = sensorObject.transform;
 
                 sensorTransform.parent = oculusTransform.transform;

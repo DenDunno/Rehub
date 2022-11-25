@@ -15,7 +15,7 @@ namespace Passer.Tracking {
         public static UnityTrackerComponent Get(Transform realWorld) {
             Transform trackerTransform = realWorld.Find("Unity");
             if (trackerTransform == null) {
-                GameObject trackerObject = new GameObject("Unity");
+                GameObject trackerObject = new("Unity");
                 trackerTransform = trackerObject.transform;
 
                 trackerTransform.parent = realWorld;

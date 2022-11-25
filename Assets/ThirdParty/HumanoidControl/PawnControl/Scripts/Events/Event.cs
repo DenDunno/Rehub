@@ -269,7 +269,7 @@ namespace Passer {
         /// <summary>
         /// The EventHandlers
         /// </summary>
-        public List<T> events = new List<T>();
+        public List<T> events = new();
     }
 
 }

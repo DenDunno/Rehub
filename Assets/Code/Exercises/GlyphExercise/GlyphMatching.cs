@@ -5,7 +5,7 @@ using static ZeppelinGames.GlyphRecogniser;
 
 public class GlyphMatching 
 {
-    private readonly List<Vector3> _glyphPoints = new List<Vector3>();
+    private readonly List<Vector3> _glyphPoints = new();
     private const float _maxPointDist = 0.025f;
 
     public void TryAddPoint(Vector3 position)

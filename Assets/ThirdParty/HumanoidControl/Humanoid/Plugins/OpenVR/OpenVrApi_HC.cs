@@ -7,6 +7,7 @@
 
 using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace Passer {
 
@@ -1813,7 +1814,7 @@ namespace Passer {
             if ((System.Environment.OSVersion.Platform == System.PlatformID.MacOSX) ||
                     (System.Environment.OSVersion.Platform == System.PlatformID.Unix)) {
                 PollNextEventUnion u;
-                VREvent_t_Packed event_packed = new VREvent_t_Packed();
+                VREvent_t_Packed event_packed = new();
                 u.pPollNextEventPacked = null;
                 u.pPollNextEvent = FnTable.PollNextEvent;
                 bool packed_result = u.pPollNextEventPacked(ref event_packed, (uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(VREvent_t_Packed)));
@@ -1853,7 +1854,7 @@ namespace Passer {
             if ((System.Environment.OSVersion.Platform == System.PlatformID.MacOSX) ||
                     (System.Environment.OSVersion.Platform == System.PlatformID.Unix)) {
                 GetControllerStateUnion u;
-                VRControllerState_t_Packed state_packed = new VRControllerState_t_Packed(pControllerState);
+                VRControllerState_t_Packed state_packed = new(pControllerState);
                 u.pGetControllerStatePacked = null;
                 u.pGetControllerState = FnTable.GetControllerState;
                 bool packed_result = u.pGetControllerStatePacked(unControllerDeviceIndex, ref state_packed, (uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(VRControllerState_t_Packed)));
@@ -1881,7 +1882,7 @@ namespace Passer {
             if ((System.Environment.OSVersion.Platform == System.PlatformID.MacOSX) ||
                     (System.Environment.OSVersion.Platform == System.PlatformID.Unix)) {
                 GetControllerStateWithPoseUnion u;
-                VRControllerState_t_Packed state_packed = new VRControllerState_t_Packed(pControllerState);
+                VRControllerState_t_Packed state_packed = new(pControllerState);
                 u.pGetControllerStateWithPosePacked = null;
                 u.pGetControllerStateWithPose = FnTable.GetControllerStateWithPose;
                 bool packed_result = u.pGetControllerStateWithPosePacked(eOrigin, unControllerDeviceIndex, ref state_packed, (uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(VRControllerState_t_Packed)), ref pTrackedDevicePose);
@@ -2673,7 +2674,7 @@ namespace Passer {
             if ((System.Environment.OSVersion.Platform == System.PlatformID.MacOSX) ||
                     (System.Environment.OSVersion.Platform == System.PlatformID.Unix)) {
                 PollNextOverlayEventUnion u;
-                VREvent_t_Packed event_packed = new VREvent_t_Packed();
+                VREvent_t_Packed event_packed = new();
                 u.pPollNextOverlayEventPacked = null;
                 u.pPollNextOverlayEvent = FnTable.PollNextOverlayEvent;
                 bool packed_result = u.pPollNextOverlayEventPacked(ulOverlayHandle, ref event_packed, (uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(VREvent_t_Packed)));
@@ -2911,7 +2912,7 @@ namespace Passer {
             if ((System.Environment.OSVersion.Platform == System.PlatformID.MacOSX) ||
                     (System.Environment.OSVersion.Platform == System.PlatformID.Unix)) {
                 GetComponentStateUnion u;
-                VRControllerState_t_Packed state_packed = new VRControllerState_t_Packed(pControllerState);
+                VRControllerState_t_Packed state_packed = new(pControllerState);
                 u.pGetComponentStatePacked = null;
                 u.pGetComponentState = FnTable.GetComponentState;
                 bool packed_result = u.pGetComponentStatePacked(pchRenderModelName, pchComponentName, ref state_packed, ref pState, ref pComponentState);
@@ -4416,7 +4417,7 @@ namespace Passer {
         public byte cNewInput0, cNewInput1, cNewInput2, cNewInput3, cNewInput4, cNewInput5, cNewInput6, cNewInput7;
         public string cNewInput {
             get {
-                var stringBuilder = new System.Text.StringBuilder(8);
+                StringBuilder stringBuilder = new(8);
                 stringBuilder.Append(cNewInput0);
                 stringBuilder.Append(cNewInput1);
                 stringBuilder.Append(cNewInput2);

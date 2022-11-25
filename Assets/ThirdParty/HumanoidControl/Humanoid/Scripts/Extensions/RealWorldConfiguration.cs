@@ -7,7 +7,7 @@ namespace Passer.Humanoid {
     [System.Serializable]
     public class RealWorldConfiguration : ScriptableObject {
 
-        public List<TrackingSpace> trackers = new List<TrackingSpace>();
+        public List<TrackingSpace> trackers = new();
         
         [System.Serializable]
         public class TrackingSpace {

@@ -18,9 +18,9 @@ namespace Passer.Humanoid.Tracking {
 
         public class Finger {
             public float curl;
-            public TargetData proximal = new TargetData();
-            public TargetData intermediate = new TargetData();
-            public TargetData distal = new TargetData();
+            public TargetData proximal = new();
+            public TargetData intermediate = new();
+            public TargetData distal = new();
         }
 
         public Finger thumb;

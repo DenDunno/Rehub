@@ -436,7 +436,7 @@ namespace Passer.Humanoid {
         }
 
         protected BasicHandPhysics[] GetComponentsInChildrenOnly(Transform transform) {
-            List<BasicHandPhysics> childHandPhysicsList = new List<BasicHandPhysics>();
+            List<BasicHandPhysics> childHandPhysicsList = new();
             for (int i = 0; i < transform.childCount; i++) {
                 BasicHandPhysics handPhysics = transform.GetChild(i).GetComponent<BasicHandPhysics>();
                 if (handPhysics != null) {

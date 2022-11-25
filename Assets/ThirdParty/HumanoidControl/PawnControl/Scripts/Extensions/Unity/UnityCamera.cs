@@ -83,7 +83,7 @@ namespace Passer {
         public static Camera StaticAddCamera(PawnHead headTarget) {
             Camera camera = headTarget.transform.GetComponentInChildren<Camera>();
             if (camera == null) {
-                GameObject cameraObj = new GameObject("First Person Camera");
+                GameObject cameraObj = new("First Person Camera");
                 camera = cameraObj.AddComponent<Camera>();
                 camera.tag = "MainCamera";
 
@@ -122,7 +122,7 @@ namespace Passer {
         public static Camera AddCamera(Transform targetTransform) {
             Camera camera = targetTransform.GetComponentInChildren<Camera>();
             if (camera == null) {
-                GameObject cameraObj = new GameObject("First Person Camera");
+                GameObject cameraObj = new("First Person Camera");
                 camera = cameraObj.AddComponent<Camera>();
                 camera.tag = "MainCamera";
 
@@ -194,7 +194,7 @@ namespace Passer {
                 UpdateStatus();
         }
 
-        private List<XRNodeState> nodeStates = new List<XRNodeState>();
+        private List<XRNodeState> nodeStates = new();
         protected virtual void UpdateStatus() {
             status = Tracker.Status.Unavailable;
             InputTracking.GetNodeStates(nodeStates);

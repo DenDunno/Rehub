@@ -461,14 +461,14 @@ namespace Passer.Humanoid {
 
         #region Limitations
         // Default limitations
-        public static readonly Vector3 minProximalAngles = new Vector3(-10, 0, 0);
-        public static readonly Vector3 maxProximalAngles = new Vector3(45, 0, 0);
+        public static readonly Vector3 minProximalAngles = new(-10, 0, 0);
+        public static readonly Vector3 maxProximalAngles = new(45, 0, 0);
 
-        public static readonly Vector3 minIntermediateAngles = new Vector3(0, 0, 0);
-        public static readonly Vector3 maxIntermediateAngles = new Vector3(90, 0, 0);
+        public static readonly Vector3 minIntermediateAngles = new(0, 0, 0);
+        public static readonly Vector3 maxIntermediateAngles = new(90, 0, 0);
 
-        public static readonly Vector3 minDistalAngles = new Vector3(0, 0, 0);
-        public static readonly Vector3 maxDistalAngles = new Vector3(90, 0, 0);
+        public static readonly Vector3 minDistalAngles = new(0, 0, 0);
+        public static readonly Vector3 maxDistalAngles = new(90, 0, 0);
         #endregion
 
         #region Configuration

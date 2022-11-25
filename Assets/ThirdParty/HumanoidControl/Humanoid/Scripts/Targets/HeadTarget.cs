@@ -25,14 +25,14 @@ namespace Passer.Humanoid {
 
         // for future use
         public static readonly float neckTurnRatio = 0.65F;
-        public static readonly Vector3 minHeadAngles = new Vector3(0, 0, 0);
-        public static readonly Vector3 maxHeadAngles = new Vector3(0, 0, 0);
+        public static readonly Vector3 minHeadAngles = new(0, 0, 0);
+        public static readonly Vector3 maxHeadAngles = new(0, 0, 0);
 
-        public static readonly Vector3 minNeckAngles = new Vector3(-55, -70, -35);
-        public static readonly Vector3 maxNeckAngles = new Vector3(80, 70, 35);
+        public static readonly Vector3 minNeckAngles = new(-55, -70, -35);
+        public static readonly Vector3 maxNeckAngles = new(80, 70, 35);
 
-        public static readonly Vector minNeckAngles2 = new Vector(-55, -70, 0);
-        public static readonly Vector maxNeckAngles2 = new Vector(80, 70, 0);
+        public static readonly Vector minNeckAngles2 = new(-55, -70, 0);
+        public static readonly Vector maxNeckAngles2 = new(80, 70, 0);
         #endregion
 
         #region Sensors
@@ -48,22 +48,22 @@ namespace Passer.Humanoid {
         public UnityVRHead unity = new UnityVRHead();
 #endif
 
-        private HeadPredictor headPredictor = new HeadPredictor();
+        private HeadPredictor headPredictor = new();
 
-        public HeadAnimator headAnimator = new HeadAnimator();
+        public HeadAnimator headAnimator = new();
         public override Passer.Sensor animator { get { return headAnimator; } }
 
 #if pUNITYXR
-        public UnityXRHead unityXR = new UnityXRHead();
+        public UnityXRHead unityXR = new();
 #endif
 #if hOPENVR && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
-        public OpenVRHead openVR = new OpenVRHead();
+        public OpenVRHead openVR = new();
 #endif
 #if hOPENVR && hVIVETRACKER && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
-        public ViveTrackerHead viveTracker = new ViveTrackerHead();
+        public ViveTrackerHead viveTracker = new();
 #endif
 #if hOCULUS && (UNITY_STANDALONE_WIN || UNITY_ANDROID)
-        public OculusHead oculus = new OculusHead();
+        public OculusHead oculus = new();
 #endif
 #if hWINDOWSMR && UNITY_2017_2_OR_NEWER && !UNITY_2020_1_OR_NEWER && UNITY_WSA_10_0
         public WindowsMRHead mixedReality = new WindowsMRHead();
@@ -473,7 +473,7 @@ namespace Passer.Humanoid {
 
         // Do not remove this, this is dynamically called from Target_Editor!
         public static HeadTarget CreateTarget(HumanoidTarget oldTarget) {
-            GameObject targetObject = new GameObject("Head Target");
+            GameObject targetObject = new("Head Target");
             Transform targetTransform = targetObject.transform;
             HumanoidControl humanoid = oldTarget.humanoid;
 
@@ -567,7 +567,7 @@ namespace Passer.Humanoid {
 
         #region Events
 
-        public BoolEventHandlers trackingEvent = new BoolEventHandlers() {
+        public BoolEventHandlers trackingEvent = new() {
             id = 1,
             label = "Tracking Event",
             tooltip =
@@ -585,7 +585,7 @@ namespace Passer.Humanoid {
             fromEventLabel = "tracking",
         };
 
-        public FloatEventHandlers audioEvent = new FloatEventHandlers() {
+        public FloatEventHandlers audioEvent = new() {
             id = 2,
             label = "Audio Event",
             tooltip =
@@ -638,7 +638,7 @@ namespace Passer.Humanoid {
             fromEventLabel = "Eyes Closed",
         };
 #endif
-        public BoolEventHandlers insideColliderEvent = new BoolEventHandlers() {
+        public BoolEventHandlers insideColliderEvent = new() {
             id = 5,
             label = "In Collider Event",
             tooltip =
@@ -668,7 +668,7 @@ namespace Passer.Humanoid {
 
         public SkinnedMeshRenderer smRenderer;
         public Rigidbody headRigidbody;
-        public HeadMovements headMovements = new HeadMovements();
+        public HeadMovements headMovements = new();
 
         #region Init
 

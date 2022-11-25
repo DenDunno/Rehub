@@ -55,7 +55,7 @@ namespace ZeppelinGames
             float inPer = ((float)pointsInside / (float)nPoints.Length) * 100;
             float keyPer = ((float)pointsFound / (float)accPoints) * 100;
 
-            GlyphReturnData glyphReturnData = new GlyphReturnData(glyph.name, inPer, keyPer, accPoints);
+            GlyphReturnData glyphReturnData = new(glyph.name, inPer, keyPer, accPoints);
             return glyphReturnData;
         }
 
@@ -145,7 +145,7 @@ namespace ZeppelinGames
 
         public static Vector2[] subDivLine(Vector2 lp1, Vector2 lp2, int subDivs)
         {
-            List<Vector2> subDivPoints = new List<Vector2>();
+            List<Vector2> subDivPoints = new();
             float k = Vector2.Distance(lp2, lp1) / subDivs;
             for (int n = 0; n < subDivs; n++)
             {

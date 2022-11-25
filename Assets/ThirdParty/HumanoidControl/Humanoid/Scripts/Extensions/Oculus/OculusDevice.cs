@@ -26,7 +26,7 @@ namespace Passer.Humanoid.Tracking {
 
         }
 
-        public static readonly System.Version version_1_16_0 = new System.Version(1, 16, 0);
+        public static readonly System.Version version_1_16_0 = new(1, 16, 0);
 
         #endregion
 
@@ -315,7 +315,7 @@ namespace Passer.Humanoid.Tracking {
             return new UnityEngine.Vector3(bone.Pose.Position.x, bone.Pose.Position.y, -bone.Pose.Position.z);
         }
 
-        private static HandStateInternal cachedHandState = new HandStateInternal();
+        private static HandStateInternal cachedHandState = new();
         public static bool GetHandState(Step stepId, Hand hand, ref HandState handState) {
 #if OVRPLUGIN_UNSUPPORTED_PLATFORM
 		return false;
@@ -485,7 +485,7 @@ namespace Passer.Humanoid.Tracking {
             public float x;
             public float y;
             public float z;
-            public static readonly Vector3f zero = new Vector3f { x = 0.0f, y = 0.0f, z = 0.0f };
+            public static readonly Vector3f zero = new() { x = 0.0f, y = 0.0f, z = 0.0f };
             public override string ToString() {
                 return string.Format("{0}, {1}, {2}", x, y, z);
             }
@@ -500,7 +500,7 @@ namespace Passer.Humanoid.Tracking {
             public float y;
             public float z;
             public float w;
-            public static readonly Quatf identity = new Quatf { x = 0.0f, y = 0.0f, z = 0.0f, w = 1.0f };
+            public static readonly Quatf identity = new() { x = 0.0f, y = 0.0f, z = 0.0f, w = 1.0f };
             public override string ToString() {
                 return string.Format("{0}, {1}, {2}, {3}", x, y, z, w);
             }
@@ -853,7 +853,7 @@ namespace Passer.Humanoid.Tracking {
         public struct Posef {
             public Quatf Orientation;
             public Vector3f Position;
-            public static readonly Posef identity = new Posef { Orientation = Quatf.identity, Position = Vector3f.zero };
+            public static readonly Posef identity = new() { Orientation = Quatf.identity, Position = Vector3f.zero };
             public override string ToString() {
                 return string.Format("Position ({0}), Orientation({1})", Position, Orientation);
             }
@@ -1038,7 +1038,7 @@ namespace Passer.Humanoid.Tracking {
         public static extern Bool ovrp_RecenterTrackingOrigin(uint flags);
 
         private static class OVRP_1_44_0 {
-            public static readonly System.Version version = new System.Version(1, 44, 0);
+            public static readonly System.Version version = new(1, 44, 0);
 
             //[DllImport(pluginName, CallingConvention = CallingConvention.Cdecl)]
             //public static extern Result ovrp_GetHandTrackingEnabled(ref Bool handTrackingEnabled);

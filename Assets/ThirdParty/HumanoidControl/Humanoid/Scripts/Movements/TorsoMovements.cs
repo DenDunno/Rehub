@@ -9,7 +9,7 @@ namespace Passer.Humanoid {
     public class TorsoMovements {
         private HipsTarget hipsTarget;
 
-        private Breathing breathing = new Breathing();
+        private Breathing breathing = new();
 
         #region Start
         public void Start(HumanoidControl _humanoid, HipsTarget _target) {
@@ -234,9 +234,9 @@ namespace Passer.Humanoid {
             Vector3 rightHandForward = rightHandRotation * Vector3.right;
             Vector3 hipsForward = hipsRotation * Vector3.forward;
 
-            Vector2 leftHandForward2 = new Vector2(leftHandForward.x, leftHandForward.z);
-            Vector2 rightHandForward2 = new Vector2(rightHandForward.x, rightHandForward.z);
-            Vector2 hipsRotation2 = new Vector2(hipsForward.x, hipsForward.z);
+            Vector2 leftHandForward2 = new(leftHandForward.x, leftHandForward.z);
+            Vector2 rightHandForward2 = new(rightHandForward.x, rightHandForward.z);
+            Vector2 hipsRotation2 = new(hipsForward.x, hipsForward.z);
 
             // Check for hands not pointing up/down too much
             float dOrientationL = leftHandForward2.sqrMagnitude > 0.1F ? UnityAngles.SignedAngle(hipsRotation2, leftHandForward2) : 0;

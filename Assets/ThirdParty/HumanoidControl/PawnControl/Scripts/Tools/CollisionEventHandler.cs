@@ -9,7 +9,7 @@ namespace Passer {
 
         #region Events
 
-        public GameObjectEventHandlers collisionHandlers = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers collisionHandlers = new() {
             label = "Collision Event",
             tooltip =
                 "Call functions using the collider state\n" +

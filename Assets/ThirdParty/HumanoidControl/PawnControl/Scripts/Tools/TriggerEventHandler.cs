@@ -13,7 +13,7 @@ namespace Passer {
 
         /// <summary> Trigger Event Handles </summary>
         /// Let you execute function calls based on the Trigger Events
-        public GameObjectEventHandlers triggerHandlers = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers triggerHandlers = new() {
             label = "Trigger Event",
             tooltip = 
                 "Call functions using the trigger collider state\n" +
@@ -30,28 +30,28 @@ namespace Passer {
         };
 
         public ControllerEventHandlers[] leftInputEvents = {
-            new ControllerEventHandlers() { label = "Left Vertical", id = 0 },
-            new ControllerEventHandlers() { label = "Left Horizontal", id = 1 },
-            new ControllerEventHandlers() { label = "Left Stick Button", id = 2 },
-            new ControllerEventHandlers() { label = "Left Button 1", id = 3 },
-            new ControllerEventHandlers() { label = "Left Button 2", id = 4 },
-            new ControllerEventHandlers() { label = "Left Button 3", id = 5 },
-            new ControllerEventHandlers() { label = "Left Button 4", id = 6 },
-            new ControllerEventHandlers() { label = "Left Trigger 1", id = 7 },
-            new ControllerEventHandlers() { label = "Left Trigger 2", id = 8 },
-            new ControllerEventHandlers() { label = "Left Option", id = 9 },
+            new() { label = "Left Vertical", id = 0 },
+            new() { label = "Left Horizontal", id = 1 },
+            new() { label = "Left Stick Button", id = 2 },
+            new() { label = "Left Button 1", id = 3 },
+            new() { label = "Left Button 2", id = 4 },
+            new() { label = "Left Button 3", id = 5 },
+            new() { label = "Left Button 4", id = 6 },
+            new() { label = "Left Trigger 1", id = 7 },
+            new() { label = "Left Trigger 2", id = 8 },
+            new() { label = "Left Option", id = 9 },
         };
         public ControllerEventHandlers[] rightInputEvents = {
-            new ControllerEventHandlers() { label = "Right Vertical", id = 0 },
-            new ControllerEventHandlers() { label = "Right Horizontal", id = 1 },
-            new ControllerEventHandlers() { label = "Right Stick Button", id = 2 },
-            new ControllerEventHandlers() { label = "Right Button 1", id = 3 },
-            new ControllerEventHandlers() { label = "Right Button 2", id = 4 },
-            new ControllerEventHandlers() { label = "Right Button 3", id = 5 },
-            new ControllerEventHandlers() { label = "Right Button 4", id = 6 },
-            new ControllerEventHandlers() { label = "Right Trigger 1", id = 7 },
-            new ControllerEventHandlers() { label = "Right Trigger 2", id = 8 },
-            new ControllerEventHandlers() { label = "Right Option", id = 9 },
+            new() { label = "Right Vertical", id = 0 },
+            new() { label = "Right Horizontal", id = 1 },
+            new() { label = "Right Stick Button", id = 2 },
+            new() { label = "Right Button 1", id = 3 },
+            new() { label = "Right Button 2", id = 4 },
+            new() { label = "Right Button 3", id = 5 },
+            new() { label = "Right Button 4", id = 6 },
+            new() { label = "Right Trigger 1", id = 7 },
+            new() { label = "Right Trigger 2", id = 8 },
+            new() { label = "Right Option", id = 9 },
         };
 
         GameObject triggeringGameObject = null;

@@ -40,7 +40,7 @@ namespace Passer.Pawn {
         /// <returns>The created CameraTarget</returns>
         /// The CameraTarget will be created as direct child of the pawn.
         public static PawnHead Create(PawnControl pawn) {
-            GameObject targetObject = new GameObject() {
+            GameObject targetObject = new() {
                 name = "Head Target"
             };
             Transform targetTransform = targetObject.transform;

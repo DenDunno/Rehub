@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObstacleSpawner : IInitializable, IUpdate
 {
-    private readonly List<ObstaclePool> _obstaclePools = new List<ObstaclePool>();
+    private readonly List<ObstaclePool> _obstaclePools = new();
     private readonly List<Obstacle> _obstaclesPrefabs;
     private readonly ObstacleSpawnData _obstacleSpawnData;
 

@@ -234,7 +234,7 @@ namespace Passer.Humanoid {
         }
 
         protected override HandSkeleton CreateHandSkeleton(bool isLeft, bool showRealObjects) {
-            GameObject skeletonObj = new GameObject(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
+            GameObject skeletonObj = new(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
             skeletonObj.transform.parent = tracker.trackerTransform;
             skeletonObj.transform.localPosition = Vector3.zero;
             skeletonObj.transform.localRotation = Quaternion.identity;
@@ -346,7 +346,7 @@ namespace Passer.Humanoid {
             int ix = fingerIx * 5 + boneIx + 2;
             Passer.VRBoneTransform_t boneTransform = openVRController.tempBoneTransforms[ix];
 
-            Quaternion q = new Quaternion(
+            Quaternion q = new(
                 boneTransform.orientation.x,
                 boneTransform.orientation.y,
                 boneTransform.orientation.z,

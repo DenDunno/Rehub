@@ -21,7 +21,7 @@ namespace Passer.Humanoid {
         /// <summary>The onClick event which replaces the standard onClick event</summary>
         /// This version takes an HumanoidControl parameter
         /// The standard does not take a parameter
-        public new HumanoidEvent onClick = new HumanoidEvent();
+        public new HumanoidEvent onClick = new();
 
         protected void Press(BaseEventData eventData) {
             if (!IsActive() || !IsInteractable())

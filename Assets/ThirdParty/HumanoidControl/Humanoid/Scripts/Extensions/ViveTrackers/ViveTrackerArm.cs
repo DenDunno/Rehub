@@ -32,9 +32,9 @@ namespace Passer.Humanoid {
             set { viveTracker.status = value; }
         }
 
-        private static readonly Vector3 defaultLeftTrackerPosition = new Vector3(0, 0.05F, 0F);
+        private static readonly Vector3 defaultLeftTrackerPosition = new(0, 0.05F, 0F);
         private static readonly Quaternion defaultLeftTrackerRotation = Quaternion.identity;
-        private static readonly Vector3 defaultRightTrackerPosition = new Vector3(0, 0.05F, 0F);
+        private static readonly Vector3 defaultRightTrackerPosition = new(0, 0.05F, 0F);
         private static readonly Quaternion defaultRightTrackerRotation = Quaternion.identity;
 
 #if hHI5
@@ -181,7 +181,7 @@ namespace Passer.Humanoid {
 #endif
             ViveTrackerComponent foundTracker = null;
             // Finds the left or rightmost tracker, at least 0.2m left or right of the HMD
-            Vector3 outermostLocalPos = new Vector3(isLeft ? -0.1F : 0.1F, 0, 0);
+            Vector3 outermostLocalPos = new(isLeft ? -0.1F : 0.1F, 0, 0);
             foreach (ViveTrackerComponent viveTracker in viveTrackers) {
                 // Is it tracking??
                 if (viveTracker.positionConfidence <= 0)
@@ -197,7 +197,7 @@ namespace Passer.Humanoid {
                 Vector3 sensorPos = viveTracker.transform.position;
 
                 // Get HMD rotation projected on XZ plane
-                Vector3 hmdForward = new Vector3(hmdTransform.forward.x, 0, hmdTransform.forward.z);
+                Vector3 hmdForward = new(hmdTransform.forward.x, 0, hmdTransform.forward.z);
                 Quaternion hmdFwdRotation = Quaternion.LookRotation(hmdForward);
 
                 // Get Vive tracker local to the HMD position

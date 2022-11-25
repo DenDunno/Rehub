@@ -10,7 +10,7 @@ public class GlyphExercise : Exercise, IScenarioComponent
     [SerializeField] private GlyphData[] _glyphGameRoundData;
     [SerializeField] private Image _imageToDraw;
     [SerializeField] private PencilAttachment _pencilAttachment;
-    private readonly GlyphMatching _glyphMatching = new GlyphMatching();
+    private readonly GlyphMatching _glyphMatching = new();
     private int _currentIndex;
     
     void IScenarioComponent.Init(ScenarioConfig scenarioConfig)

@@ -105,7 +105,7 @@ namespace Passer.Humanoid {
         }
 
         public OpenVRHmd hmd = null;
-        public List<OpenVRController> controllers = new List<OpenVRController>();
+        public List<OpenVRController> controllers = new();
 
 #if hVIVETRACKER
         public HeadSensor headSensorVive {
@@ -127,13 +127,13 @@ namespace Passer.Humanoid {
             get { return humanoid.rightFootTarget.viveTracker; }
         }
 
-        public List<ViveTrackerComponent> viveTrackers = new List<ViveTrackerComponent>();
+        public List<ViveTrackerComponent> viveTrackers = new();
 #endif
 
         ulong pHandle;
 
         [System.NonSerialized]
-        protected Passer.VRActiveActionSet_t actionSet = new Passer.VRActiveActionSet_t();
+        protected Passer.VRActiveActionSet_t actionSet = new();
         [System.NonSerialized]
         protected static uint activeActionSetSize;
         [System.NonSerialized]
@@ -544,10 +544,10 @@ namespace Passer.Humanoid {
         }
 
         private static string GetSensorHardwareId(uint index) {
-            ETrackedPropertyError error = new ETrackedPropertyError();
+            ETrackedPropertyError error = new();
 
             uint capacity = OpenVR.System.GetStringTrackedDeviceProperty(index, ETrackedDeviceProperty.Prop_SerialNumber_String, null, 0, ref error);
-            StringBuilder sb = new StringBuilder((int)capacity);
+            StringBuilder sb = new((int)capacity);
             if (capacity > 1) {
                 OpenVR.System.GetStringTrackedDeviceProperty(index, ETrackedDeviceProperty.Prop_SerialNumber_String, sb, capacity, ref error);
                 string probablyUniqueDeviceSerial = sb.ToString();
@@ -576,7 +576,7 @@ namespace Passer.Humanoid {
         }
 
         private static void StorePose(Passer.CVRSystem system, Passer.HmdMatrix34_t pose, uint sensorID) {
-            Matrix4x4 m = new Matrix4x4();
+            Matrix4x4 m = new();
 
             m.m00 = pose.m0;
             m.m01 = pose.m1;
@@ -677,9 +677,9 @@ namespace Passer.Humanoid {
         }
 
         public static Vector GetPosition(Matrix4x4 matrix) {
-            var x = matrix.m03;
-            var y = matrix.m13;
-            var z = matrix.m23;
+            float x = matrix.m03;
+            float y = matrix.m13;
+            float z = matrix.m23;
 
             return new Vector(x, y, z);
         }

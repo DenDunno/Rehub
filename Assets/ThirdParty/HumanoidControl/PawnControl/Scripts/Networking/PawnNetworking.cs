@@ -57,7 +57,7 @@ namespace Passer.Pawn {
         private static GameObject remotePawnPrefab;
 
         public static List<PawnControl> FindLocalPawns() {
-            List<PawnControl> pawns = new List<PawnControl>();
+            List<PawnControl> pawns = new();
             PawnControl[] foundPawns = Object.FindObjectsOfType<PawnControl>();
             for (int i = 0; i < foundPawns.Length; i++) {
                 if (!foundPawns[i].isRemote) {

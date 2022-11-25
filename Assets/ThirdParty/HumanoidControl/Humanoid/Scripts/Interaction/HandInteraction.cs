@@ -53,7 +53,7 @@ namespace Passer.Humanoid {
             if (socket != null)
                 return socket;
 
-            GameObject socketObj = new GameObject(isLeft ? "Left Grab Socket" : "Right Grab Socket");
+            GameObject socketObj = new(isLeft ? "Left Grab Socket" : "Right Grab Socket");
             Transform socketTransform = socketObj.transform;
             socketTransform.parent = hand.bone.transform;
             MoveToPalm(socketTransform);
@@ -73,7 +73,7 @@ namespace Passer.Humanoid {
                     return socket;
             }
 
-            GameObject socketObj = new GameObject(isLeft ? "Left Pinch Socket" : "Right Pinch Socket");
+            GameObject socketObj = new(isLeft ? "Left Pinch Socket" : "Right Pinch Socket");
             Transform socketTransform = socketObj.transform;
             socketTransform.parent = hand.bone.transform;
             socketTransform.rotation = hand.bone.targetRotation * Quaternion.Euler(355, 190, 155);
@@ -133,7 +133,7 @@ namespace Passer.Humanoid {
                 if (handPalm == null)
                     handPalm = hand.bone.transform.Find(isLeft ? "Left Hand Palm" : "Right Hand Palm");
                 if (handPalm == null) {
-                    GameObject handPalmObj = new GameObject(isLeft ? "Left Hand Palm" : "Right Hand Palm");
+                    GameObject handPalmObj = new(isLeft ? "Left Hand Palm" : "Right Hand Palm");
                     handPalm = handPalmObj.transform;
                     handPalm.parent = hand.bone.transform;
                 }
@@ -997,7 +997,7 @@ namespace Passer.Humanoid {
         }
 
         protected BasicHandPhysics[] GetComponentsInChildrenOnly(Transform transform) {
-            List<BasicHandPhysics> childHandPhysicsList = new List<BasicHandPhysics>();
+            List<BasicHandPhysics> childHandPhysicsList = new();
             for (int i = 0; i < transform.childCount; i++) {
                 BasicHandPhysics handPhysics = transform.GetChild(i).GetComponent<BasicHandPhysics>();
                 if (handPhysics != null) {

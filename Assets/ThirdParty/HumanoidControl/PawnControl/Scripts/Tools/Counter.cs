@@ -70,7 +70,7 @@ namespace Passer {
         /// <summary>
         /// Can be used to call values based on the Counter value
         /// </summary>
-        public IntEventHandlers counterEvent = new IntEventHandlers() {
+        public IntEventHandlers counterEvent = new() {
             label = "Value Change Event",
             tooltip = 
                 "Call functions using counter values\n" +

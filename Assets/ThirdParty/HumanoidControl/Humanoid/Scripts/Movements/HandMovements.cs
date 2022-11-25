@@ -71,7 +71,7 @@ namespace Passer.Humanoid {
             if (handTarget.stretchlessTarget == null) {
                 handTarget.stretchlessTarget = handTarget.hand.target.transform.Find("Stretchless Target");
                 if (handTarget.stretchlessTarget == null) {
-                    GameObject stretchlessTargetObj = new GameObject("Stretchless Target");
+                    GameObject stretchlessTargetObj = new("Stretchless Target");
                     handTarget.stretchlessTarget = stretchlessTargetObj.transform;
                     handTarget.stretchlessTarget.parent = handTarget.hand.target.transform;
                     handTarget.stretchlessTarget.localPosition = Vector3.zero;

@@ -36,7 +36,7 @@ namespace Passer.Tracking {
         [System.NonSerialized]
         ulong hapticsActionHandle;
         [System.NonSerialized]
-        InputSkeletalActionData_t tempSkeletonActionData = new InputSkeletalActionData_t();
+        InputSkeletalActionData_t tempSkeletonActionData = new();
         [System.NonSerialized]
         uint skeletonActionData_size;
 
@@ -145,8 +145,8 @@ namespace Passer.Tracking {
             rotationConfidence = OpenVRDevice.GetConfidence(trackerId);
             renderController = show;
 
-            Passer.VRControllerState_t controllerState = new Passer.VRControllerState_t();
-            var system = Passer.OpenVR.System;
+            Passer.VRControllerState_t controllerState = new();
+            CVRSystem system = Passer.OpenVR.System;
             uint controllerStateSize = (uint)Marshal.SizeOf(typeof(Passer.VRControllerState_t));
             bool newControllerState = system.GetControllerState((uint)trackerId, ref controllerState, controllerStateSize);
             if (system != null && newControllerState)
@@ -179,7 +179,7 @@ namespace Passer.Tracking {
             if (Passer.OpenVR.System == null)
                 return;
 
-            Vector outermostLocalPos = new Vector(isLeft ? -0.1F : 0.1F, 0, 0);
+            Vector outermostLocalPos = new(isLeft ? -0.1F : 0.1F, 0, 0);
 
             for (int i = 0; i < Passer.OpenVR.k_unMaxTrackedDeviceCount; i++) {
                 if (OpenVRDevice.GetDeviceClass(i) != Passer.ETrackedDeviceClass.Controller)
@@ -361,7 +361,7 @@ namespace Passer.Tracking {
         }
 
         [System.NonSerialized]
-        protected Passer.InputDigitalActionData_t digitalActionData = new Passer.InputDigitalActionData_t();
+        protected Passer.InputDigitalActionData_t digitalActionData = new();
         [System.NonSerialized]
         protected readonly uint digitalActionDataSize = (uint)Marshal.SizeOf(typeof(Passer.InputDigitalActionData_t));
 
@@ -376,7 +376,7 @@ namespace Passer.Tracking {
         }
 
         [System.NonSerialized]
-        protected Passer.InputAnalogActionData_t analogActionData = new Passer.InputAnalogActionData_t();
+        protected Passer.InputAnalogActionData_t analogActionData = new();
         [System.NonSerialized]
         protected readonly uint analogActionDataSize = (uint)Marshal.SizeOf(typeof(Passer.InputAnalogActionData_t));
 
@@ -397,7 +397,7 @@ namespace Passer.Tracking {
             if (err != Passer.EVRInputError.None)
                 return Vector2.zero;
 
-            Vector2 v = new Vector2(analogActionData.x, analogActionData.y);
+            Vector2 v = new(analogActionData.x, analogActionData.y);
             return v;
         }
 
@@ -408,7 +408,7 @@ namespace Passer.Tracking {
             if (err != Passer.EVRInputError.None)
                 return Vector3.zero;
 
-            Vector3 v = new Vector3(analogActionData.x, analogActionData.y, analogActionData.z);
+            Vector3 v = new(analogActionData.x, analogActionData.y, analogActionData.z);
             return v;
         }
 #endif

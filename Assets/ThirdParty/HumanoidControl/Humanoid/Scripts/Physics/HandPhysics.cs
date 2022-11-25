@@ -34,8 +34,8 @@ namespace Passer.Humanoid {
 
         #region Update
 
-        private List<Collider> currentTriggers = new List<Collider>();
-        private List<Collider> lastTriggers = new List<Collider>();
+        private List<Collider> currentTriggers = new();
+        private List<Collider> lastTriggers = new();
 
         public virtual void FixedUpdate() {
             lastTriggers = currentTriggers;
@@ -309,7 +309,7 @@ namespace Passer.Humanoid {
                 return;
 
             Vector3 torqueAxis = torque.normalized;
-            Vector3 ortho = new Vector3(1, 0, 0);
+            Vector3 ortho = new(1, 0, 0);
 
             // prevent torqueAxis and ortho from pointing in the same direction
             if (((torqueAxis - ortho).sqrMagnitude < Mathf.Epsilon) || ((torqueAxis + ortho).sqrMagnitude < Mathf.Epsilon)) {

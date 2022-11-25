@@ -5,7 +5,7 @@ namespace Passer.Humanoid {
 
     [System.Serializable]
     public class PoseMixer {
-        public List<MixedPose> mixedPoses = new List<MixedPose>();
+        public List<MixedPose> mixedPoses = new();
         public int currentPoseIx;
         public int detectedPoseIx;
         public enum PoseMode {
@@ -62,7 +62,7 @@ namespace Passer.Humanoid {
         }
 
         public virtual MixedPose Add() {
-            MixedPose newMixedPose = new MixedPose() {
+            MixedPose newMixedPose = new() {
                 pose = ScriptableObject.CreateInstance<Pose>()
             };
             mixedPoses.Add(newMixedPose);
@@ -73,7 +73,7 @@ namespace Passer.Humanoid {
             MixedPose foundMixedPose = mixedPoses.Find(mixedPose => mixedPose.pose == _pose);
             if (foundMixedPose != null)
                 return foundMixedPose;
-            MixedPose newMixedPose = new MixedPose() {
+            MixedPose newMixedPose = new() {
                 pose = _pose
             };
             mixedPoses.Add(newMixedPose);
@@ -87,7 +87,7 @@ namespace Passer.Humanoid {
             int ix = mixedPoses.FindIndex(mixedPose => mixedPose.pose == _pose);
             if (ix != -1)
                 return ix;
-            MixedPose newMixedPose = new MixedPose() {
+            MixedPose newMixedPose = new() {
                 pose = _pose
             };
             mixedPoses.Add(newMixedPose);

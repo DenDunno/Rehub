@@ -188,7 +188,7 @@ namespace Passer {
         public InteractionPointer[] pointers = new InteractionPointer[maxInteractions];
 
         public int CreateNewInteraction(Transform transform, float timedClick) {
-            InteractionPointer pointer = new InteractionPointer(PointerType.Point, transform, eventSystem);
+            InteractionPointer pointer = new(PointerType.Point, transform, eventSystem);
             pointers[nInteractions++] = pointer;
 
             pointer.focusingEnabled = false;
@@ -200,7 +200,7 @@ namespace Passer {
         }
 
         public int CreateNewInteraction(Transform transform, float timedClick, EventSystem eventSystem) {
-            InteractionPointer pointer = new InteractionPointer(PointerType.Point, transform, eventSystem);
+            InteractionPointer pointer = new(PointerType.Point, transform, eventSystem);
             pointers[nInteractions++] = pointer;
 
             pointer.focusingEnabled = false;
@@ -459,7 +459,7 @@ namespace Passer {
         }
 
         private void CastPhysicsRayFromPointer(InteractionPointer pointer) {
-            RaycastResult raycastResult = new RaycastResult();
+            RaycastResult raycastResult = new();
 
             if (pointer.focusingEnabled && pointer.type == PointerType.Point) {
                 if (pointer.externalRayCast) {
@@ -535,7 +535,7 @@ namespace Passer {
 
             pointer.data.position = Camera.main.WorldToScreenPoint(pointer.pointerTransform.position);
 
-            System.Collections.Generic.List<RaycastResult> m_RaycastResultCache = new System.Collections.Generic.List<RaycastResult>();
+            System.Collections.Generic.List<RaycastResult> m_RaycastResultCache = new();
             eventSystem.RaycastAll(pointer.data, m_RaycastResultCache);
             RaycastResult raycastResult = FindFirstRaycast(m_RaycastResultCache);
             m_RaycastResultCache.Clear();

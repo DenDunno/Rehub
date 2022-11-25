@@ -5,8 +5,8 @@ namespace Passer {
 
     public class Script : MonoBehaviour {
         public string scriptName;
-        public List<Condition> conditions = new List<Condition>();
-        public List<FunctionCall> functionCalls = new List<FunctionCall>();
+        public List<Condition> conditions = new();
+        public List<FunctionCall> functionCalls = new();
 
         protected virtual void Reset() {
             this.enabled = false;

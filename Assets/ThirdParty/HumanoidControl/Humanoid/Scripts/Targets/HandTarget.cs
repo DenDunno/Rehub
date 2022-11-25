@@ -89,25 +89,25 @@ namespace Passer.Humanoid {
         public const float maxHandAngle = 100;
 
         // for future use
-        public static readonly Vector3 minLeftShoulderAngles = new Vector3(0, 0, -45);
-        public static readonly Vector3 maxLeftShoulderAngles = new Vector3(0, 45, 0);
-        public static readonly Vector3 minRightShoulderAngles = new Vector3(0, -45, 0);
-        public static readonly Vector3 maxRightShoulderAngles = new Vector3(0, 0, 45);
+        public static readonly Vector3 minLeftShoulderAngles = new(0, 0, -45);
+        public static readonly Vector3 maxLeftShoulderAngles = new(0, 45, 0);
+        public static readonly Vector3 minRightShoulderAngles = new(0, -45, 0);
+        public static readonly Vector3 maxRightShoulderAngles = new(0, 0, 45);
 
-        public static readonly Vector3 minLeftUpperArmAngles = new Vector3(-180, -45, -180);
-        public static readonly Vector3 maxLeftUpperArmAngles = new Vector3(60, 130, 45);
-        public static readonly Vector3 minRightUpperArmAngles = new Vector3(-180, -130, -45);
-        public static readonly Vector3 maxRightUpperArmAngles = new Vector3(60, 45, 180);
+        public static readonly Vector3 minLeftUpperArmAngles = new(-180, -45, -180);
+        public static readonly Vector3 maxLeftUpperArmAngles = new(60, 130, 45);
+        public static readonly Vector3 minRightUpperArmAngles = new(-180, -130, -45);
+        public static readonly Vector3 maxRightUpperArmAngles = new(60, 45, 180);
 
-        public static readonly Vector3 minLeftForearmAngles = new Vector3(0, 0, 0);
-        public static readonly Vector3 maxLeftForearmAngles = new Vector3(0, 150, 0);
-        public static readonly Vector3 minRightForearmAngles = new Vector3(0, -150, 0);
-        public static readonly Vector3 maxRightForearmAngles = new Vector3(0, 0, 0);
+        public static readonly Vector3 minLeftForearmAngles = new(0, 0, 0);
+        public static readonly Vector3 maxLeftForearmAngles = new(0, 150, 0);
+        public static readonly Vector3 minRightForearmAngles = new(0, -150, 0);
+        public static readonly Vector3 maxRightForearmAngles = new(0, 0, 0);
 
-        public static readonly Vector3 minLeftHandAngles = new Vector3(-180, -50, -70);
-        public static readonly Vector3 maxLeftHandAngles = new Vector3(90, 20, 90);
-        public static readonly Vector3 minRightHandAngles = new Vector3(-90, -20, -70);
-        public static readonly Vector3 maxRightHandAngles = new Vector3(45, 50, 70);
+        public static readonly Vector3 minLeftHandAngles = new(-180, -50, -70);
+        public static readonly Vector3 maxLeftHandAngles = new(90, 20, 90);
+        public static readonly Vector3 minRightHandAngles = new(-90, -20, -70);
+        public static readonly Vector3 maxRightHandAngles = new(45, 50, 70);
         #endregion
 
         #region Sensors
@@ -118,21 +118,21 @@ namespace Passer.Humanoid {
         public UnityVRHand unity = new UnityVRHand();
 #endif
 
-        private ArmPredictor armPredictor = new ArmPredictor();
-        public ArmAnimator armAnimator = new ArmAnimator();
+        private ArmPredictor armPredictor = new();
+        public ArmAnimator armAnimator = new();
         public override Passer.Sensor animator { get { return armAnimator; } }
 
 #if pUNITYXR
-        public UnityXRHand unityXR = new UnityXRHand();
+        public UnityXRHand unityXR = new();
 #endif
 #if hOPENVR && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
-        public OpenVRHand openVR = new OpenVRHand();
+        public OpenVRHand openVR = new();
 #if hVIVETRACKER
-        public ViveTrackerArm viveTracker = new ViveTrackerArm();
+        public ViveTrackerArm viveTracker = new();
 #endif
 #endif
 #if hOCULUS && (UNITY_STANDALONE_WIN || UNITY_ANDROID)
-        public OculusHand oculus = new OculusHand();
+        public OculusHand oculus = new();
 #endif
 #if hWINDOWSMR && UNITY_2017_2_OR_NEWER && !UNITY_2020_1_OR_NEWER && UNITY_WSA_10_0
         public WindowsMRHand mixedReality = new WindowsMRHand();
@@ -175,8 +175,8 @@ namespace Passer.Humanoid {
 #endif
 
         protected ArmSensor[] sensors;
-        protected List<SensorComponent> sensorComponents = new List<SensorComponent>();
-        protected List<TrackedRigidbody> trackedRigidbodies = new List<TrackedRigidbody>();
+        protected List<SensorComponent> sensorComponents = new();
+        protected List<TrackedRigidbody> trackedRigidbodies = new();
 
         /*! \cond PRIVATE */
 
@@ -678,7 +678,7 @@ namespace Passer.Humanoid {
         public static HandTarget CreateTarget(HandTarget oldTarget) {
             HumanoidControl humanoid = oldTarget.humanoid;
 
-            GameObject targetObject = new GameObject();
+            GameObject targetObject = new();
             if (oldTarget.isLeft)
                 targetObject.name = "Left Hand Target";
             else
@@ -839,7 +839,7 @@ namespace Passer.Humanoid {
         public Pose grabPose;
         public Pose closedPose;
 
-        public PoseMixer poseMixer = new PoseMixer();
+        public PoseMixer poseMixer = new();
         public void SetPose1(Pose pose) {
             poseMixer.SetPoseValue(pose, 1);
         }
@@ -898,7 +898,7 @@ namespace Passer.Humanoid {
 
         #region Events
 
-        public PoseEventList poseEvent = new PoseEventList() {
+        public PoseEventList poseEvent = new() {
             id = 1,
             label = "Pose Event",
             tooltip =
@@ -915,7 +915,7 @@ namespace Passer.Humanoid {
             },
             fromEventLabel = "poseMixer.detectedPose",
         };
-        public GameObjectEventHandlers touchEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers touchEvent = new() {
             id = 2,
             label = "Touch Event",
             tooltip =
@@ -932,7 +932,7 @@ namespace Passer.Humanoid {
             },
             fromEventLabel = "touchedObject",
         };
-        public GameObjectEventHandlers grabEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers grabEvent = new() {
             id = 3,
             label = "Grab Event",
             tooltip =
@@ -963,8 +963,8 @@ namespace Passer.Humanoid {
 
         public AdvancedHandPhysics handPhysics;
 
-        public HandMovements handMovements = new HandMovements();
-        public ArmMovements armMovements = new ArmMovements();
+        public HandMovements handMovements = new();
+        public ArmMovements armMovements = new();
 
         public HandTarget otherHand {
             get {
@@ -1235,7 +1235,7 @@ namespace Passer.Humanoid {
                 stretchlessTarget = hand.target.transform.Find("Stretchless Target");
                 if (stretchlessTarget == null) {
 
-                    GameObject stretchlessTargetObj = new GameObject("Stretchless Target");
+                    GameObject stretchlessTargetObj = new("Stretchless Target");
                     stretchlessTarget = stretchlessTargetObj.transform;
                     stretchlessTarget.parent = hand.target.transform;
                     stretchlessTarget.localPosition = Vector3.zero;
@@ -1710,7 +1710,7 @@ namespace Passer.Humanoid {
                     //Quaternion fingerRotation = Quaternion.FromToRotation(localIntermediatePosition, Vector3.forward);
                     float proximalLength = Vector3.Distance(proximal.position, intermediate.position);
 
-                    GameObject proximalColliderObj = new GameObject("Proximal Collider");
+                    GameObject proximalColliderObj = new("Proximal Collider");
                     proximalColliderObj.tag = this.gameObject.tag;
                     proximalColliderObj.layer = this.gameObject.layer;
                     proximalColliderObj.transform.parent = proximal;
@@ -1723,7 +1723,7 @@ namespace Passer.Humanoid {
                     cc.direction = 2; // Z-axis
 
                     if (distal != null) {
-                        GameObject distalColliderObj = new GameObject("Distal Collider");
+                        GameObject distalColliderObj = new("Distal Collider");
                         distalColliderObj.tag = this.gameObject.tag;
                         distalColliderObj.layer = this.gameObject.layer;
                         distalColliderObj.transform.parent = distal;

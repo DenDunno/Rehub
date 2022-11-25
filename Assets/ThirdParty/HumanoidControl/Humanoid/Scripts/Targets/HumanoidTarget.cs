@@ -371,8 +371,8 @@ namespace Passer.Humanoid {
         public class TargetedBone {
             public string name;
             public Bone boneId = Bone.None;
-            public TargetTransform target = new TargetTransform();
-            public BoneTransform bone = new BoneTransform();
+            public TargetTransform target = new();
+            public BoneTransform bone = new();
 
             [System.NonSerialized]
             public TargetedBone parent;
@@ -393,7 +393,7 @@ namespace Passer.Humanoid {
             }
 
             public static Transform NewTargetTransform(string name) {
-                GameObject obj = new GameObject(name);
+                GameObject obj = new(name);
                 obj.transform.rotation = Quaternion.identity;
                 return obj.transform;
             }

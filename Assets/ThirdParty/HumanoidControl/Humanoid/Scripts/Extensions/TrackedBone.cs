@@ -10,12 +10,12 @@ namespace Passer.Tracking {
         protected static Material boneWhite;
 
         public static TrackedBone Create(string name, Transform parent) {
-            GameObject boneGO = new GameObject(name);
+            GameObject boneGO = new(name);
             boneGO.transform.SetParent(parent, false);
 
             AddBoneRenderer(boneGO);
 
-            TrackedBone bone = new TrackedBone() {
+            TrackedBone bone = new() {
                 transform = boneGO.transform
             };
             return bone;

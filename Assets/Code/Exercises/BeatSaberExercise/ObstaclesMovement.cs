@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObstaclesMovement : IUpdate
 {
-    private readonly List<Obstacle> _activeObstacles = new List<Obstacle>();
+    private readonly List<Obstacle> _activeObstacles = new();
     private readonly Vector3 _direction;
     private readonly float _speed;
 

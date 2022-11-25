@@ -8,8 +8,8 @@ public class DrawGlyph : MonoBehaviour
     public float maxPointDist = 0.1f;
     public bool debugMode = false;
 
-    private List<Vector2> glyphPoints = new List<Vector2>();
-    private List<GlyphData> glyphs = new List<GlyphData>();
+    private List<Vector2> glyphPoints = new();
+    private List<GlyphData> glyphs = new();
     private UnityEngine.LineRenderer lr;
 
     private void Start()
@@ -41,7 +41,7 @@ public class DrawGlyph : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
         {
-            List<GlyphReturnData> allMatchData = new List<GlyphReturnData>();
+            List<GlyphReturnData> allMatchData = new();
             foreach (GlyphData matchGlyph in glyphs)
             {
                 GlyphReturnData glyphData = MatchGlyph(glyphPoints.ToArray(), matchGlyph);

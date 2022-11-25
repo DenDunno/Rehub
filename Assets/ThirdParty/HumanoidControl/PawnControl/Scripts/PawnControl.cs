@@ -58,7 +58,7 @@ namespace Passer.Pawn {
 
         #endregion
 
-        protected TraditionalDevice traditionalInput = new TraditionalDevice();
+        protected TraditionalDevice traditionalInput = new();
         public GameControllers gameController;
 
         #region Init
@@ -258,7 +258,7 @@ namespace Passer.Pawn {
             if (realWorldTransform != null)
                 return realWorldTransform;
 
-            GameObject realWorld = new GameObject("Real World");
+            GameObject realWorld = new("Real World");
             realWorldTransform = realWorld.transform;
 
             realWorldTransform.parent = this.transform;
@@ -608,7 +608,7 @@ namespace Passer.Pawn {
 
                     Vector3 moveDirection = characterController.transform.TransformDirection(inputMovement);
 
-                    Vector3 localHmdPosition = new Vector3(0, 0, -characterController.radius);
+                    Vector3 localHmdPosition = new(0, 0, -characterController.radius);
 #if pUNITYXR
                     Vector3 neckPosition = _headTarget.unityCamera.transform.TransformPoint(localHmdPosition) + moveDirection * Time.fixedDeltaTime;
 #endif
@@ -616,7 +616,7 @@ namespace Passer.Pawn {
                     Vector3 neckPosition = _headTarget.unityCamera.sensorTransform.TransformPoint(localHmdPosition) + moveDirection * Time.fixedDeltaTime;
 #endif
 #if pUNITYXR || hLEGACYXR
-                    Vector3 footPosition = new Vector3(neckPosition.x, transform.position.y, neckPosition.z);
+                    Vector3 footPosition = new(neckPosition.x, transform.position.y, neckPosition.z);
 
                     Vector3 cameraTranslation = footPosition - transform.position;
 

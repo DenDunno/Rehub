@@ -23,7 +23,7 @@ namespace Passer.Tracking {
         public static UnityXR Get(Transform realWorld) {
             Transform trackerTransform = realWorld.Find("UnityXR");
             if (trackerTransform == null) {
-                GameObject trackerObject = new GameObject("UnityXR");
+                GameObject trackerObject = new("UnityXR");
                 trackerTransform = trackerObject.transform;
 
                 trackerTransform.parent = realWorld;
@@ -59,7 +59,7 @@ namespace Passer.Tracking {
 
         public UnityXRHmd GetHmd(Vector3 position, Quaternion rotation) {
             if (hmd == null) {
-                GameObject sensorObj = new GameObject("Hmd");
+                GameObject sensorObj = new("Hmd");
                 Transform sensorTransform = sensorObj.transform;
 
                 sensorTransform.parent = this.transform;
@@ -100,7 +100,7 @@ namespace Passer.Tracking {
             Renderer renderer = plane.GetComponent<Renderer>();
             if (renderer != null) {
                 Shader fadeShader = Shader.Find("Standard");
-                Material fadeMaterial = new Material(fadeShader);
+                Material fadeMaterial = new(fadeShader);
                 fadeMaterial.name = "FadeMaterial";
                 fadeMaterial.SetFloat("_Mode", 2);
                 fadeMaterial.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
@@ -178,7 +178,7 @@ namespace Passer.Tracking {
         public UnityXRController GetController(bool isLeft, Vector3 position, Quaternion rotation) {
             UnityXRController controller = FindController(isLeft);
             if (controller == null) {
-                GameObject sensorObj = new GameObject(isLeft ? "Left Controller" : "Right Controler");
+                GameObject sensorObj = new(isLeft ? "Left Controller" : "Right Controler");
                 Transform sensorTransform = sensorObj.transform;
 
                 sensorTransform.parent = this.transform;

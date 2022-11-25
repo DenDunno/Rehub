@@ -31,9 +31,9 @@ namespace Passer.Humanoid {
             set { viveTracker.status = value; }
         }
 
-        private static readonly Vector3 defaultLeftTrackerPosition = new Vector3(0, 0, 0.13F);
+        private static readonly Vector3 defaultLeftTrackerPosition = new(0, 0, 0.13F);
         private static readonly Quaternion defaultLeftTrackerRotation = Quaternion.identity;
-        private static readonly Vector3 defaultRightTrackerPosition = new Vector3(0, 0, 0.13F);
+        private static readonly Vector3 defaultRightTrackerPosition = new(0, 0, 0.13F);
         private static readonly Quaternion defaultRightTrackerRotation = Quaternion.identity;
 
 
@@ -142,12 +142,12 @@ namespace Passer.Humanoid {
                 Vector3 sensorPos = viveTracker.transform.position;
 
                 // Get HMD rotation projected on XZ plane
-                Vector3 hmdForward = new Vector3(hmdTransform.forward.x, 0, hmdTransform.forward.z);
+                Vector3 hmdForward = new(hmdTransform.forward.x, 0, hmdTransform.forward.z);
                 Quaternion hmdFwdRotation = Quaternion.LookRotation(hmdForward);
 
                 // Get Vive tracker local to the HMD position
                 Vector3 sensorLocalPos = Quaternion.Inverse(hmdFwdRotation) * (sensorPos - hmdTransform.position);
-                Vector2 sensorLocalPosPlane = new Vector2(sensorLocalPos.x, sensorLocalPos.z);
+                Vector2 sensorLocalPosPlane = new(sensorLocalPos.x, sensorLocalPos.z);
 
                 // foot is no more than 20cm above ground and 0.5m around hmd
                 float sensorTrackingHeight = sensorPos.y - tracker.trackerTransform.position.y;

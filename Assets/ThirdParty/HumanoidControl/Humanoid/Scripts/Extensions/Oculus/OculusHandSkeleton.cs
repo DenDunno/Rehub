@@ -11,7 +11,7 @@ namespace Passer.Tracking {
 
 #if hOCULUS
 
-        private OculusDevice.HandState handState = new OculusDevice.HandState();
+        private OculusDevice.HandState handState = new();
 
         #region Start
 

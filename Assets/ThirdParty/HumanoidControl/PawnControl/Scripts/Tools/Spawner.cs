@@ -142,7 +142,7 @@ namespace Passer {
             if (spawnPoints == null)
                 return null;
 
-            List<SpawnPoint> availablePoints = new List<SpawnPoint>();
+            List<SpawnPoint> availablePoints = new();
             foreach (SpawnPoint spawnPoint in spawnPoints) {
                 if (spawnPoint is HumanoidSpawnPoint) {
                     if (((HumanoidSpawnPoint)spawnPoint).isFree)

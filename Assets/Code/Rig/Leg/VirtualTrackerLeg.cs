@@ -10,19 +10,8 @@ public class VirtualTrackerLeg : ViveTrackerLeg
         _isVirtual = true;
     }
 
-    public override void Update()
-    {
-        if (_isVirtual)
-        {
-            UpdateTrackedLeg();
-        }
-        else
-        {
-            base.Update();
-        }
-    }
-
     private void UpdateTrackedLeg()
     {
+        Transform targetUpperLeg = footTarget.upperLeg.target.transform;
     }
 }

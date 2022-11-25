@@ -17,7 +17,7 @@ namespace Passer {
 		};
 
 		[SerializeField]
-		public List<KeyboardEventHandlers> keyboardHandlers = new List<KeyboardEventHandlers>();
+		public List<KeyboardEventHandlers> keyboardHandlers = new();
 
 		protected virtual void Update() {
 			foreach (KeyboardEventHandlers keyboardHandler in keyboardHandlers)

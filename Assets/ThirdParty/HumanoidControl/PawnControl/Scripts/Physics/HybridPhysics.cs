@@ -295,7 +295,7 @@ namespace Passer {
                 return;
 
             Vector3 torqueAxis = torque.normalized;
-            Vector3 ortho = new Vector3(1, 0, 0);
+            Vector3 ortho = new(1, 0, 0);
 
             // prevent torqueAxis and ortho from pointing in the same direction
             if (((torqueAxis - ortho).sqrMagnitude < Mathf.Epsilon) || ((torqueAxis + ortho).sqrMagnitude < Mathf.Epsilon)) {
@@ -463,7 +463,7 @@ namespace Passer {
         /// <param name="colliders">The colliders which may need switching</param>
         /// <returns>A list of updated colliders</returns>
         public static List<Collider> SetCollidersToTrigger(Rigidbody rigidbody, Collider[] colliders) {
-            List<Collider> changedColliders = new List<Collider>();
+            List<Collider> changedColliders = new();
 
             for (int j = 0; j < colliders.Length; j++) {
 
@@ -496,7 +496,7 @@ namespace Passer {
         /// <param name="colliders">The colliders which may need switching</param>
         /// <returns>A list of updated colliders</returns>
         public static List<Collider> SetCollidersToTrigger(Rigidbody rigidbody, List<Collider> colliders) {
-            List<Collider> changedColliders = new List<Collider>();
+            List<Collider> changedColliders = new();
 
             for (int j = 0; j < colliders.Count; j++) {
 

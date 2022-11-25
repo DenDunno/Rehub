@@ -18,7 +18,7 @@ namespace Passer.Humanoid {
         }
 
         public bool newSpineIK = false;
-        public TorsoMovements torsoMovements = new TorsoMovements();
+        public TorsoMovements torsoMovements = new();
 
         #region Limitations
         public const float maxSpineAngle = 20;
@@ -26,11 +26,11 @@ namespace Passer.Humanoid {
         #endregion
 
         #region Sensors
-        public TorsoAnimator torsoAnimator = new TorsoAnimator();
+        public TorsoAnimator torsoAnimator = new();
         public override Passer.Sensor animator { get { return torsoAnimator;  } }
 
 #if hOPENVR && hVIVETRACKER && (UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX)
-        public ViveTrackerTorso viveTracker = new ViveTrackerTorso();
+        public ViveTrackerTorso viveTracker = new();
 #endif
 #if hNEURON
         public PerceptionNeuronTorso neuron = new PerceptionNeuronTorso();
@@ -277,7 +277,7 @@ namespace Passer.Humanoid {
                 return hipsTarget.humanoid.transform;
             }
 
-            protected static Quaternion quaternionZero = new Quaternion(0, 0, 0, 0);
+            protected static Quaternion quaternionZero = new(0, 0, 0, 0);
 
             public override void MatchTargetToAvatar() {
                 // Don't know why this was here 
@@ -347,7 +347,7 @@ namespace Passer.Humanoid {
 
         // Do not remove this, this is dynamically called from Target_Editor!
         public static HipsTarget CreateTarget(HumanoidTarget oldTarget) {
-            GameObject targetObject = new GameObject("Hips Target");
+            GameObject targetObject = new("Hips Target");
             Transform targetTransform = targetObject.transform;
             HumanoidControl humanoid = oldTarget.humanoid;
 

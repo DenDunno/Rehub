@@ -338,9 +338,9 @@ namespace Passer {
         }
 
         private static Quaternion GetTwist(Quaternion rotation, Vector3 axis) {
-            Vector3 ra = new Vector3(rotation.x, rotation.y, rotation.z); // rotation axis
+            Vector3 ra = new(rotation.x, rotation.y, rotation.z); // rotation axis
             Vector3 p = Vector3.Project(ra, axis); // return projection v1 on to v2  (parallel component)
-            Quaternion twist = new Quaternion(p.x, p.y, p.z, rotation.w);
+            Quaternion twist = new(p.x, p.y, p.z, rotation.w);
             Quaternion normalizedTwist = Normalize(twist);
             return normalizedTwist;
         }
@@ -348,7 +348,7 @@ namespace Passer {
         private static Quaternion Normalize(Quaternion q) {
             float length = Mathf.Sqrt(q.x * q.x + q.y * q.y + q.z * q.z + q.w * q.w);
             float scale = 1.0f / length;
-            Quaternion q1 = new Quaternion(q.x * scale, q.y * scale, q.z * scale, q.w * scale);
+            Quaternion q1 = new(q.x * scale, q.y * scale, q.z * scale, q.w * scale);
             return q1;
         }
 
@@ -391,7 +391,7 @@ namespace Passer {
 
         #region Events
 
-        public GameObjectEventHandlers gameObjectEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers gameObjectEvent = new() {
             label = "GameObject Event",
             id = 0,
             tooltip = "Call functions based on the GameObject life cycle",
@@ -416,7 +416,7 @@ namespace Passer {
                 "Continuous"
         };
 
-        public FloatEventHandlers xSliderEvents = new FloatEventHandlers() {
+        public FloatEventHandlers xSliderEvents = new() {
             label = "X Axis",
             id = 1,
             eventTypeLabels = sliderEventTypeLabels,
@@ -424,7 +424,7 @@ namespace Passer {
                 "Call function using the X axis range value\n" +
                 "Parameter: the range along the X axis (-1..1)"
         };
-        public FloatEventHandlers ySliderEvents = new FloatEventHandlers() {
+        public FloatEventHandlers ySliderEvents = new() {
             label = "Y Axis",
             id = 2,
             eventTypeLabels = sliderEventTypeLabels,
@@ -432,7 +432,7 @@ namespace Passer {
                 "Call function using the Y axis range value\n" +
                 "Parameter: the range along the Y axis (-1..1)"
         };
-        public FloatEventHandlers zSliderEvents = new FloatEventHandlers() {
+        public FloatEventHandlers zSliderEvents = new() {
             label = "Z Axis",
             id = 3,
             eventTypeLabels = sliderEventTypeLabels,
@@ -441,7 +441,7 @@ namespace Passer {
                 "Parameter: the range along the Z axis (-1..1)"
         };
 
-        public FloatEventHandlers angleEvents = new FloatEventHandlers() {
+        public FloatEventHandlers angleEvents = new() {
             label = "Angle",
             id = 4,
             eventTypeLabels = sliderEventTypeLabels,

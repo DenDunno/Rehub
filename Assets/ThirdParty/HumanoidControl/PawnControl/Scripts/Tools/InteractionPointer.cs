@@ -77,12 +77,12 @@ namespace Passer {
         /// <param name="parentTransform">The transform to which the Teleporter will be added</param>
         /// <param name="pointerType">The interaction pointer type for the Teleporter.</param>
         public static InteractionPointer Add(Transform parentTransform, PointerType pointerType = PointerType.Ray) {
-            GameObject pointerObj = new GameObject("Interaction Pointer");
+            GameObject pointerObj = new("Interaction Pointer");
             pointerObj.transform.SetParent(parentTransform);
             pointerObj.transform.localPosition = Vector3.zero;
             pointerObj.transform.localRotation = Quaternion.identity;
 
-            GameObject focusPointObj = new GameObject("FocusPoint");
+            GameObject focusPointObj = new("FocusPoint");
             focusPointObj.transform.SetParent(pointerObj.transform);
             focusPointObj.transform.localPosition = Vector3.zero;
             focusPointObj.transform.localRotation = Quaternion.identity;
@@ -150,7 +150,7 @@ namespace Passer {
             }
 #endif
 
-            GameObject interactionModuleObj = new GameObject("InteractionModule");
+            GameObject interactionModuleObj = new("InteractionModule");
             InteractionModule interactionModule = interactionModuleObj.AddComponent<InteractionModule>();
 
             return interactionModule;
@@ -166,7 +166,7 @@ namespace Passer {
             }
 #endif
 
-            GameObject eventSystemObject = new GameObject("EventSystem");
+            GameObject eventSystemObject = new("EventSystem");
             EventSystem eventSystem = eventSystemObject.AddComponent<EventSystem>();
 
 
@@ -502,7 +502,7 @@ namespace Passer {
         /// <summary>Event based on the current focus.</summary>
         /// This event is generated from the objectInFocus.
         /// It has the objectInFocus as parameter. It can be used to execute functions when the focus changes between objects.
-        public GameObjectEventHandlers focusEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers focusEvent = new() {
             label = "Focus Event",
             tooltip =
                 "Call functions using the current focus\n" +
@@ -533,7 +533,7 @@ namespace Passer {
         /// <summary>Event based on the current focus.</summary>
         /// This event is generated from the objectInFocus.
         /// It has the objectInFocus as parameter. It can be used to execute functions when the focus changes between objects.
-        public Vector3EventList focusPointEvent = new Vector3EventList() {
+        public Vector3EventList focusPointEvent = new() {
             label = "Focus Point Event",
             tooltip =
                 "Call functions using the current focus point\n" +
@@ -550,7 +550,7 @@ namespace Passer {
         /// <summary>Event based on the clicking status</summary>
         /// This event is generated from the clicking boolean.
         /// It has the objectInFocus as parameter. It can be used to exectue functions when the user has clicked on an object.
-        public GameObjectEventHandlers clickEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers clickEvent = new() {
             label = "Click Event",
             tooltip =
                 "Call functions using the clicking status\n" +
@@ -575,7 +575,7 @@ namespace Passer {
 
             if (objectInFocus != null) {
                 PointerEventData data = interactionModule.pointers[interactionID].data;
-                RaycastResult raycastResult = new RaycastResult() {
+                RaycastResult raycastResult = new() {
                     worldPosition = focusPointObj.transform.position,
                     worldNormal = focusPointObj.transform.forward,
                     distance = (focusPointObj.transform.position - this.transform.position).magnitude,
@@ -600,7 +600,7 @@ namespace Passer {
         /// <summary>Event based on the active status</summary>
         /// This event is genereated from the active boolean
         /// Is has the active boolean as parameter. It can be used to execute functions when the interaction pointer is activated.
-        public BoolEvent activeEvent = new BoolEvent();
+        public BoolEvent activeEvent = new();
 
         /// <summary>Change the active status of the InteractionPointer</summary>
         /// <param name="_active">Indicates if the InteractionPointer is active</param>

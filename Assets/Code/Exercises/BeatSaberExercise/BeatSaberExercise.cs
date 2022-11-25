@@ -12,11 +12,11 @@ public class BeatSaberExercise : Exercise, IInitializable
 
     void IInitializable.Init()
     {
-        var obstacleTouchFeedback = new ObstacleTouchFeedback();
-        var obstacleSpawnData = new ObstacleSpawnData(transform, obstacleTouchFeedback.OnTouch, _spawnPositionOffset);
-        var obstacleSpawner = new ObstacleSpawner(_obstaclesPrefabs, obstacleSpawnData);
-        var obstaclesMovement = new ObstaclesMovement(_direction, _speed);
-        var obstacleCooldownSpawning = new ObstacleCooldownSpawning(obstacleSpawner, obstaclesMovement, _coolDown);
+        ObstacleTouchFeedback obstacleTouchFeedback = new();
+        ObstacleSpawnData obstacleSpawnData = new(transform, obstacleTouchFeedback.OnTouch, _spawnPositionOffset);
+        ObstacleSpawner obstacleSpawner = new(_obstaclesPrefabs, obstacleSpawnData);
+        ObstaclesMovement obstaclesMovement = new(_direction, _speed);
+        ObstacleCooldownSpawning obstacleCooldownSpawning = new(obstacleSpawner, obstaclesMovement, _coolDown);
 
         SetDependencies(new object[]
         {

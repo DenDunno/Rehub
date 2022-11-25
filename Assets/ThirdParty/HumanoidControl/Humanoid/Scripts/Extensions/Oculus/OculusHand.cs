@@ -190,9 +190,9 @@ namespace Passer.Humanoid {
 
 #if pUNITYXR
 
-        protected readonly Vector3 defaultLeftPosition = new Vector3(-0.1F, -0.05F, 0.04F);
+        protected readonly Vector3 defaultLeftPosition = new(-0.1F, -0.05F, 0.04F);
         protected readonly Quaternion defaultLeftRotation = Quaternion.Euler(180, 90, 90);
-        protected readonly Vector3 defaultRightPosition = new Vector3(0.1F, -0.05F, 0.04F);
+        protected readonly Vector3 defaultRightPosition = new(0.1F, -0.05F, 0.04F);
         protected readonly Quaternion defaultRightRotation = Quaternion.Euler(180, -90, -90);
         //public virtual void CheckController() {
         //    Vector3 position = handTarget.transform.TransformPoint(handTarget.isLeft ? defaultLeftPosition : defaultRightPosition);
@@ -218,7 +218,7 @@ namespace Passer.Humanoid {
         }
 
         protected override HandSkeleton CreateHandSkeleton(bool isLeft, bool showRealObjects) {
-            GameObject skeletonObj = new GameObject(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
+            GameObject skeletonObj = new(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
             skeletonObj.transform.parent = tracker.trackerTransform;
             skeletonObj.transform.localPosition = Vector3.zero;
             skeletonObj.transform.localRotation = Quaternion.identity;

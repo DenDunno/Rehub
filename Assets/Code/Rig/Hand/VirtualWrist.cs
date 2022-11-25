@@ -27,13 +27,11 @@ public class VirtualWrist
     {
         _virtualHand.hand.target.transform.position = _virtualHand.hand.bone.transform.position;
         _wristMovementStrategy[_wristMovementType]();
-        ClampWrist();
     }
 
     private void UpdateFixedPose()
     {
-        Vector3 rotation = _virtualHand.isLeft ? new Vector3(-90, 0, 0) : new Vector3(90, 0, 0);
-        _virtualHand.hand.target.transform.localRotation = Quaternion.Euler(rotation);
+        _virtualHand.hand.target.transform.localRotation = Quaternion.Euler(new Vector3(-90, 0, 0));
     }
 
     private void UpdateSymmetricMovement()
@@ -48,8 +46,8 @@ public class VirtualWrist
 
     private void ClampWrist()
     {
-        var coneNormal = -_virtualHand.hand.bone.transform.parent.up;
-        var wristDirection = _virtualHand.hand.target.transform.right;
+        Vector3 coneNormal = -_virtualHand.hand.bone.transform.parent.up;
+        Vector3 wristDirection = _virtualHand.hand.target.transform.right;
         
         float targetAngle = 60;
 

@@ -132,7 +132,7 @@ namespace Passer.Tracking {
         }
 
         [System.NonSerialized]
-        protected Passer.InputDigitalActionData_t digitalActionData = new Passer.InputDigitalActionData_t();
+        protected Passer.InputDigitalActionData_t digitalActionData = new();
         [System.NonSerialized]
         protected readonly uint digitalActionDataSize = (uint)Marshal.SizeOf(typeof(Passer.InputDigitalActionData_t));
 

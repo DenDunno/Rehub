@@ -86,10 +86,10 @@ namespace Passer {
         /// <param name="parentTransform">The transform to which the Teleporter will be added</param>
         /// <param name="pointerType">The interaction pointer type for the Teleporter</param>
         public static new Teleporter Add(Transform parentTransform, PointerType pointerType = PointerType.Ray) {
-            GameObject pointerObj = new GameObject("Teleporter");
+            GameObject pointerObj = new("Teleporter");
             pointerObj.transform.SetParent(parentTransform, false);
 
-            GameObject destinationObj = new GameObject("Destination");
+            GameObject destinationObj = new("Destination");
             destinationObj.transform.SetParent(pointerObj.transform);
             destinationObj.transform.localPosition = Vector3.zero;
             destinationObj.transform.localRotation = Quaternion.identity;

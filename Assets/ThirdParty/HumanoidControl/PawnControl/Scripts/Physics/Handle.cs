@@ -54,19 +54,19 @@ namespace Passer {
         /// <summary>The Controller input which will be active while the Handle is grabbed.</summary>
         /// \version v3
         public ControllerEventHandlers[] inputEvents = {
-            new ControllerEventHandlers() { label = "Vertical", id = 0 },
-            new ControllerEventHandlers() { label = "Horizontal", id = 1 },
-            new ControllerEventHandlers() { label = "Stick Button", id = 2 },
-            new ControllerEventHandlers() { label = "Vertical", id = 3 },
-            new ControllerEventHandlers() { label = "Horizontal", id = 4 },
-            new ControllerEventHandlers() { label = "Stick Button", id = 5 },
-            new ControllerEventHandlers() { label = "Button 1", id = 6 },
-            new ControllerEventHandlers() { label = "Button 2", id = 7 },
-            new ControllerEventHandlers() { label = "Button 3", id = 8 },
-            new ControllerEventHandlers() { label = "Button 4", id = 9 },
-            new ControllerEventHandlers() { label = "Trigger 1", id = 10 },
-            new ControllerEventHandlers() { label = "Trigger 2", id = 11 },
-            new ControllerEventHandlers() { label = "Option", id = 12 },
+            new() { label = "Vertical", id = 0 },
+            new() { label = "Horizontal", id = 1 },
+            new() { label = "Stick Button", id = 2 },
+            new() { label = "Vertical", id = 3 },
+            new() { label = "Horizontal", id = 4 },
+            new() { label = "Stick Button", id = 5 },
+            new() { label = "Button 1", id = 6 },
+            new() { label = "Button 2", id = 7 },
+            new() { label = "Button 3", id = 8 },
+            new() { label = "Button 4", id = 9 },
+            new() { label = "Trigger 1", id = 10 },
+            new() { label = "Trigger 2", id = 11 },
+            new() { label = "Option", id = 12 },
         };
 
         /// <summary>The socket holding the handle</summary>
@@ -112,7 +112,7 @@ namespace Passer {
         }
 
         public static void Create(GameObject gameObject, Pawn.PawnHand controllerTarget) {
-            GameObject handleObject = new GameObject("Handle");
+            GameObject handleObject = new("Handle");
             handleObject.transform.parent = gameObject.transform;
             handleObject.transform.localRotation = controllerTarget.transform.rotation * gameObject.transform.rotation;
             handleObject.transform.localPosition = gameObject.transform.InverseTransformPoint(controllerTarget.transform.position);
@@ -122,7 +122,7 @@ namespace Passer {
         }
 #if pHUMANOID
         public static void Create(GameObject gameObject, Humanoid.HandTarget handTarget) {
-            GameObject handleObject = new GameObject("Handle");
+            GameObject handleObject = new("Handle");
             handleObject.transform.parent = gameObject.transform;
             handleObject.transform.localRotation = Quaternion.Inverse(Quaternion.Inverse(handTarget.handPalm.rotation * gameObject.transform.rotation));
             handleObject.transform.localPosition = gameObject.transform.InverseTransformPoint(handTarget.handPalm.position);
@@ -305,7 +305,7 @@ namespace Passer {
 
         #region Events
 
-        public GameObjectEventHandlers grabbedEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers grabbedEvent = new() {
             label = "Grab Event",
             tooltip =
                 "Call functions using the grabbing status\n" +

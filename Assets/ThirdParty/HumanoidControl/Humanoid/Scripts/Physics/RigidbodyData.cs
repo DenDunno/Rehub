@@ -40,7 +40,7 @@ namespace Passer {
         }
 
         public static RigidbodyData ParentRigidbody(Transform parentTransform, Rigidbody childRigidbody) {
-            RigidbodyData rigidbodyData = new RigidbodyData(childRigidbody);
+            RigidbodyData rigidbodyData = new(childRigidbody);
 
             childRigidbody.transform.parent = parentTransform;
 
@@ -53,7 +53,7 @@ namespace Passer {
         }
 
         public static RigidbodyData ParentRigidbody(Rigidbody parentRigidbody, Rigidbody childRigidbody) {
-            RigidbodyData rigidbodyData = new RigidbodyData(childRigidbody);
+            RigidbodyData rigidbodyData = new(childRigidbody);
 
             childRigidbody.transform.parent = parentRigidbody.transform;
             parentRigidbody.mass += childRigidbody.mass;

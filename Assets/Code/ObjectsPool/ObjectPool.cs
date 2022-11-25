@@ -4,8 +4,8 @@ using UnityEngine;
 public class ObjectPool<T> : IUpdate where T : MonoBehaviour, IPoolableObject
 {
     private readonly T _prefab;
-    private readonly Stack<T> _pool = new Stack<T>();
-    private readonly List<T> _activeObjects = new List<T>();
+    private readonly Stack<T> _pool = new();
+    private readonly List<T> _activeObjects = new();
 
     protected ObjectPool(T prefab)
     {

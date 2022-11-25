@@ -232,7 +232,7 @@ namespace Passer.Humanoid {
             footTarget.foot.target.transform.rotation = Quaternion.AngleAxis(hipsTarget.hips.target.transform.eulerAngles.y, footTarget.humanoid.up) * Quaternion.AngleAxis(30, Vector3.right);
 
             float legLength = footTarget.upperLeg.bone.length + footTarget.lowerLeg.bone.length;
-            Vector3 localFootPosition = new Vector3(footTarget.isLeft ? -footSeparation : footSeparation, -legLength, 0);
+            Vector3 localFootPosition = new(footTarget.isLeft ? -footSeparation : footSeparation, -legLength, 0);
             footTarget.foot.target.transform.position = hipsTarget.hips.target.transform.position + hipsTarget.hips.target.transform.rotation * localFootPosition;
         }
 
@@ -343,17 +343,17 @@ namespace Passer.Humanoid {
 
         private static int nrFrames = 100;
         private KeyFrame[] keyFrames = {
-            new KeyFrame( 0, new Vector3(0F, 0.00F, 0.0F), new Vector3(67,0,0), nrFrames),
-            new KeyFrame(10, new Vector3(0F, 0.02F, 0.1F), new Vector3(58,0,0), nrFrames),
-            new KeyFrame(20, new Vector3(0F, 0.05F, 0.2F), new Vector3(55,0,0), nrFrames),
-            new KeyFrame(30, new Vector3(0F, 0.10F, 0.3F), new Vector3(38,0,0), nrFrames),
-            new KeyFrame(40, new Vector3(0F, 0.12F, 0.4F), new Vector3(38,0,0), nrFrames),
-            new KeyFrame(50, new Vector3(0F, 0.14F, 0.5F), new Vector3(26,0,0), nrFrames),
-            new KeyFrame(60, new Vector3(0F, 0.18F, 0.6F), new Vector3(12,0,0), nrFrames),
-            new KeyFrame(70, new Vector3(0F, 0.17F, 0.7F), new Vector3(29,0,0), nrFrames),
-            new KeyFrame(80, new Vector3(0F, 0.13F, 0.8F), new Vector3(63,0,0), nrFrames),
-            new KeyFrame(90, new Vector3(0F, 0.07F, 0.9F), new Vector3(80,0,0), nrFrames),
-            new KeyFrame(100, new Vector3(0F, 0.00F, 1.0F), new Vector3(85,0,0), nrFrames)
+            new( 0, new Vector3(0F, 0.00F, 0.0F), new Vector3(67,0,0), nrFrames),
+            new(10, new Vector3(0F, 0.02F, 0.1F), new Vector3(58,0,0), nrFrames),
+            new(20, new Vector3(0F, 0.05F, 0.2F), new Vector3(55,0,0), nrFrames),
+            new(30, new Vector3(0F, 0.10F, 0.3F), new Vector3(38,0,0), nrFrames),
+            new(40, new Vector3(0F, 0.12F, 0.4F), new Vector3(38,0,0), nrFrames),
+            new(50, new Vector3(0F, 0.14F, 0.5F), new Vector3(26,0,0), nrFrames),
+            new(60, new Vector3(0F, 0.18F, 0.6F), new Vector3(12,0,0), nrFrames),
+            new(70, new Vector3(0F, 0.17F, 0.7F), new Vector3(29,0,0), nrFrames),
+            new(80, new Vector3(0F, 0.13F, 0.8F), new Vector3(63,0,0), nrFrames),
+            new(90, new Vector3(0F, 0.07F, 0.9F), new Vector3(80,0,0), nrFrames),
+            new(100, new Vector3(0F, 0.00F, 1.0F), new Vector3(85,0,0), nrFrames)
         };
         private float frameSpeed = 200;
 

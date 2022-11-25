@@ -38,7 +38,7 @@ namespace Passer {
         }
 
         protected virtual void CreateUnityRoot(Transform realWorld, string resourceName) {
-            GameObject unityRootObject = new GameObject(resourceName);
+            GameObject unityRootObject = new(resourceName);
             trackerTransform = unityRootObject.transform;
             trackerTransform.parent = realWorld.transform;
         }

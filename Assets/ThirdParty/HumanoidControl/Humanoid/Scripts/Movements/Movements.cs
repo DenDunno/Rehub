@@ -88,7 +88,7 @@ namespace Passer.Humanoid {
             Quaternion localRotation = Quaternion.Inverse(referenceRotation) * bone.rotation;
             Vector3 localEuler = localRotation.eulerAngles;
 
-            Vector3 tension = new Vector3(
+            Vector3 tension = new(
                 AxisTension(Angle180(localEuler.x), ROMnegative.x, ROMpositive.x),
                 AxisTension(Angle180(localEuler.y), ROMnegative.y, ROMpositive.y),
                 AxisTension(Angle180(localEuler.z), ROMnegative.z, ROMpositive.z));

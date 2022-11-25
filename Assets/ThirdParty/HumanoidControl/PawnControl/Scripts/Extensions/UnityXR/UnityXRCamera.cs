@@ -29,7 +29,7 @@ namespace Passer.Tracking {
             //if (cameraTransform == null) {
             UnityXRCamera unityCamera = FindXRCamera(unityXR);
             if (unityCamera == null) {
-                GameObject trackerObject = new GameObject("Camera");
+                GameObject trackerObject = new("Camera");
                 Transform cameraTransform = trackerObject.transform;
 
                 cameraTransform.parent = unityXR.transform;
@@ -58,7 +58,7 @@ namespace Passer.Tracking {
 
             UnityXRCamera unityCamera = FindXRCamera(unityXR);
             if (unityCamera == null) {
-                GameObject trackerObject = new GameObject("Camera");
+                GameObject trackerObject = new("Camera");
                 Transform cameraTransform = trackerObject.transform;
 
                 cameraTransform.parent = unityXR.transform;
@@ -121,7 +121,7 @@ namespace Passer.Tracking {
 
         #region Update
 
-        private List<XRNodeState> nodeStates = new List<XRNodeState>();
+        private List<XRNodeState> nodeStates = new();
 
         public override void UpdateComponent() {
             base.UpdateComponent();

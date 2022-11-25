@@ -8,8 +8,8 @@ namespace Passer.Humanoid {
 
         public BoneType boneType = BoneType.AllBones;
 
-        public BoneReference boneRef = new BoneReference();
-        public BoneReference referenceBoneRef = new BoneReference();
+        public BoneReference boneRef = new();
+        public BoneReference referenceBoneRef = new();
 
         public bool setTranslation;
         public bool setRotation;
@@ -83,11 +83,11 @@ namespace Passer.Humanoid {
                 // We need to convert the left-orientated anyside to a right side
                 // For this, we mirror the translation/rotation along the YZ-plane (not scale!)
                 if (setTranslation) {
-                    Vector3 mirroredTranslation = new Vector3(-translation.x, translation.y, translation.z);
+                    Vector3 mirroredTranslation = new(-translation.x, translation.y, translation.z);
                     targetedBone.target.transform.position = targetedBone.TargetBasePosition() + Vector3.Lerp(Vector3.zero, referenceRotation * mirroredTranslation, value);
                 }
                 if (setRotation) {
-                    Quaternion mirroredRotation = new Quaternion(rotation.x, -rotation.y, -rotation.z, rotation.w);
+                    Quaternion mirroredRotation = new(rotation.x, -rotation.y, -rotation.z, rotation.w);
                     targetedBone.target.transform.rotation = Quaternion.Slerp(targetedBone.TargetBaseRotation(), referenceRotation * mirroredRotation, value);
                 }
                 if (setScale)
@@ -129,11 +129,11 @@ namespace Passer.Humanoid {
                 // We need to convert the left-orientated anyside to a right side
                 // For this, we mirror the translation/rotation along the YZ-plane (not scale!)
                 if (setTranslation) {
-                    Vector3 mirroredTranslation = new Vector3(-translation.x, translation.y, translation.z);
+                    Vector3 mirroredTranslation = new(-translation.x, translation.y, translation.z);
                     targetedBone.target.transform.position += Vector3.Lerp(Vector3.zero, referenceRotation * mirroredTranslation, value);
                 }
                 if (setRotation) {
-                    Quaternion mirroredRotation = new Quaternion(rotation.x, -rotation.y, -rotation.z, rotation.w);
+                    Quaternion mirroredRotation = new(rotation.x, -rotation.y, -rotation.z, rotation.w);
                     targetedBone.target.transform.rotation = Quaternion.Slerp(targetedBone.target.transform.rotation, referenceRotation * mirroredRotation, value);
                 }
                 if (setScale)

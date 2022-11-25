@@ -53,7 +53,7 @@ namespace Passer.Humanoid {
         }
 
         public BonePose AddBone(Bone _boneId, bool useSideBones = false) {
-            BonePose newBonePose = new BonePose();
+            BonePose newBonePose = new();
 
             SideBone sideBone = BoneReference.HumanoidSideBone(_boneId);
             if (sideBone == SideBone.None) {                
@@ -103,7 +103,7 @@ namespace Passer.Humanoid {
         }
 
         public BlendshapePose AddBlendshape(SkinnedMeshRenderer _renderer, int _blendshapeId) {
-            BlendshapePose blendshapePose = new BlendshapePose() {
+            BlendshapePose blendshapePose = new() {
                 renderer = _renderer,
                 blendshapeId = _blendshapeId
             };

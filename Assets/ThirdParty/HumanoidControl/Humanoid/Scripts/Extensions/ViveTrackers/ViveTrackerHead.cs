@@ -31,7 +31,7 @@ namespace Passer.Humanoid {
             set { viveTracker.status = value; }
         }
 
-        private static readonly Vector3 defaultLocalTrackerPosition = new Vector3(0, 0.1F, 0.17F);
+        private static readonly Vector3 defaultLocalTrackerPosition = new(0, 0.1F, 0.17F);
         private static readonly Quaternion defaultLocalTrackerRotation = Quaternion.Euler(270, 180, 0);
 
         #region Start

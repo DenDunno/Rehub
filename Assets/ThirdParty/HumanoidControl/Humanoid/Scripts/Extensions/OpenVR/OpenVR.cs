@@ -43,7 +43,7 @@ namespace Passer.Tracking {
                 return null;
             }
 #if UNITY_EDITOR
-            GameObject trackerObj = new GameObject("OpenVR");
+            GameObject trackerObj = new("OpenVR");
             Transform trackerTransform = trackerObj.transform;
 
             trackerTransform.parent = parentTransform;
@@ -84,7 +84,7 @@ namespace Passer.Tracking {
             }
 
 #if UNITY_EDITOR
-            GameObject hmdObject = new GameObject("OpenVR Hmd");
+            GameObject hmdObject = new("OpenVR Hmd");
             Transform hmdTransform = hmdObject.transform;
 
             hmdTransform.parent = this.transform;
@@ -126,7 +126,7 @@ namespace Passer.Tracking {
             }
 
 #if UNITY_EDITOR
-            GameObject controllerObject = new GameObject("OpenVR Controller");
+            GameObject controllerObject = new("OpenVR Controller");
             Transform controllerTransform = controllerObject.transform;
 
             controllerTransform.parent = this.transform;
@@ -199,7 +199,7 @@ namespace Passer.Tracking {
                 return null;
             }
 #if UNITY_EDITOR
-            GameObject skeletonObj = new GameObject(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
+            GameObject skeletonObj = new(isLeft ? "Left Hand Skeleton" : "Right Hand Skeleton");
             skeletonObj.transform.parent = this.transform;
             skeletonObj.transform.localPosition = position;
             skeletonObj.transform.localRotation = rotation;

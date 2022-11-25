@@ -711,7 +711,7 @@ namespace Passer {
         };
 
         /// <summary>A GameObject Event for triggering changes in the Transform held by the Socket</summary>
-        public GameObjectEventHandlers attachEvent = new GameObjectEventHandlers() {
+        public GameObjectEventHandlers attachEvent = new() {
             label = "Hold Event",
             tooltip =
                 "Call functions using what the socket is holding\n" +
@@ -748,19 +748,19 @@ namespace Passer {
         }
 
         public static Mesh GenerateGizmoMesh1() {
-            Vector3 p0 = new Vector3(-0.01F, 0.03F, -0.01F);
-            Vector3 p1 = new Vector3(-0.01F, -0.03F, -0.01F);
-            Vector3 p2 = new Vector3(-0.01F, -0.03F, 0.01F);
-            Vector3 p3 = new Vector3(-0.01F, 0.01F, 0.01F);
-            Vector3 p4 = new Vector3(-0.01F, 0.01F, 0.03F);
-            Vector3 p5 = new Vector3(-0.01F, 0.03F, 0.03F);
+            Vector3 p0 = new(-0.01F, 0.03F, -0.01F);
+            Vector3 p1 = new(-0.01F, -0.03F, -0.01F);
+            Vector3 p2 = new(-0.01F, -0.03F, 0.01F);
+            Vector3 p3 = new(-0.01F, 0.01F, 0.01F);
+            Vector3 p4 = new(-0.01F, 0.01F, 0.03F);
+            Vector3 p5 = new(-0.01F, 0.03F, 0.03F);
 
-            Vector3 p6 = new Vector3(0.01F, 0.03F, -0.01F);
-            Vector3 p7 = new Vector3(0.01F, -0.03F, -0.01F);
-            Vector3 p8 = new Vector3(0.01F, -0.03F, 0.01F);
-            Vector3 p9 = new Vector3(0.01F, 0.01F, 0.01F);
-            Vector3 p10 = new Vector3(0.01F, 0.01F, 0.03F);
-            Vector3 p11 = new Vector3(0.01F, 0.03F, 0.03F);
+            Vector3 p6 = new(0.01F, 0.03F, -0.01F);
+            Vector3 p7 = new(0.01F, -0.03F, -0.01F);
+            Vector3 p8 = new(0.01F, -0.03F, 0.01F);
+            Vector3 p9 = new(0.01F, 0.01F, 0.01F);
+            Vector3 p10 = new(0.01F, 0.01F, 0.03F);
+            Vector3 p11 = new(0.01F, 0.03F, 0.03F);
 
             Vector3[] vertices = {
                 p0, p1, p6, p7,     // 0, 1, 2, 3
@@ -793,7 +793,7 @@ namespace Passer {
                 //Vector3.left, Vector3.left, Vector3.left, Vector3.left, Vector3.left, Vector3.left,
                 //Vector3.right, Vector3.right, Vector3.right, Vector3.right, Vector3.right, Vector3.right,
             };
-            Mesh gizmoMesh = new Mesh() {
+            Mesh gizmoMesh = new() {
                 vertices = vertices,
                 triangles = triangles,
                 normals = normals
@@ -802,19 +802,19 @@ namespace Passer {
         }
 
         public static Mesh GenerateGizmoMesh() {
-            Vector3 p0 = new Vector3(-0.01F, 0.03F, -0.01F);
-            Vector3 p1 = new Vector3(-0.01F, -0.03F, -0.01F);
-            Vector3 p2 = new Vector3(-0.01F, -0.03F, 0.01F);
-            Vector3 p3 = new Vector3(-0.01F, 0.01F, 0.01F);
-            Vector3 p4 = new Vector3(-0.01F, 0.01F, 0.03F);
-            Vector3 p5 = new Vector3(-0.01F, 0.03F, 0.03F);
+            Vector3 p0 = new(-0.01F, 0.03F, -0.01F);
+            Vector3 p1 = new(-0.01F, -0.03F, -0.01F);
+            Vector3 p2 = new(-0.01F, -0.03F, 0.01F);
+            Vector3 p3 = new(-0.01F, 0.01F, 0.01F);
+            Vector3 p4 = new(-0.01F, 0.01F, 0.03F);
+            Vector3 p5 = new(-0.01F, 0.03F, 0.03F);
 
-            Vector3 p6 = new Vector3(0.01F, 0.03F, -0.01F);
-            Vector3 p7 = new Vector3(0.01F, -0.03F, -0.01F);
-            Vector3 p8 = new Vector3(0.01F, -0.03F, 0.01F);
-            Vector3 p9 = new Vector3(0.01F, 0.01F, 0.01F);
-            Vector3 p10 = new Vector3(0.01F, 0.01F, 0.03F);
-            Vector3 p11 = new Vector3(0.01F, 0.03F, 0.03F);
+            Vector3 p6 = new(0.01F, 0.03F, -0.01F);
+            Vector3 p7 = new(0.01F, -0.03F, -0.01F);
+            Vector3 p8 = new(0.01F, -0.03F, 0.01F);
+            Vector3 p9 = new(0.01F, 0.01F, 0.01F);
+            Vector3 p10 = new(0.01F, 0.01F, 0.03F);
+            Vector3 p11 = new(0.01F, 0.03F, 0.03F);
 
             Vector3[] vertices = {
                 p0, p1, p6, p7,     // 0, 1, 2, 3
@@ -848,7 +848,7 @@ namespace Passer {
                 Vector3.left, Vector3.left, Vector3.left, Vector3.left, Vector3.left, Vector3.left,
                 Vector3.right, Vector3.right, Vector3.right, Vector3.right, Vector3.right, Vector3.right,
             };
-            Mesh gizmoMesh = new Mesh() {
+            Mesh gizmoMesh = new() {
                 vertices = vertices,
                 triangles = triangles,
                 normals = normals

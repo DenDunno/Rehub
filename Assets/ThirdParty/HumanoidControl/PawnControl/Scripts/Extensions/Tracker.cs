@@ -24,7 +24,7 @@ namespace Passer {
             if (realWorldTransform != null)
                 return realWorldTransform.gameObject;
 
-            GameObject realWorld = new GameObject("Real World");
+            GameObject realWorld = new("Real World");
             realWorld.transform.parent = transform;
             realWorld.transform.localPosition = Vector3.zero;
             realWorld.transform.localRotation = Quaternion.identity;
@@ -53,7 +53,7 @@ namespace Passer {
                     trackerTransform = trackerObject.transform;
                 }
                 else {
-                    GameObject trackerObject = new GameObject(name);
+                    GameObject trackerObject = new(name);
                     trackerTransform = trackerObject.transform;
                 }
                 trackerTransform.parent = realWorld.transform;

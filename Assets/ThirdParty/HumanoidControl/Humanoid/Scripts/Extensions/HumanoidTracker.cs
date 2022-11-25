@@ -30,9 +30,9 @@ namespace Passer.Humanoid {
 #endif
         #endregion
 
-        public DeviceView deviceView = new DeviceView();
+        public DeviceView deviceView = new();
 
-        public List<SubTracker> subTrackers = new List<SubTracker>();
+        public List<SubTracker> subTrackers = new();
 
         public virtual void Enable() {
             enabled = true;
@@ -76,7 +76,7 @@ namespace Passer.Humanoid {
                     trackerTransform = trackerObject.transform;
                 }
                 else {
-                    GameObject trackerObject = new GameObject(name);
+                    GameObject trackerObject = new(name);
                     trackerTransform = trackerObject.transform;
                 }
                 trackerTransform.parent = realWorld.transform;
@@ -98,7 +98,7 @@ namespace Passer.Humanoid {
                     trackerTransform = trackerObject.transform;
                 }
                 else {
-                    GameObject trackerObject = new GameObject(name);
+                    GameObject trackerObject = new(name);
                     trackerTransform = trackerObject.transform;
                 }
                 trackerTransform.parent = realWorld.transform;
